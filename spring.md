@@ -117,3 +117,16 @@ However, it can be changed, then the bean can throw an exception caused by eg. m
 #### Lazy initialization
 Beans with lazy-init, are not created on container creation, unless they are dependencies of another not lazy-iniialized beans.
 
+### Bean scope
+#### Singleton (default) - best for stateless beans
+* only one shared instance of a singleton bean is managed;
+* default scope of a bean in Spring.
+##### GoF singleton vs Spring singleton
+* GoF: singleton scope is hard-coded such that *one and only one* instance of a particular class is created *per ClassLoader*
+* Spring - one and only one per container and per bean. If one bean is defined for a particular class in a single Spring container, then the *one and only one* instance of class defined by that bean definition is created.
+#### Prototype - best for stateful beans
+* creation of a new bean instance every time a request for that specific bean is made;
+* request is made = bean is injected into another bean or you request it through a `getBean()` method call on container;
+* after instantiation, configuration and assemby of a prototype object, it is handed to the client (there will be *initialization* callbacks but no *destruction* callbacks). The client code must clean up prototype-scoped objects and release expensive resources that the prototype bean(s) are holding.
+* the role of Spring container here is like a replacement for the Java `new` operator.
+

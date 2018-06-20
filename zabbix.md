@@ -60,3 +60,7 @@ Click `Next step` and `Finish`.
 Now you can log in the frontend with the following credentials:
 * default user name **Admin**;
 * default password **zabbix**.
+
+### Asumptions
+* 1 host <-> 1 service
+* 

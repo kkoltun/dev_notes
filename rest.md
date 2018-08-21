@@ -172,6 +172,31 @@ Cache constraints are added to form client-cache-stateless-server style. This is
 
 Adding cache constraints reduces or completely eliminates some interactions, improving efficiency, scalability and user perceived performance. The trade-off is obvious - it can decrease reliability if stale data within the cache differs significantly from the data that would have been obtained had the request been sent directly to the server.
 
+##### REST Architectural Elements
+`The Representational State Trasfer (REST) style is an abstraction of the architectural elements within a distributed hypermedia system.`
+What does not matter:
+* component implementation;
+* protocol syntax.
+What matters:
+* roles of the components;
+* constraints upon their interaction with other components;
+* components interpretation of significant data elements.
+
+##### Data Elements
+A key aspect of REST is the nature and state of an architecture's data elements. There are three options in terms of distributed hypermedia system:
+* render the data where it is locate and send a fixed-format image to the recipient;
+* encapsulate the data with a rendering engine and send bot to the recipient;
+* send the raw data to recipient with metadata that describes the data type.
+Each of the options has advantages and disadvantages. **REST provides a hybrid of all three options by focusing on a shared understanding of data types with metadata, but limiting the scope of what is revealed to a standardized interface.** 
+
+Overall rules:
+* rest components communicate by transferring a representation of a resource in a format matching one of an evolving set of standard data types, selected dynamically based on the capabilities or desires of the recitpient and the nature of the resource;
+* whether the representation is in the same format as the raw source, or is derived from the source, remains hidden behind the interface;
+* the benefits of the mobile object style are approximated by sending a representation that consists of instructions in the standard data format of an encapsulated rendering engine (*downloadable feature-engines*).
+
+###### Resources and Resource Identifiers
+`Resource is any information that can be named. In other words, it can be any concept that might be the target of an author's hypertext reference.`
+Resource `R` is a temporally varying membersip function `Mr(t)` which for time `t` maps to a set of entities, or valuse which are equivalent. The values in the set may be resource *resource representations* and/or *resource identifiers&.
 
 
 ### Books

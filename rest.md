@@ -198,13 +198,19 @@ Overall rules:
 `Resource is any information that can be named. In other words, it can be any concept that might be the target of an author's hypertext reference.`
 Resource `R` is a temporally varying membersip function `Mr(t)` which for time `t` maps to a set of entities, or valuse which are equivalent. The values in the set may be resource *resource representations* and/or *resource identifiers&.
 
-
 ### Books
 * C. Ghezzi, M. Jazayeri, and D. Mandrioli. Fundamentals of Software Engineering. Prentice-Hall, 1991.
 * C. Alexander. The Timeless Way of Building. Oxford University Press, New York, 1979.
 * G. Booch. Object-oriented development. IEEE Transactions on Software Engineering, 12(2), Feb. 1986, pp. 211–221.
 * Shaw. Toward higher-level abstractions for software systems. Data & Knowledge Engineering, 5, 1990, pp. 119–128.
 * L. Bass, P. Clements, and R. Kazman. Software Architecture in Practice. Addison Wesley, Reading, Mass., 1998.
+
+## Statefull vs stateless
+### Statefull and stateless protocols
+
+### Stateless vs caching
+[Ion Crowcraft](https://www.cl.cam.ac.uk/~jac22/books/www/book/node39.html)
+
 
 ## RPC vs Messaging
 ### Remote Procedure Calls

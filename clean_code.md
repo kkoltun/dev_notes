@@ -115,6 +115,11 @@ Small iterfaces:
 #### Further reading
 * Design Patterns book.
 
+## Don't Repeat Yourself (DRY)
+*Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.*
+
+
+
 ## Further reading
 * [Google on writing testable code](http://misko.hevery.com/code-reviewers-guide/);
 * [Principles of OOD by Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
@@ -123,3 +128,4 @@ Small iterfaces:
 * [Working Effectively With Legacy Code by Feathers](https://www.amazon.com/FEATHERS-WORK-EFFECT-LEG-CODE/dp/0131177052);
 * [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882);
 * [Object Oriented Software Construction](https://sophia.javeriana.edu.co/~cbustaca/docencia/POO-2016-01/documentos/Object%20Oriented%20Software%20Construction-Meyer.pdf)
+* [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)

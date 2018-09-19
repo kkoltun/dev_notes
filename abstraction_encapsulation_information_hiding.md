@@ -4,7 +4,7 @@ The Object Agency
 
 > A powerful agent is the right word. Whenever we come upon one of those intensely right words in a book or a newspaper the resulting effect is physical as well as spiritual, and electrically prompt.
 
-*Mark Twain (Samuel Langhorne Clemens), Essay on William Dean Howells,1906
+*Mark Twain (Samuel Langhorne Clemens), Essay on William Dean Howells,1906*
 
 ## PROLOGUE
 I recently read a magazine article that said, "Encapsulation is just a fancy name for information hiding." Since the writer was non-technical, I just assumed that he was attempting to show that he really did not understand technical matters. However, the passage reminded me of several situations in which other authors -- both technical and non-technical -- had confused encapsulation and information hiding.
@@ -16,36 +16,37 @@ This led to some fanciful speculation on my part. "If encapsulation could be con
 Still, I was curious. I decided to gather a number of different definitions for abstraction, information hiding, and encapsulation, and to compare them. This article details what I found.
 
 ## ABSTRACTION
-> A view of a problem that extracts the essential information relevant to a particular purpose and ignores the remainder of the information."
-IEEE, 1983
+> A view of a problem that extracts the essential information relevant to a particular purpose and ignores the remainder of the information.
 
-> The essence of abstraction is to extract essential properties while omitting inessential details."
+*IEEE, 1983*
 
--- [Ross et al, 1975]
+> The essence of abstraction is to extract essential properties while omitting inessential details.
 
-"Abstraction is a process whereby we identify the important aspects of a phenomenon and ignore its details."
+*Ross et al, 1975*
 
--- [Ghezzi et al, 1991]
+> Abstraction is a process whereby we identify the important aspects of a phenomenon and ignore its details.
 
-"Abstraction is generally defined as 'the process of formulating generalised concepts by extracting common qualities from specific examples.'"
+*Ghezzi et al, 1991*
 
--- [Blair et al, 1991]
+> Abstraction is generally defined as *the process of formulating generalised concepts by extracting common qualities from specific examples.*
 
-"Abstraction is the selective examination of certain aspects of a problem. The goal of abstraction is to isolate those aspects that are important for some purpose and suppress those aspects that are unimportant."
+*Blair et al, 1991*
 
--- [Rumbaugh et al, 1991]
+> Abstraction is the selective examination of certain aspects of a problem. The goal of abstraction is to isolate those aspects that are important for some purpose and suppress those aspects that are unimportant.
 
-"The meaning [of abstraction] given by the Oxford English Dictionary (OED) closest to the meaning intended here is 'The act of separating in thought'. A better definition might be 'Representing the essential features of something without including background or inessential detail.'"
+*Rumbaugh et al, 1991*
 
--- [Graham, 1991]
+> The meaning [of abstraction] given by the Oxford English Dictionary (OED) closest to the meaning intended here is *The act of separating in thought*. A better definition might be *Representing the essential features of something without including background or inessential detail.*
 
-"[A] simplified description, or specification, of a system that emphasizes some of the system's details or properties while suppressing others. A good abstraction is one that emphasizes details that are significant to the reader or user and suppress details that are, at least for the moment, immaterial or diversionary."
+*Graham, 1991*
 
--- [Shaw, 1984]
+> [A] simplified description, or specification, of a system that emphasizes some of the system's details or properties while suppressing others. A good abstraction is one that emphasizes details that are significant to the reader or user and suppress details that are, at least for the moment, immaterial or diversionary.
 
-"An abstraction denotes the essential characteristics of an object that distinguish it from all other kinds of object and thus provide crisply defined conceptual boundaries, relative to the perspective of the viewer."
+*Shaw, 1984*
 
--- [Booch, 1991]
+> An abstraction denotes the essential characteristics of an object that distinguish it from all other kinds of object and thus provide crisply defined conceptual boundaries, relative to the perspective of the viewer.
+
+*Booch, 1991*
 
 One point of confusion regarding abstraction is its use as both a process and an entity. Abstraction, as a process, denotes the extracting of the essential details about an item, or a group of items, while ignoring the inessential details. Abstraction, as an entity, denotes a model, a view, or some other focused representation for an actual item. Abstraction is most often used as a complexity mastering technique. For example, we often hear people say such things as: "just give me the highlights" or "just the facts, please." What these people are asking for are abstractions.
 
@@ -57,34 +58,35 @@ We also note that there are many different types of abstraction, e.g., functiona
 
 Usually, abstraction is not defined in terms of information hiding, e.g., note the use of words such as "ignore" and "extracting." However, we should also note the use of the words "suppress" and "suppressing" in some of the above examples. In short, you might say that abstraction dictates that some information is more important than other information, but (correctly) does not specify a specific mechanism for handling the unimportant information.
 
-INFORMATION HIDING
-"The second decomposition was made using 'information hiding' ... as a criterion. The modules no longer correspond to steps in the processing. ... Every module in the second decomposition is characterized by its knowledge of a design decision which it hides from all others. Its interface or definition was chosen to reveal as little as possible about its inner workings."
+## INFORMATION HIDING
 
--- [Parnas, 1972b]
+> The second decomposition was made using 'information hiding' ... as a criterion. The modules no longer correspond to steps in the processing. ... Every module in the second decomposition is characterized by its knowledge of a design decision which it hides from all others. Its interface or definition was chosen to reveal as little as possible about its inner workings.
 
-"... the purpose of hiding is to make inaccessible certain details that should not affect other parts of a system."
+*Parnas, 1972b*
 
--- [Ross et al, 1975]
+> ... the purpose of hiding is to make inaccessible certain details that should not affect other parts of a system.
 
-"... [I]nformation hiding: a module is characterized by the information it hides from other modules, which are called its clients. The hidden information remains a secret to the client modules."
+*Ross et al, 1975*
 
--- [Ghezzi et al, 1991]
+> ... [I]nformation hiding: a module is characterized by the information it hides from other modules, which are called its clients. The hidden information remains a secret to the client modules.
 
-"[Information hiding is] the principle that users of a software component (such as a class) need to know only the essential details of how to initialize and access the component, and do not need to know the details of the implementation."
+*Ghezzi et al, 1991*
 
--- [Budd, 1991]
+> [Information hiding is] the principle that users of a software component (such as a class) need to know only the essential details of how to initialize and access the component, and do not need to know the details of the implementation.
 
-"The technique of encapsulating software design decisions in modules in such a way that the module's interfaces reveal little as possible about the module's inner workings; thus each module is a 'black box' to the other modules in the system."
+*Budd, 1991*
 
--- [IEEE, 1983]
+> The technique of encapsulating software design decisions in modules in such a way that the module's interfaces reveal little as possible about the module's inner workings; thus each module is a 'black box' to the other modules in the system.
 
-"The process of hiding all the details of an object that do not contribute to its essential characteristics; typically, the structure of an object is hidden, as well as the implementation of its methods. The terms information hiding and encapsulation are usually interchangeable."
+*IEEE, 1983*
 
--- [Booch, 1991]
+> The process of hiding all the details of an object that do not contribute to its essential characteristics; typically, the structure of an object is hidden, as well as the implementation of its methods. The terms information hiding and encapsulation are usually interchangeable.
 
-"The principle of information hiding is central. It says that modules are used via their specifications, not their implementations. All information about a module, whether concerning data or function, is encapsulated with it and, unless specifically declared public, hidden from other modules."
+*Booch, 1991*
 
--- [Graham, 1991]
+> The principle of information hiding is central. It says that modules are used via their specifications, not their implementations. All information about a module, whether concerning data or function, is encapsulated with it and, unless specifically declared public, hidden from other modules.
+
+*Graham, 1991*
 
 In his classic 1972 article ([Parnas, 1972b]), D.L. Parnas describes two different implementation scenarios for a simple key word in context (KWIC) application. One is decomposed and modularized based on the steps one might take in accomplishing the purpose of the application. (Parnas speculates that this approach would be taken by someone who is basing their design on a flowchart.)
 
@@ -92,11 +94,13 @@ The second (and better) scenario is modularized based on "design decisions." Par
 
 In truth, both of the scenarios presented by Parnas involve "information hiding." In his first scenario, the hidden information involves the details of the procedural steps necessary to accomplish the application. (By 1971, when Parnas first published his work in a university technical report, programmers had known for almost 20 years of the usefulness of subroutines in mastering complexity.) The second, and (very arguably) superior, scenario requires that the hidden information be the details of difficult and/or likely-to-change design decisions.
 
-"Hiding information," in and of itself, was not new. For that matter, the isolation of difficult and/or likely-to-change design decisions in modules was also not new. (Dijkstra had done this earlier in his implementation of the "THE"-Multiprogramming System.) The significance of Parnas's 1972 article on software module specification lay in two areas:
+"Hiding information," in and of itself, was not new. For that matter, the isolation of difficult and/or likely-to-change design decisions in modules was also not new. (Dijkstra had done this earlier in his implementation of the "THE"-Multiprogramming System.) 
 
-- His avocation and specification of the (then innovative) technique of basing system modularization on design decisions. (You would have to say that the article presented a significantly different view of Dijkstra's "levels of abstraction" approach.)
+The significance of Parnas's 1972 article on software module specification lay in two areas:
 
-- His use of the term "information hiding." Virtually every article which mentions the topic traces its origin to [Parnas, 1972b].
+* His avocation and specification of the (then innovative) technique of basing system modularization on design decisions. (You would have to say that the article presented a significantly different view of Dijkstra's "levels of abstraction" approach.)
+
+* His use of the term "information hiding." Virtually every article which mentions the topic traces its origin to [Parnas, 1972b].
 
 Obviously, Parnas did not say all information hiding is good, nor did he say that all information hiding techniques are equally useful. He was identifying a particularly pragmatic approach to information hiding.
 
@@ -104,58 +108,58 @@ Just as with abstraction, there are degrees of information hiding. For example, 
 
 We can now identify some of the sources of confusion about the differences between information hiding and abstraction, i.e.:
 
-- Abstraction can be (and often is) used as a technique for identifying which information should be hidden. For example, in functional abstraction we might say that it is important to be able to add items to a list, but the details of how that is accomplished are not of interest and should be hidden. Using data abstraction, we would say that a list is a place where we can store information, but how the list is actually implemented (e.g., as an array or as a series of linked locations) is unimportant and should be hidden.
+* Abstraction can be (and often is) used as a technique for identifying which information should be hidden. For example, in functional abstraction we might say that it is important to be able to add items to a list, but the details of how that is accomplished are not of interest and should be hidden. Using data abstraction, we would say that a list is a place where we can store information, but how the list is actually implemented (e.g., as an array or as a series of linked locations) is unimportant and should be hidden.
 
 Confusion can occur when people fail to distinguish between the hiding of information, and a technique (e.g., abstraction) that is used to help identify which information is to be hidden.
 
-- Some of the definitions for abstraction can also be sources of confusion. For example, words like "ignore," "omit," "extract," and "without including" are rather passive, and would not necessarily imply the deliberate hiding of any information, e.g., "the information is there, and accessible, but we just ignore it." However, words like "suppress" and "suppressing" present a somewhat different image -- quite possibly the active and deliberate hiding of information.
+* Some of the definitions for abstraction can also be sources of confusion. For example, words like "ignore," "omit," "extract," and "without including" are rather passive, and would not necessarily imply the deliberate hiding of any information, e.g., "the information is there, and accessible, but we just ignore it." However, words like "suppress" and "suppressing" present a somewhat different image -- quite possibly the active and deliberate hiding of information.
 
 Now, let's look at the other definitions for information hiding:
 
-- The [Ross et al, 1975] definition somewhat generalizes Parnas's definition, but still stipulates that the information that should be hidden are those "details that should not affect other parts of a system."
+* The [Ross et al, 1975] definition somewhat generalizes Parnas's definition, but still stipulates that the information that should be hidden are those "details that should not affect other parts of a system."
 
-- The [Ghezzi et al, 1991] definition also presents a somewhat generalized view of Parnas's view on information hiding.
+* The [Ghezzi et al, 1991] definition also presents a somewhat generalized view of Parnas's view on information hiding.
 
-- The [Budd, 1991] and [Booch, 1991] definitions are specialized to an object-oriented view of the world.
+* The [Budd, 1991] and [Booch, 1991] definitions are specialized to an object-oriented view of the world.
 
-- Note the use of the words "encapsulating" and "encapsulated" in [IEEE, 1983] and [Graham, 1991] respectively. As we shall see in the next section, there is a significant difference between information hiding and encapsulation. However, some people might attempt to infer incorrectly from the [IEEE, 1983] and [Graham, 1991] definitions for information hiding, that encapsulation and information hiding are the same thing.
+* Note the use of the words "encapsulating" and "encapsulated" in [IEEE, 1983] and [Graham, 1991] respectively. As we shall see in the next section, there is a significant difference between information hiding and encapsulation. However, some people might attempt to infer incorrectly from the [IEEE, 1983] and [Graham, 1991] definitions for information hiding, that encapsulation and information hiding are the same thing.
 
-ENCAPSULATION
-"1. to enclose in or as if in a capsule"
+## ENCAPSULATION
+> 1. to enclose in or as if in a capsule
 
--- [Mish, 1988]
+*Mish, 1988*
 
-"The concept of encapsulation as used in an object-oriented context is not essentially different from its dictionary definition. It still refers to building a capsule, in the case a conceptual barrier, around some collection of things."
+> The concept of encapsulation as used in an object-oriented context is not essentially different from its dictionary definition. It still refers to building a capsule, in the case a conceptual barrier, around some collection of things.
 
--- [Wirfs-Brock et al, 1990]
+*Wirfs-Brock et al, 1990*
 
-"It is a simple, yet reasonable effective, system-building tool. It allows suppliers to present cleanly specified interfaces around the services they provide. A consumer has full visibility to the procedures offered by an object, and no visibility to its data. From a consumer's point of view, and object is a seamless capsule that offers a number of services, with no visibility as to how these services are implemented ... The technical term for this is encapsulation."
+> It is a simple, yet reasonable effective, system-building tool. It allows suppliers to present cleanly specified interfaces around the services they provide. A consumer has full visibility to the procedures offered by an object, and no visibility to its data. From a consumer's point of view, and object is a seamless capsule that offers a number of services, with no visibility as to how these services are implemented ... The technical term for this is encapsulation.
 
--- [Cox, 1986]
+*Cox, 1986*
 
-"Encapsulation or equivalently information hiding refers to the practice of including within an object everything it needs, and furthermore doing this in such a way that no other object need ever be aware of this internal structure."
+> Encapsulation or equivalently information hiding refers to the practice of including within an object everything it needs, and furthermore doing this in such a way that no other object need ever be aware of this internal structure.
 
--- [Graham, 1991]
+*Graham, 1991*
 
-"We say that the changeable, hidden information becomes the secret of the module; also, according to a widely used jargon, we say that such information is encapsulated within the implementation."
+> We say that the changeable, hidden information becomes the secret of the module; also, according to a widely used jargon, we say that such information is encapsulated within the implementation.
 
--- [Ghezzi et al, 1991]
+*Ghezzi et al, 1991*
 
-"Data hiding is sometimes called encapsulation because the data and its code are put together in a package or 'capsule.'"
+> Data hiding is sometimes called encapsulation because the data and its code are put together in a package or 'capsule.'"
 
--- [Smith, 1991]
+*Smith, 1991*
 
-"Encapsulation is used as a generic term for techniques which realize data abstraction. Encapsulation therefore implies the provision of mechanisms to support both modularity and information hiding. There is therefore a one to one correspondence in this case between the technique of encapsulation and the principle of data abstraction."
+> Encapsulation is used as a generic term for techniques which realize data abstraction. Encapsulation therefore implies the provision of mechanisms to support both modularity and information hiding. There is therefore a one to one correspondence in this case between the technique of encapsulation and the principle of data abstraction.
 
--- [Blair et al, 1991]
+*Blair et al, 1991*
 
-"Encapsulation (also information hiding) consists of separating the external aspects of an object which are accessible to other objects, from the internal implementation details of the object, which are hidden from other objects."
+> Encapsulation (also information hiding) consists of separating the external aspects of an object which are accessible to other objects, from the internal implementation details of the object, which are hidden from other objects."
 
--- [Rumbaugh et al, 1991]
+*Rumbaugh et al, 1991*
 
-"[E]ncapsulation -- also known as information hiding -- prevents clients from seeing its inside view, were the behavior of the abstraction is implemented."
+> [E]ncapsulation -- also known as information hiding -- prevents clients from seeing its inside view, were the behavior of the abstraction is implemented."
 
--- [Booch, 1991]
+*Booch, 1991*
 
 Like abstraction, the word "encapsulation" can be used to describe either a process or an entity. As a process, encapsulation means the act of enclosing one or more items within a (physical or logical) container. Encapsulation, as an entity, refers to a package or an enclosure that holds (contains, encloses) one or more items. It is extremely important to note that nothing is said about "the walls of the enclosure." Specifically, they may be "transparent," "translucent," or even "opaque."
 
@@ -171,22 +175,19 @@ Even arguing that encapsulation is necessary for information hiding is not as si
 
 Examining the cited definitions for encapsulation above, we make the following observations:
 
-- [Wirfs-Brock et al, 1990] comes closest to a simple, straightforward definition for encapsulation.
+* [Wirfs-Brock et al, 1990] comes closest to a simple, straightforward definition for encapsulation.
+* Brad Cox's definition ([Cox, 1986]) allows for encapsulation to hide some information ("full visibility to the procedures offered by an object"), while hiding other information ("no visibility to its data").
+* Although not as clean as it could be, the definition supplied by [Blair et al, 1991] presents an accurate view of the relationship among abstraction, information hiding, and encapsulation.
+* [Ghezzi et al, 1991] at least acknowledges the confusion associated with information hiding and encapsulation, i.e., "widely used jargon."
+* [Booch, 1991], [Graham, 1991], [Rumbaugh et al, 1991], and [Smith, 1991] make no (or very little) distinction between "information hiding" and "encapsulation."
 
-- Brad Cox's definition ([Cox, 1986]) allows for encapsulation to hide some information ("full visibility to the procedures offered by an object"), while hiding other information ("no visibility to its data").
+## CONCLUSIONS
 
-- Although not as clean as it could be, the definition supplied by [Blair et al, 1991] presents an accurate view of the relationship among abstraction, information hiding, and encapsulation.
-
-- [Ghezzi et al, 1991] at least acknowledges the confusion associated with information hiding and encapsulation, i.e., "widely used jargon."
-
-- [Booch, 1991], [Graham, 1991], [Rumbaugh et al, 1991], and [Smith, 1991] make no (or very little) distinction between "information hiding" and "encapsulation."
-
-CONCLUSIONS
 Abstraction, information hiding, and encapsulation are very different, but highly-related, concepts. One could argue that abstraction is a technique that helps us identify which specific information should be visible, and which information should be hidden. Encapsulation is then the technique for packaging the information in such a way as to hide what should be hidden, and make visible what is intended to be visible.
 
 It is not hard to see how abstraction, information hiding, and encapsulation became confused with one another. Further, one could argue that, regardless of their "dictionary definitions," these terms have evolved new meanings in the context of software engineering, e.g., in much the same way as "paradigm" has. (See, e.g., [Kuhn, 1962].) However, a stronger argument can be made for keeping the concepts, and thus the terms, distinct.
 
-BIBLIOGRAPHY
+## BIBLIOGRAPHY
 [Alexandridis, 1986]. N.A. Alexandridis, "Adaptable Software and Hardware : Problems and Solutions," Computer , Vol. 19, No. 2, February 1986, pp. 29 - 39.
 
 [ARM, 1983]. Reference Manual for the Ada Programming Language, ANSI/MIL-STD 1815A (1983) , United States Department of Defense, February 1983.
@@ -246,4 +247,3 @@ BIBLIOGRAPHY
 [Yourdon and Constantine, 1979]. E. Yourdon and L.L. Constantine, Structured Design: Fundamentals of a Discipline of Computer Program and Systems Design, Prentice-Hall, Englewood Cliffs, New Jersey, 1979.
 
 [Zimmer, 1985]. J.A. Zimmer, Abstraction for Programmers, McGraw-Hill, New York, New York, 1985.
-

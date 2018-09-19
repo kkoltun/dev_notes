@@ -1,5 +1,5 @@
 # Clean Code Rules
-
+> Todo: move SOLID to another document
 ## SOLID
 
 ### Single Responsibility Principle
@@ -150,6 +150,9 @@ It can be summarized in each of the following ways:
 * [Tell, Don't Ask](https://pragprog.com/articles/tell-dont-ask)
 * [Object-Oriented Programming: An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
 * [Aspect-oriented Programming With Adaptive Methods](https://www.researchgate.net/publication/220422659/download)
+
+## Single Level of Abstraction Principle(SLAP)
+**TODO**
 
 ## Further reading
 * [Google on writing testable code](http://misko.hevery.com/code-reviewers-guide/);

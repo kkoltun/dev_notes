@@ -176,4 +176,5 @@ To bind the goal to `process-test-resources` phase:
 * (dalej maven)[https://maven.apache.org/guides/introduction/introduction-to-the-pom.html]
 * (spring plugin)[https://maven.apache.org/guides/introduction/introduction-to-the-pom.html]
 * multiple instances of the same plugin? Czy moze jest to powiazane z bugiem Gabriela - bylo wiele instancji pluginu Springa i zle budowaly (nie wspolpracowaly ze soba?)
+* inwestygacja bledu u Gabriela - co takiego sie dzieje jak jest wszedzie referencja do pluginu a co innego sie dzieje jak sie da pluginManagement 
 * what is the `<build>` tag

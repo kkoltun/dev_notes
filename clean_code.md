@@ -136,6 +136,21 @@ Small iterfaces:
 * waste everyone's time;
 * write everything twice.
 
+## Loose coupling
+### Law of Demeter (principle of least knowledge)
+LoD is a specific case of loose coupling.
+It can be summarized in each of the following ways:
+* each unit should have only limited knowledge about other units: only units "closely" related to the current unit;
+* each unit should only talk to its friends; don't talk to strangers;
+* only talk to your immediate friends.
+
+### Further reading
+* [The Paperboy, The Wallet and The Law Of Demeter](https://www2.ccs.neu.edu/research/demeter/demeter-method/LawOfDemeter/paper-boy/demeter.pdf)
+* [Introducing Demeter and its Laws](http://www.bradapp.com/docs/demeter-intro.html)
+* [Tell, Don't Ask](https://pragprog.com/articles/tell-dont-ask)
+* [Object-Oriented Programming: An Objective Sense of Style](https://www2.ccs.neu.edu/research/demeter/papers/law-of-demeter/oopsla88-law-of-demeter.pdf)
+* [Aspect-oriented Programming With Adaptive Methods](https://www.researchgate.net/publication/220422659/download)
+
 ## Further reading
 * [Google on writing testable code](http://misko.hevery.com/code-reviewers-guide/);
 * [Principles of OOD by Uncle Bob](http://butunclebob.com/ArticleS.UncleBob.PrinciplesOfOod)
@@ -145,3 +160,4 @@ Small iterfaces:
 * [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882);
 * [Object Oriented Software Construction](https://sophia.javeriana.edu.co/~cbustaca/docencia/POO-2016-01/documentos/Object%20Oriented%20Software%20Construction-Meyer.pdf)
 * [The Pragmatic Programmer](https://en.wikipedia.org/wiki/The_Pragmatic_Programmer)
+* [Code Complete]()

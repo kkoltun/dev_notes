@@ -1,6 +1,7 @@
 # Abstraction, Encapsulation, and Information Hiding
-By Edward V. Berard
-The Object Agency
+*By Edward V. Berard*
+
+*The Object Agency*
 
 > A powerful agent is the right word. Whenever we come upon one of those intensely right words in a book or a newspaper the resulting effect is physical as well as spiritual, and electrically prompt.
 

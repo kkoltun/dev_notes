@@ -118,7 +118,23 @@ Small iterfaces:
 ## Don't Repeat Yourself (DRY)
 *Every piece of knowledge must have a single, unambiguous, authoritative representation within a system.*
 
+### Caused by:
+* `copy-paste programming`;
+* poor understanding of how to apply abstraction.
 
+### Consequences:
+* amount of work required to extend and maintain is increased;
+* repeating errors.
+
+### Handling:
+* duplication in logic should be eliminated via abstraction;
+* duplication in process should be eliminated by automation;
+* rule of three - if you have identical code in three or more places, it should be abstracted into common place to be reusable and maintainable;
+* single source of truth (SSOT)/single point of truth (SPOT) - use relational schemas instead of duplication of data. Every data element is stored exactly once.
+
+### `WET` code:
+* waste everyone's time;
+* write everything twice.
 
 ## Further reading
 * [Google on writing testable code](http://misko.hevery.com/code-reviewers-guide/);

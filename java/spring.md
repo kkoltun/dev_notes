@@ -89,7 +89,12 @@ This is used in <property/> and <constructor-arg/> elements:
 Relationships between collaborating beans can be resolved automatically by inspecting `ApplicationContext`. Advantages:
 * reduce the need to specify properites or constructor arguments;
 * update a configuration as objects evolve.
+
 #### Autowiring modes
+Set in `autowire` attribute of the `<bean>` element:
+
+attribute value | meaning
+------|------
 no | bean references must be defined via a `ref` element. Changing this is not recommended for larger deployments.
 byName | look for a bean with the same name as the property that needs to be autowired. Example: bean with *master* property (has a *setMaster(...)* method) -> Spring looks for a bean definition named `master`
 byType | property is autowired if exactly one bean of the property type exists in the container. If there are more than one - fatal exception. If ther are none - property is not set.

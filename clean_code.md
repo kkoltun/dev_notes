@@ -137,6 +137,17 @@ Small iterfaces:
 * write everything twice.
 
 ## Loose coupling
+A design strategy which:
+* allows to reduce the inter-dependencies between components of a system;
+* reduces the risk of changes in one component that will require changes in other ones;
+* improves thinking about the problem in a genneric manner;
+* improves maintainability.
+
+Tight coupling:
+* makes introducing changes harder;
+* impar testability;
+* increases the probability of "spaghetti code".
+
 ### Law of Demeter (principle of least knowledge)
 LoD is a specific case of loose coupling.
 It can be summarized in each of the following ways:
@@ -152,7 +163,19 @@ It can be summarized in each of the following ways:
 * [Aspect-oriented Programming With Adaptive Methods](https://www.researchgate.net/publication/220422659/download)
 
 ## Single Level of Abstraction Principle(SLAP)
-**TODO**
+* do not mix levels of abstraction in a function;
+
+## Miscellaneous Rules
+1. Prefer immutable objects:
+* less error prone;
+* more secure;
+* inherently thread safe.
+2. Avoid side effects:
+* do not lie about what the function does - eg. [Java Thread.interrupted()](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted());
+* this is making method unreliable and hard to debug.
+3. Prefer stateless objects:
+* easier to make the solution thread-safe;
+* easier to debug.
 
 ## Further reading
 * [Google on writing testable code](http://misko.hevery.com/code-reviewers-guide/);

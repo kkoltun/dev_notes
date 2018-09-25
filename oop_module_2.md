@@ -81,13 +81,11 @@ Abstraction describes:
 * directly mapped to code; as opposed to vague **CRC Cards which are far from the implementation, this enables to focus on the problem**.
 * CRC resposibilities map Class Diagram to properties/operations
 
-## Encapsulation in Java and UML
+### Encapsulation in Java and UML
 * restricting access to properties to getters and setters;
 * hiding implementation details from other classes.
 
-## Decomposition in Java and UML
-
-### Methods of Decomposition
+### Decomposition in Java and UML - methods
 
 #### Association
 * loose "some" relationship;

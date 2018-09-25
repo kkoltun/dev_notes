@@ -96,13 +96,13 @@ Abstraction describes:
 * lifetimes of objects are independent;
 * symbol - straight line with quantities on each side.
 
-### Aggregation
+#### Aggregation
 * weak "has-a" relationship;
 * weak relationship - the whole can exist without its parts and vice versa (`Crewmember` can exist without `Plane` aggregting it and vice versa);
 * parts can be shared;
 * symbol - line with empty diamond and quantities on each side.
 
-### Composition
+#### Composition
 * striong "has-a" relationship;
 * strong relationship - the whole cannot exist without its parts; if it looses its parts it ceases to exist; if whole is destroyed, parts are destroyed too;
 * parts are exclusive to the whole;

@@ -36,12 +36,10 @@ Make Employee class a partial facade:
 * rest of the functionality is reached via delegation (Employee class acts as a facade in these cases).
 ![solution 3 - partial facade](srp_4.svg)
 
-
-
 ### Further reading
 * [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns).
 
-## 0pen/Closed Principle
+## Open/Closed Principle
 **The code entities should be open for extension, but closed for modification.** 
 
 ### Description
@@ -57,6 +55,45 @@ A module is:
 ### Example
 * an **anti-example** could be `switch` statement that requires change every time you add an option to menu;
 * strategy pattern.
+
+### Use case
+#### Summary
+* software that displays a financial summary on a web page with negative values rendered in red;
+* new requirement: make a printable report in black-and-white - negative values in parentheses.
+#### Steps
+##### Separate things that change for different reasons (SRP)
+Applying SRP:
+* there are two steps in the processing;
+* simplified data-flow view can be made.
+![single responsibility](oo_1.svg)
+##### Organize the dependencies properly (DIP)
+Organizing the source code dependencies:
+* ensure that changes to one of the responsibilities do not cause changes in the other;
+* ensure that the behavior can be extended without undo modification;
+* partitioning processes into classes;
+* separating classes into components.
+![dependencies](oo_2.svg)
+Connections between classes/components are characterized in the following way:
+![connections](oo_3.svg)
+A top view of components is the following:
+![components](oo_4.svg)
+Interactor is protected from changes:
+* it contains business rules;
+* it contains the highest-level policies of the application;
+* other components are dealing with peripheral concerns from the application point of view.
+
+The same way as rest of the application is peripheral to *Interactor*:
+* *Controller* is peripheral to *Interactor*, but central to *Presenters* and *Views*;
+* *Presenters* are peripheral to *Controller*, but central to *Views*.
+
+**A hierarchy of protection based on the notion of "level" is created**:
+* *Interactors* are the highest-level concept, they are the most protected;
+* *Views* are among the lowest-level concepts, they are the least protected.
+
+OCP for architect is for:
+* separating the functionality based on how, why and when it changes;
+* organizing the separated functionality into a hierarchy of compontents;
+* protecting higher-level components in that hierarchy from changes to lower-level compontents.
 
 ### Further reading
 * [Craig Larman, *Protected Variation: The Importance of Being Closed*](http://codecourse.sourceforge.net/materials/The-Importance-of-Being-Closed.pdf);

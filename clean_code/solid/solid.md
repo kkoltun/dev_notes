@@ -50,22 +50,29 @@ A module is:
 * **closed** if it is available for use by other modules. This assumes that the module has been given a well defined, stable description.
 
 ### Rationale
-* 
+OCP for architect is for:
+* separating the functionality based on how, why and when it changes;
+* organizing the separated functionality into a hierarchy of compontents;
+* protecting higher-level components in that hierarchy from changes to lower-level compontents.
 
 ### Example
 * an **anti-example** could be `switch` statement that requires change every time you add an option to menu;
 * strategy pattern.
 
 ### Use case
+
 #### Summary
 * software that displays a financial summary on a web page with negative values rendered in red;
 * new requirement: make a printable report in black-and-white - negative values in parentheses.
+
 #### Steps
+
 ##### Separate things that change for different reasons (SRP)
 Applying SRP:
 * there are two steps in the processing;
 * simplified data-flow view can be made.
 ![single responsibility](oo_1.svg)
+
 ##### Organize the dependencies properly (DIP)
 Organizing the source code dependencies:
 * ensure that changes to one of the responsibilities do not cause changes in the other;
@@ -77,7 +84,7 @@ Connections between classes/components are characterized in the following way:
 ![connections](oo_3.svg)
 A top view of components is the following:
 ![components](oo_4.svg)
-Interactor is protected from changes:
+Interactor is protected from changes because:
 * it contains business rules;
 * it contains the highest-level policies of the application;
 * other components are dealing with peripheral concerns from the application point of view.
@@ -86,14 +93,15 @@ The same way as rest of the application is peripheral to *Interactor*:
 * *Controller* is peripheral to *Interactor*, but central to *Presenters* and *Views*;
 * *Presenters* are peripheral to *Controller*, but central to *Views*.
 
-**A hierarchy of protection based on the notion of "level" is created**:
+A hierarchy of protection based on the notion of "level" is created:
 * *Interactors* are the highest-level concept, they are the most protected;
 * *Views* are among the lowest-level concepts, they are the least protected.
 
-OCP for architect is for:
-* separating the functionality based on how, why and when it changes;
-* organizing the separated functionality into a hierarchy of compontents;
-* protecting higher-level components in that hierarchy from changes to lower-level compontents.
+![features](oo_5.svg)
+
+Additionally, the following measurements are taken in the diagram:
+* information hiding to protect from transitive dependencies;
+* directional control to invert dependency.
 
 ### Further reading
 * [Craig Larman, *Protected Variation: The Importance of Being Closed*](http://codecourse.sourceforge.net/materials/The-Importance-of-Being-Closed.pdf);
@@ -115,7 +123,11 @@ When redefining a method (in a derivative):
 * preconditions may be replaced by weaker ones;
 * postconditions may be replaced by stronger ones.
 
-### Rationale
+This not only applies to making subclasses breaking the API of the super class, but also subclasses which implement the API in an unpredictable way:
+* in mathematics `Square` is a `Rectangle`, so it could be a subclass;
+* height and width of a Rectangle are independently mutable;
+* height and width of a Square must change together;
+* `User` who believes it is communicating with a `Rectangle` would get easily confused.
 
 ### Anti-examples
 
@@ -146,8 +158,21 @@ Small iterfaces:
 * are easier to utilize;
 * are less prone to breaking.
 
-### Example
-* at a larger scale - microservices.
+### Example at code level
+
+#### Problem
+![misuse](isp_1.svg)
+* `User1` uses only `operation1`, `User2` - `operation2` and `User3` - `operation3`;
+* `User1` is dependent of `operation2` and `operation3` despite the fact that it does not use them;
+* change of `operation2` or `operation3` in `OPS` will force `User1` to be recompiled and redeployed (**HOW?**).
+
+#### Solution with ISP
+![solution](isp_2.svg)
+* by seggregating the operations into interface, the source code of `User1` depends on `Operation1` interface and `operation1()`, but **will not** depend on `OPS`;
+* change to `OPS` that `User1` does not care about will not cause `User1` to be recompiled and redeployed.
+
+### Example at architectural level
+
 
 ### Further reading
 
@@ -169,3 +194,6 @@ Small iterfaces:
 
 ### Further reading
 * Design Patterns book.
+
+## TODO
+* dependence does not have to mean expicit code use - it means also one module has to be recompiled and redeployed if other is changed - how does it apply to CI and CD in Java? How does it impair these mechanisms?

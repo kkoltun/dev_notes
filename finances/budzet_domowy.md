@@ -158,7 +158,15 @@ Książki:
 * Pomysł do wynajęcia;
 * Jak kupować nieruchomości poniżej ich wartości rynkowej;
 * Zarządzanie najmem – Poradnik dla właścicielek mieszkań na wynajem;
-* Wolność finansowa dzięki inwestowaniu w nieruchomości.
-
-
-
+* Wolność finansowa dzięki inwestowaniu w nieruchomości;
+* Richest man in babylon;
+* The Little Book of Common Sense Investing;
+* The Little Book of Behavioral Investing;
+* The Psychology of Investing;
+* The Total Money Makeover;
+* Smart and Simple Financial Strategies for Busy People;
+* The millionaire next door;
+* Personal finance for dummies;
+* The only investment book you will ever need;
+* One page financial plan;
+* The intelligent investor.

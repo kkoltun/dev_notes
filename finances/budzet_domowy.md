@@ -141,6 +141,7 @@ Blogi polskie:
 Książki:
 * Złoty spisek;
 * Spisek bogatych;
+* Effective Executive;
 * Myśl i bogać się;
 * Filozofia Kaizen;
 * Ekonomia dla bystrzaków;
@@ -169,4 +170,5 @@ Książki:
 * Personal finance for dummies;
 * The only investment book you will ever need;
 * One page financial plan;
-* The intelligent investor.
+* The intelligent investor;
+* Money Mastery.

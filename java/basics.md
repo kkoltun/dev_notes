@@ -1,5 +1,10 @@
 # Java Basics
 
+## Objects, variables
+* All non-primitive objects must be explicitly allocated and these objects are allocated on heap;
+* fields of classes and objects that do not have an explicit initializer and elements of arrays are automatically initialized with the default value for their type (false for boolean, 0 for all numerical types, null for all reference types).
+* local variables must be definitely assigned to before they are accessed, or it is a compile error.
+
 ## Abstract Class Compared to Interfaces
 Similarities:
 * they cannot be instantiated;
@@ -27,21 +32,113 @@ When to use interface:
 * enabling multple inheritance of type.
 
 ## Exceptions
+
 ### Three kinds of exceptions
-### Checked exception
+#### Checked exception
 * exceptional conditions that a well-written application should anticipate and recover from;
 * these are subject to the Catch or Specify Requirement;
 * these are all exceptions, except for those indicated by `Error`, `RuntimeException` and their subclasses;
 * logging an error message without stacktrace is advised.
-### Errors
+#### Errors
 * exceptional conditions that **external** to the application;
 * application usually cannot anticipate or recover from them;
 * usually result in printing the stack trace and exiting;
 * subclasses of `Error` class;
 * logging the stacktrace usually depends on the context.
-### Runtime Exception
+#### Runtime Exception
 * exceptional conditions that are **internal** to the application;
 * application cannot anticipate or recover from them;
 * usually result of programming bugs - logic errors or improper use of an API;
 * not catching these exceptions is usually helpful as it increases the chance the exception will be detected in the early stage of development;
 * logging all the details - message and whole stacktrace is advised.
+
+### Catching base and derived classes as expceptions
+If both base and erived classes are caught as exceptions, then catch block of derived class must appear before the base class.
+Unlike C++, in Java, catching a base class exception before derived is not allowed by the compiler itself.
+
+## Final
+### Final class
+A final class cannot be subclassed. Many classes in Java are final - `java.lang.System`, `java.lang.String`. This has security and efficiency benefits.
+
+### Final methods
+A final method cannot be overriden or hidden by subclasses.
+This is usually used to prevent unexpected behavior from a subclass altering a method that may be crucial to the function or consistency of the class.
+
+### Final variables
+A final variable can only be initialized once, either via an initializer or an assignment statement. 
+If a variable is a reference:
+* the variable cannot be re-bound to reference another object;
+* the object it references is **still mutable**, if it was originally mutable.
+
+Inside a class:
+* a final variable has to be definitely assigned in every constructor of the class in which it is declared;
+* a static final variable has to be definitely assigned in a static initializer of the class in which it is declared.
+
+## Static
+### Runtime polymorphism
+Like in C++, when method is static, runtime polymorphism **does not happen**.
+This means this code:
+```java
+class Base {
+    public static void show() {
+       System.out.println("Base::show() called");
+    }
+}
+  
+class Derived extends Base {
+    public static void show() {
+       System.out.println("Derived::show() called");
+    }
+}
+  
+class Main {
+    public static void main(String[] args) {
+        Base b = new Derived();;
+        b.show();
+    }
+}
+```
+results in printing `Base::show() called`.
+
+### Static with null
+Calling static methods on objects that are `null` **does not** cause `NullPointerException`. This code compiles and runs well:
+```java
+public class Test {
+    public static void main(String args[]) {
+        Test obj = null;
+        obj.staticMethod();
+    }
+
+    public static void staticMethod() {
+        System.out.println("Hello world!");
+    }
+}
+```
+
+## equals() and hashCode() methods
+Every `java.lang.Object` has two important methods defined:
+* `public boolean equals(Object obj)`;
+* `public int hashCode(Object obj`).
+
+### equals() method
+Java method `equals()` is used to compare equality of two Objects. There are two ways of comparison:
+* **Shallow comparison** - this is the default implementation of `java.lang.Object.equals()`. Is simply checks if two Object references refer to the same object (using `==` operator);
+* **Deep comparison** - this can be provided as own implementation. The comparison can be done w.r.t. state of the Objects.
+
+Any implementation of `equals()` method has to be:
+* **Reflexive** - for any reference value `a`, `a.equals(a)` should return `true`.
+* **Symmetric** - for any reference values `a` and `b`, if `a.equals(b)` returns `true`, then `b.equals(a)` should return `true`.
+* **Transitive** - for any reference values `a`, `b` and `c`, if `a.equals(b)` and `b.equals(c)` then `a.equals(c)` should return `true`.
+* **Consistent** - for any reference values `a` and `b`, multiple invocations of `a.equals(b)` consistently return `true` or consistently return `false`, provided no informatio nused in comparison on the object is modified.
+
+Furthermore, for any non-null reference `a`, `a.equals(null)` should return false.
+
+### hashCode() method
+Java method `hashCode()` returns hashcode value as an Integer. **This method must be overriden in every class which overrides equals() method.**
+
+The general contract of `hashCode()` is:
+* it must be consistent, although it is not necessary that it returns the same numbers from one execution of the application to another;
+* if two objects are equal, according to `equals()` method, then `hashCode()` method must produce the same `Integer` on each of the two objects;
+* if two objects are unequal, according to `equals()` method, is is not neccessary `hashCode()` will produce two distincts numbers. However. producing distinct values on each of the two objects is better for improving performance of hashing based collections.
+
+

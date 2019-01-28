@@ -46,4 +46,29 @@
 * Solve all ambiguities upfront;
 * Avoid signing an uknown non-disclosure agreement;
 * Read and understand the contract;
-* 
+
+## Freelancer
+* Expensive withdrawal;
+* Project accepting costs 10% even if you reject it later;
+
+## Upwork
+
+## Finances
+[prakreacja](https://prakreacja.pl/freelancer-dzialalnosc/)
+[4programmers forum](https://4programmers.net/Forum/Off-Topic/284627-upwork_rozliczenie_bez_dg?page=1)
+[opracyzdalnej 1](http://opracyzdalnej.pl/4-najwieksze-finansowe-bledy-freelancerow/)
+[opracyzdalnej 2](http://opracyzdalnej.pl/jak-rozliczyc-prace-zdalna-i-zabezpieczyc-swoje-wynagrodzenie-2/)
+[lookreatywni](http://lookreatywni.pl/prawo-dla-freelancera/rozliczenia-podatkowe-freelancerow/)
+[mamopracuj](https://mamopracuj.pl/freelancer-bez-dzialalnosci-jak-mozesz-sie-rozliczyc/)
+
+## Plans
+Short-term plan (february-march):
+0. 01/02 - 15/02: look at the jobs - what do you need to learn to get them?
+1. 16/02 - 28/02: start looking for jobs on one of the platforms. Until the end, earn 150$ in the website wallet.
+2. 01/03 - ...: apply for the donation in Labour Office. In the meantime work as a freelancer, earn 1000$ in the website wallet.
+3. 01/04 - ...: receive the donation, open the company and get the money from website wallet.
+
+Long-term plan:
+1. Work in projects, earn money on the website's wallet.
+2. Monthly withraw money (usually costs ca. 30$) to a currency account (mBank, free).
+3. Provide an invoice to the website.

@@ -18,10 +18,22 @@ TEST(HeapSortTest, MaxHeapifyTest) {
     EXPECT_EQ(expected, actual.getArray());
 }
 
-TEST(HeapSortTest, DefaultHeapSortTest) {
+TEST(HeapSortTest, BuildMaxHeapTest) {
     // given
     std::vector<int> actual{5, 2, 4, 5, 1, 3, 6, 8};
-    std::vector<int> expected{1, 2, 3, 4, 5, 5, 6, 8};
+    std::vector<int> expected{8, 5, 6, 5, 1, 3, 4, 2};
+
+    // when
+    buildMaxHeap(actual);
+
+    // then
+    EXPECT_EQ(expected, actual);
+}
+
+TEST(HeapSortTest, DefaultHeapSortTest) {
+    // given
+    std::vector<int> actual{2, 6, 1, 2, 3, 13, 46, 1, 35, 7};
+    std::vector<int> expected{1, 1, 2, 2, 3, 6, 7, 13, 35, 46};
 
     // when
     heapSort(actual);

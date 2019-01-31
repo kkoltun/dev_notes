@@ -7,6 +7,7 @@
 #include "Heap.h"
 
 Heap::Heap(std::vector<int> array) {
+    this->size = array.size();
     this->array = std::move(array);
 }
 
@@ -40,6 +41,14 @@ int Heap::leftIdx(int i) const {
 
 int Heap::rightIdx(int i) const {
     return 2 * i + 2;
+}
+
+int Heap::getSize() const {
+    return this->size;
+}
+
+void Heap::shrinkBy(int size) {
+    this->size -= size;
 }
 
 int Heap::operator[](int i) const {

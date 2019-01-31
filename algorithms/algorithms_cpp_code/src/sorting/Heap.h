@@ -10,25 +10,29 @@
 class Heap {
 private:
     std::vector<int> array;
+    int size;
 
 public:
 
     explicit Heap(std::vector<int> array);
 
-    int parent(int i) const;
-    int left(int i) const;
-    int right(int i) const;
+    int parent(int) const;
+    int left(int) const;
+    int right(int) const;
 
-    bool hasLeft(int i) const;
-    bool hasRight(int i) const;
+    bool hasLeft(int) const;
+    bool hasRight(int) const;
 
-    int parentIdx(int i) const;
-    int leftIdx(int i) const;
-    int rightIdx(int i) const;
+    int parentIdx(int) const;
+    int leftIdx(int) const;
+    int rightIdx(int) const;
 
-    int operator[](int i) const;
+    int getSize() const;
+    void shrinkBy(int);
 
-    void set(int idx, int value);
+    int operator[](int) const;
+
+    void set(int, int);
 
     std::vector<int>& getArray();
 };

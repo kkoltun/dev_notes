@@ -8,20 +8,36 @@
 #include "Heap.h"
 
 void heapSort(std::vector<int> &list) {
+    buildMaxHeap(list);
+
     Heap heap = Heap(list);
 
-    std::cout << "Element 0: " << heap[0] << std::endl;
-    std::cout << "Element 1: " << heap[1] << std::endl;
-    std::cout << "Element 1 parent: array[" << heap.parentIdx(1) << "]=" << heap.parent(1) << std::endl;
-    std::cout << "Element 1 left: array[" << heap.leftIdx(1) << "]=" << heap.left(1) << std::endl;
-    std::cout << "Element 1 right: array[" << heap.rightIdx(1) << "]=" << heap.right(1) << std::endl;
+    for (int i = heap.getSize() - 1; i >= 1; --i) {
+        int currentElementValue = heap[i];
+        heap.getArray()[i] = heap[0];
+        heap.getArray()[0] = currentElementValue;
+
+        heap.shrinkBy(1);
+        maxHeapify(heap, i);
+    }
+
+    list = heap.getArray();
+}
+
+void buildMaxHeap(std::vector<int> &list) {
+    Heap heap = Heap(list);
+    for (int i = heap.getSize() - 1; i >= 0; --i) {
+        maxHeapify(heap, i);
+    }
+    list = heap.getArray();
 }
 
 // assumes binary trees rooted at left(i) and right(i) are max-heaps but heap[i] might be smaller than its children
 void maxHeapify(Heap &heap, int i) {
     auto isMaxHeap = [](Heap& heap, int i) -> bool { return heap[i] >= heap.left(i) && heap[i] >= heap.right(i); };
 
-    while (heap.hasLeft(i) && heap.hasRight(i)) {
+    // przerobić na skrypt rekursywny bazujący na size
+    while (heap.hasLeft(i)) {
         if (isMaxHeap(heap, i)) {
             return;
         }
@@ -31,7 +47,7 @@ void maxHeapify(Heap &heap, int i) {
             largestIdx = heap.leftIdx(i);
         }
 
-        if (heap.right(i) > heap[largestIdx]) {
+        if (heap.hasRight(i) && (heap.right(i) > heap[largestIdx])) {
             largestIdx = heap.rightIdx(i);
         }
 

@@ -10,6 +10,8 @@
 
 void heapSort(std::vector<int> &list);
 
+void buildMaxHeap(std::vector<int> &list);
+
 void maxHeapify(Heap &heap, int i);
 
 #endif //ALGORITHMS_CPP_CODE_HEAPSORT_H

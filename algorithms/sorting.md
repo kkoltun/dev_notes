@@ -81,8 +81,32 @@ MERGE_SORT(A, p, r)
 
 ## Heap sort
 
+### Heaps
+Features:
+* aray object that can be viewed as nearly complete binary tree;
+* each node of the tree corresponds to an element of an array;
+* the tree is completely filled on all levels except possibly the lowest;
+
+Functions:
+```cpp
+parent(i) { return array[(i-1)/2]; }
+left(i) { return array[2*i+1]; }
+right(i) { return array[2*i+2]; }
+```
+
+Max-heap:
+* maintains property for every node `i` other than the root `array[parent(i)] >= array[i]`;
+* usually used for sorting.
+Min-heap:
+* maintains property for every node `i` other than the root `array[parent(i)] <= array[i]`;
+* usually used for pririty queues.
+
+### Sorting using heap sort
 Features:
 * **sorts in place**, like insertion sort;
-* **O(n lg(n)) worst-case running time**;
+* **O(n lg(n)) worst-case running time**, like merge sort;
+* **combines the better attributes of the two - insertion sort and merge sort**;
 * uses heap to manage information;
+
+
 * 

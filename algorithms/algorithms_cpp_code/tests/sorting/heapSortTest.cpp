@@ -1,8 +1,7 @@
-#include <iostream>
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "../src/sorting/heapSort.h"
+#include "../../src/sorting/heapSort.h"
 
 TEST(HeapSortTest, MaxHeapifyTest) {
     // given

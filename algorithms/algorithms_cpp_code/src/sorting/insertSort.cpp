@@ -7,15 +7,15 @@ std::vector<int> insertSort(std::vector<int> list) {
         return list;
     }
 
-    for (int i = 1; i < list.size(); ++i) {
-        int key = list[i];
-        int j = i - 1;
+    for (int j = 1; j < list.size(); ++j) {
+        int key = list[j];
 
-        while (j > 0 && list[j] > key) {
-            list[j + 1] = list[j];
-            j -= 1;
+        int i = j - 1;
+        while(i > 0 && list[i] > key) {
+            list[i + 1] = list[i];
+            list[i] = key;
+            --i;
         }
-        list[j + 1] = key;
     }
 
     return list;

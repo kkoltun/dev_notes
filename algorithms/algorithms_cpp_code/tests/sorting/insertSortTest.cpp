@@ -2,7 +2,7 @@
 #include <vector>
 
 #include "gtest/gtest.h"
-#include "../src/sorting/insertSort.h"
+#include "../../src/sorting/insertSort.h"
 
 TEST(InsertSortTest, NoElementsTest) {
     // given

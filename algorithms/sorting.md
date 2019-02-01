@@ -1,6 +1,7 @@
 # Sorting algorithms
 
 ## Glossary:
+
 * **the algorithm sorts in place**: the algorithm rearranges the elements within the input array, with at most a constant number of them stored outside the array at any time;
 
 ## Insertion sort
@@ -43,36 +44,36 @@ Steps:
 2. Sort the two subarrays recursively using merge sort.
 3. Merge the two sorted subsequences to produce the sorted answer.
 
-Pseudocode for the `MERGE` step:
+Pseudocode for the `MERGE` step (p, q, r are idices such that p <= q < r):
 ```
 MERGE(A, p, q, r)
-n1 = q - p + 1
-n2 = r - q
-let L[1..n1 + 1] and R[1..n2 + 1] be new arrays
+    n1 = q - p + 1
+    n2 = r - q
+    let L[1..n1 + 1] and R[1..n2 + 1] be new arrays
 
-for i = 1 to n1
-    L[i] = A[p + i - 1]
+    for i = 1 to n1
+        L[i] = A[p + i - 1]
 
-for j = 1 to n2
-    R[j] = A[q + j]
+    for j = 1 to n2
+        R[j] = A[q + j]
 
-L[n1 + 1] = inf
-R[n2 + 1] = inf
+    L[n1 + 1] = inf
+    R[n2 + 1] = inf
 
-for k = p to r
-    if L[i] =< R[j]
-        A[k] = L[i]
-        i = i + 1
-    else
-        A[k] = R[j]
-        j = j + 1
+    for k = p to r
+        if L[i] =< R[j]
+            A[k] = L[i]
+            i = i + 1
+        else
+            A[k] = R[j]
+            j = j + 1
 ```
 
-Pseudocode for the `MERGE_SORT`:
+Pseudocode for the `MERGE_SORT` which sorts the elements in the subarray `A[p..r]` (if p >= r the subarray has at most one lement and is therefore already sorted):
 ```
 MERGE_SORT(A, p, r)
     if p < r
-        q = (p + 1)/2
+        q = (p + r)/2
 
         MERGE_SORT(A, p, q)
         MERGE_SORT(A, q + 1, R)
@@ -82,6 +83,7 @@ MERGE_SORT(A, p, r)
 ## Heap sort
 
 ### Heaps
+
 Features:
 * aray object that can be viewed as nearly complete binary tree;
 * each node of the tree corresponds to an element of an array;
@@ -102,6 +104,7 @@ Min-heap:
 * usually used for pririty queues.
 
 ### Sorting using heap sort
+
 Features:
 * **sorts in place**, like insertion sort;
 * **O(n lg(n)) worst-case running time**, like merge sort;
@@ -149,7 +152,7 @@ Starting from the lowest level, there are only leaves of the tree, and so each i
 #### Heap sort algorithm
 
 The heapsort algorithm:
-1. Use BUILD_MAX_HEAP on input array.
+1. Use `BUILD_MAX_HEAP` on input array.
 2. The resultant array is a max-heap, however it is not sorted. 
 3. Since the maximum element of the array is stored at the root `A[1]` we can put it into its correct final position - exchange values with `A[n]`.
 4. Discard the node `n` by decrementing A.heap_size.
@@ -165,3 +168,53 @@ HEAPSORT(A)
         A.heap_size = A.heap_size - 1
         MAX_HEAPIFY(A, 1)
 ```
+
+## Quicksort
+
+Features:
+* **O(n^2) worst case running time, however its expected running time is O(n*lg(n)) with quite small constant factors**;
+* **sorts in place**;
+* employs divide-and-conquer paradigm.
+
+### Description
+
+Quicksort employs three-step divide-and-conquer process for sorting typical subarray `A[p..r]`:
+1. Divide: partition the array `A[p..r]` into two (possibly empty) subarrays:
+* `A[p..q-1]` such that each element of if is less than or equal to `A[q]`;
+* `A[q+1, r]` such that each element of it is greater than or equal to `A[q]`.
+2. Conquer: sort the two subarrays `A[p..q-1]` and `A[q+1..r]` by recursive calls to quicksort.
+3. Combine: because the subarrays are already sorted, no work is needed to combine them: the entire array `A[p..r]` is now sorted.
+
+```
+QUICKSORT(A, p, r)
+    if p < r
+        q = PARTITION(A, p, r)
+        QUICKSORT(A, p, q - 1)
+        QUICKSORT(A, q + 1, r)
+```
+
+Partitioning rearranges the subarray in place. It always selects an element `x =A[r]` as pivot element around which to partition the subarray `A[p..r]`.
+
+```
+PARTITION(A, p, r)
+    x = A[r]
+    i = p - 1
+    for j = p to r - 1
+        if A[j] <= x
+            i = i + 1
+            exchange A[i] with A[j]
+    exchange A[i+1] with A[r]
+    return i+1
+```
+
+### Performance of quicksort
+
+The running time of quicksort depends on whether the partioning is balances or unbalanced, which in turn depends on which elements are used for partitioning:
+* for balanced partitioning, the algorithm runs asymptoticalyl as fast as merge sort;
+* for unbalanced, it can run asymptotically as slow as insertion sort.
+
+The two boundary cases are:
+* Worst-case partitioning - occurs when partitioning routine produces on subproblem with `n-1` elements and one with 0 elements. This case running time is O(n^2).
+* Best-case partitioning - in the most even possible split, `PARITION` produces two subproblems, each of size no more than `n/2`. In this case quicksort runs much faster - running time is O(nlgn).
+
+**The average-case running time of quicksort is much closer to the best case than to the worst case.**

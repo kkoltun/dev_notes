@@ -41,3 +41,16 @@ TEST(HeapSortTest, DefaultHeapSortTest) {
     // then
     EXPECT_EQ(expected, actual);
 }
+
+TEST(HeapSortTest, HeapExtactMaxTest) {
+    // given
+    Heap actual({8, 5, 6, 5, 1, 3});
+    int expectedMax = 8;
+    std::vector<int> expectedAfterExtract{6, 5, 3, 5, 1};
+
+    // when
+    int actualMax = heapExtractMax(actual);
+
+    EXPECT_EQ(expectedMax, actualMax);
+    EXPECT_EQ(expectedAfterExtract, actual.getArray());
+}

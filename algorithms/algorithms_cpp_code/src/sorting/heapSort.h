@@ -14,4 +14,6 @@ void buildMaxHeap(std::vector<int> &list);
 
 void maxHeapify(Heap &heap, int i);
 
+int heapExtractMax(Heap &heap);
+
 #endif //ALGORITHMS_CPP_CODE_HEAPSORT_H

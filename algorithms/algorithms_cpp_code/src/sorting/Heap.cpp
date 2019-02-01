@@ -24,11 +24,11 @@ int Heap::right(int i) const {
 }
 
 bool Heap::hasLeft(int i) const {
-    return array.size() > leftIdx(i);
+    return this->size > leftIdx(i);
 }
 
 bool Heap::hasRight(int i) const {
-    return array.size() > rightIdx(i);
+    return this->size > rightIdx(i);
 }
 
 int Heap::parentIdx(int i) const {

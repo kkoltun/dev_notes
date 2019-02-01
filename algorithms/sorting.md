@@ -108,5 +108,60 @@ Features:
 * **combines the better attributes of the two - insertion sort and merge sort**;
 * uses heap to manage information;
 
+#### Maintaining the heap property
 
-* 
+In order to maintain the max-heap property, we call the procedure `MAX_HEAPIFY`.
+When it is called, `MAX_HEAPIFY` assumes that binary trees rooted at `LEFT(i)` and `RIGHT(i)` are max-heaps, but that `A[i]` might be smaller than its children, thus violating the max-heap property.
+
+`MAX_HEAPIFY` lets the value `A[i]` "float down" in the max-heap so that the subtree at index `i` obeys the max-heap property.
+
+```
+MAX_HEAPIFY(A, i):
+    l = LEFT(i)
+    r= RIGHT(i)
+
+    if l <= A.heap_size and A[l] > A[i]
+        largest = l
+    else
+        largest = i
+
+    if r <= A.heap_size and A[r] > A[largest]
+        largest = r
+
+    if largest != i
+        exchange A[i] with A[largest]
+        MAX_HEAPIFY(A, largest)
+```
+
+#### Building a heap
+
+`MAX_HEAPIFY` can be used in a bottom-up manner to convert an array `A` into a max-heap.
+
+```
+BUILD_MAX_HEAP(A):
+    A.heap_size = A.length
+    for i = A.length/2 downto 1
+        MAX_HEAPIFY(A, i)
+```
+
+Starting from the lowest level, there are only leaves of the tree, and so each is a 1-element heap to begin with. The procedure goes through the remaining nodes of the tree and runs `MAX_HEAPIFY` on each one.
+
+#### Heap sort algorithm
+
+The heapsort algorithm:
+1. Use BUILD_MAX_HEAP on input array.
+2. The resultant array is a max-heap, however it is not sorted. 
+3. Since the maximum element of the array is stored at the root `A[1]` we can put it into its correct final position - exchange values with `A[n]`.
+4. Discard the node `n` by decrementing A.heap_size.
+5. The children of the root remain max-heaps, but the new rootelemnt might violate the max-heap property.
+6. Call `MAX_HEAPIFY(A, 1)`.
+7. Go to point 1.
+
+```
+HEAPSORT(A)
+    BUILD_MAX_HEAP(A)
+    for i = A.length downto 2
+        exchange A[1] with A[i]
+        A.heap_size = A.heap_size - 1
+        MAX_HEAPIFY(A, 1)
+```

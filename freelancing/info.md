@@ -4,6 +4,11 @@
 * Update linkedin;
 * YouTube video, webpage;
 
+## Overall information
+[thread on HN about remote salaries](https://news.ycombinator.com/item?id=19024575&utm_source=hackernewsletter&utm_medium=email&utm_term=working)
+[remote companies list 1](https://docs.google.com/spreadsheets/d/1VOehQv0bOs2pY7RkKJ8RmlUbuu8UmSgzfvjR0m5hyxQ/edit#gid=1145296357)
+[remote companies list 2](https://docs.google.com/spreadsheets/d/1TLJSlNxCbwRNxy14Toe1PYwbCTY7h0CNHeer9J0VRzE/edit#gid=1279011369)
+
 ## What is paid
 * **Rates and reputation are in fairly strict relationship**;
 * History of projects;
@@ -47,11 +52,31 @@
 * Avoid signing an uknown non-disclosure agreement;
 * Read and understand the contract;
 
-## Freelancer
+## Downs
+### Freelancer
 * Expensive withdrawal;
 * Project accepting costs 10% even if you reject it later;
 
-## Upwork
+### Upwork
+* 20 % fee;
+* Additional fees for terrible support;
+* One dispute can block your account forever;
+* Hard to compete with those who have lower costs of living;
+
+### CrossOver
+* Large discrepancies in hour rates (from $10 to $100).
+* Randomly taken screenshots, if you go to the toilet in a wrong time - deduction.
+* If you fail one week, they don't pay you.
+* You get fired from a job without a notice.
+
+### Toptal
+* Does not show available jobs to non-member freelancers.
+* 5-steps interview, 2-weeks test-project.
+
+## Overall rules
+* In order to get a job done properly, you need solid communication, a client willing to talk to you and sort you out with what you need within at least 48 hours;
+* If they’re constantly bargaining to get your price down, to undervalue the work that needs to be done.
+* If they try and validate a low price with the promise of ‘Long term work’.
 
 ## Finances
 [prakreacja](https://prakreacja.pl/freelancer-dzialalnosc/)

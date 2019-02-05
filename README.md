@@ -4,6 +4,18 @@
 
 *Hubert Dreyfus*
 
+
+
 > If you don't prioritize your life, someone else will.
 
 *Greg McKeown*
+
+
+
+> Repetition does not spoil the prayer.
+
+*Jonathan Rosenberg*
+
+
+
+> Repetitio est mater studiorum.

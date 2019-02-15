@@ -23,18 +23,18 @@
 ### Diagrams
 #### Violation
 Violation of SRP rule - implicit coupling of three actors (*reasons to change*).
-![misunderstanding](srp_1.svg)
+![misunderstanding](./image/srp_1.svg)
 #### Solution 1
 Put all operations to separate classes. Drawback - three classes to manage.
-![solution 1 - separation](srp_2.svg)
+![solution 1 - separation](./image/srp_2.svg)
 #### Solution 2
 Use facade to manage classses and delegate calls.
-![solution 2 - facade](srp_3.svg)
+![solution 2 - facade](./image/srp_3.svg)
 #### Solution 3
 Make Employee class a partial facade:
 * most important business function stays in the class close to data;
 * rest of the functionality is reached via delegation (Employee class acts as a facade in these cases).
-![solution 3 - partial facade](srp_4.svg)
+![solution 3 - partial facade](./image/srp_4.svg)
 
 ### Further reading
 * [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns).
@@ -71,7 +71,7 @@ OCP for architect is for:
 Applying SRP:
 * there are two steps in the processing;
 * simplified data-flow view can be made.
-![single responsibility](oo_1.svg)
+![single responsibility](./image/oo_1.svg)
 
 ##### Organize the dependencies properly (DIP)
 Organizing the source code dependencies:
@@ -79,11 +79,11 @@ Organizing the source code dependencies:
 * ensure that the behavior can be extended without undo modification;
 * partitioning processes into classes;
 * separating classes into components.
-![dependencies](oo_2.svg)
+![dependencies](./image/oo_2.svg)
 Connections between classes/components are characterized in the following way:
-![connections](oo_3.svg)
+![connections](./image/oo_3.svg)
 A top view of components is the following:
-![components](oo_4.svg)
+![components](./image/oo_4.svg)
 Interactor is protected from changes because:
 * it contains business rules;
 * it contains the highest-level policies of the application;
@@ -97,7 +97,7 @@ A hierarchy of protection based on the notion of "level" is created:
 * *Interactors* are the highest-level concept, they are the most protected;
 * *Views* are among the lowest-level concepts, they are the least protected.
 
-![features](oo_5.svg)
+![features](./image/oo_5.svg)
 
 Additionally, the following measurements are taken in the diagram:
 * information hiding to protect from transitive dependencies;
@@ -142,8 +142,8 @@ This not only applies to making subclasses breaking the API of the super class, 
 3. Code that worked on the object assuming that the post-condition is upheld is broken now.
 
 ### Further reading
-* [Presentation by Liskov and Wing](http://reports-archive.adm.cs.cmu.edu/anon/1999/CMU-CS-99-156.ps])
-* [Robert C. Martin](https://web.archive.org/web/20151128004108/http://www.objectmentor.com/resources/articles/lsp.pdf)
+* [Presentation by Liskov and Wing](./image/http://reports-archive.adm.cs.cmu.edu/anon/1999/CMU-CS-99-156.ps])
+* [Robert C. Martin](./image/https://web.archive.org/web/20151128004108/http://www.objectmentor.com/resources/articles/lsp.pdf)
 
 ## Interface Segregation Principle
 **Favor many, smaller, client-specific interfaces over one larger, more monolithic interface.**
@@ -161,13 +161,13 @@ Small iterfaces:
 ### Example at code level
 
 #### Problem
-![misuse](isp_1.svg)
+![misuse](./image/isp_1.svg)
 * `User1` uses only `operation1`, `User2` - `operation2` and `User3` - `operation3`;
 * `User1` is dependent of `operation2` and `operation3` despite the fact that it does not use them;
 * change of `operation2` or `operation3` in `OPS` will force `User1` to be recompiled and redeployed (**HOW?**).
 
 #### Solution with ISP
-![solution](isp_2.svg)
+![solution](./image/isp_2.svg)
 * by seggregating the operations into interface, the source code of `User1` depends on `Operation1` interface and `operation1()`, but **will not** depend on `OPS`;
 * change to `OPS` that `User1` does not care about will not cause `User1` to be recompiled and redeployed.
 

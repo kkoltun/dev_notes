@@ -162,3 +162,15 @@ If we wish to delete an element with given key, O(n) time is required in the wor
 #### Circular, doubly linked list with a sentinel
 
 TODO
+
+### Hash Table
+
+**Hash Table** is a dynamic set that supports only dictionary operations:
+* `INSERT`;
+* `SEARCH`;
+* `DELETE`.
+
+**Hash table** average time to search for an element is `O(1)`, however it can be as long as in a linked list - `O(n)`.
+
+#### Direct-address tables
+

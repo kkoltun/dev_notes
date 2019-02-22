@@ -1,4 +1,9 @@
 # Maven
+
+## Miscellanea
+
+* `<parent>` - Maven looks for it and creates an *effective POM* by merging the information from parent and module POM.
+
 ## Build Lifecycle Basics
 
 ### Build Lifecycles

@@ -211,6 +211,17 @@ Resource `R` is a temporally varying membersip function `Mr(t)` which for time `
 ### Stateless vs caching
 [Ion Crowcraft](https://www.cl.cam.ac.uk/~jac22/books/www/book/node39.html)
 
+## Errors in REST
+
+If resource has not been found:
+* 400 if there is no mapping to it;
+* 404 if there is mapping but it has not been found.
+
+Furthermore:
+* according to OWASP API should not reveal any information about the implementation or structure;
+* A LOT OF business exceptions should not be really exceptions;
+* mapping with FE should be simple;
+* information passed to FE should be minimal.
 
 ## RPC vs Messaging
 ### Remote Procedure Calls

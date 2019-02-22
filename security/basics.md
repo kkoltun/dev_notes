@@ -46,4 +46,8 @@ Usages:
 
 ## LDAP
 
-
+## Useful information
+[100% Stateless with JWT (JSON Web Token) by Hubert Sablonnière](https://www.youtube.com/watch?v=67mezK3NzpU)
+[Deconstructing REST Security by David Blevins](https://www.youtube.com/watch?v=9CJ_BAeOmW0)
+[David Blevins: Deconstructing and Evolving REST Security 1/2](https://www.youtube.com/watch?v=_wWxfZxCQfQ)
+[David Blevins: Deconstructing and Evolving REST Security 2/2](https://www.youtube.com/watch?v=osQmFNm0YDU)

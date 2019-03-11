@@ -42,8 +42,6 @@ Usages:
 * **By reference** - like a credit card. A third service is required to know the person (here: account balance) from the token.
 * **By value** - like a banknote. The only thing to be checked is if the token has not been forged (like a banknote).
 
-## Cookies
-
 ## LDAP
 
 ## Useful information

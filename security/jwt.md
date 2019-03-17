@@ -68,9 +68,9 @@ After these claims, there can be private claims, eg.:
 For example, if `"alg": "HS256"` the following function will be used to generate the signature:
 `hmacSha256(encodedHeader + "." + encodedPayload, "secret");`.
 
-### Example message
+## Example message
 
-#### Encoded
+### Encoded
 
 ```
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
@@ -81,8 +81,7 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
 *Breaklines added to enhance readability.*
 *Encoded header, encoded payload and signature are divided by the dot.*
 
-
-#### Decoded
+### Decoded
 
 1. Header:
 ```json
@@ -113,13 +112,15 @@ HMACSHA256(
 
 The resultant signature is used to trust the payload. **If anything changes in the payload, the signature will change and the server should reject the message!**
 
-## Signing the message
+## Miscellanea
+
+### Signing the message
 
 There are two ways of signing the message:
 * symmetric - the secret is shared among nodes/services - **not neccessarily secure**;
 * asymmetric - a security provider is used with a **private key**, public key is shared.
 
-## What about OAUTH2
+### What about OAUTH2
 
 OAUTH2 tokens are mostly obscure. **JWT can be used with OAUTH2**:
 * it will is a bit longer;
@@ -128,13 +129,12 @@ OAUTH2 tokens are mostly obscure. **JWT can be used with OAUTH2**:
 
 **The same with OPEN-ID connect - the `id token` is a JWT!**
 
-## Benefits
+### Benefits
 
 * Minimal overhead - just add a processor to every used node to encode/decode the message.
 * Microservices can be used.
 
-
-## Drawbacks
+### Drawbacks
 
 ### Tokens revocation
 

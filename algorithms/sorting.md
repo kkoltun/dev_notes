@@ -99,9 +99,10 @@ right(i) { return array[2*i+2]; }
 Max-heap:
 * maintains property for every node `i` other than the root `array[parent(i)] >= array[i]`;
 * usually used for sorting.
+
 Min-heap:
 * maintains property for every node `i` other than the root `array[parent(i)] <= array[i]`;
-* usually used for pririty queues.
+* usually used for priority queues.
 
 ### Sorting using heap sort
 
@@ -209,7 +210,7 @@ PARTITION(A, p, r)
 
 ### Performance of quicksort
 
-The running time of quicksort depends on whether the partioning is balances or unbalanced, which in turn depends on which elements are used for partitioning:
+The running time of quicksort depends on whether the partioning is balanced or unbalanced, which in turn depends on which elements are used for partitioning:
 * for balanced partitioning, the algorithm runs asymptoticalyl as fast as merge sort;
 * for unbalanced, it can run asymptotically as slow as insertion sort.
 

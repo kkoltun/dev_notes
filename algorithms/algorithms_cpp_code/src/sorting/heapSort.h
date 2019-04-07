@@ -6,7 +6,7 @@
 #define ALGORITHMS_CPP_CODE_HEAPSORT_H
 
 #include <vector>
-#include "Heap.h"
+#include "../structures/Heap.h"
 
 void heapSort(std::vector<int> &list);
 

@@ -17,7 +17,7 @@ add_executable(runAllTests tests.cpp ${TEST_SOURCES} ${SOURCES}
         tests/dac/findMaxSubarrayTest.cpp
         tests/structures/queueTest.cpp tests/structures/doublyLinkedListTest.cpp tests/structures/circularDoublyLinkedListTest.cpp)
 add_executable(algorithms_cpp_code main.cpp ${SOURCES}
-        src/sorting/mergeSort.cpp src/sorting/Heap.cpp src/sorting/Heap.h src/sorting/heapSort.h src/sorting/heapSort.cpp src/sorting/quickSort.cpp src/sorting/quickSort.h src/sorting/mergeSort2.cpp src/sorting/mergeSort2.h src/sorting/countingSort.cpp src/sorting/countingSort.h src/sorting/bucketSort.cpp src/sorting/bucketSort.h
+        src/sorting/mergeSort.cpp src/structures/Heap.cpp src/structures/Heap.h src/sorting/heapSort.h src/sorting/heapSort.cpp src/sorting/quickSort.cpp src/sorting/quickSort.h src/sorting/mergeSort2.cpp src/sorting/mergeSort2.h src/sorting/countingSort.cpp src/sorting/countingSort.h src/sorting/bucketSort.cpp src/sorting/bucketSort.h
         src/dac/findMaxSubarray.cpp src/dac/findMaxSubarray.h
         src/structures/Queue.cpp src/structures/Queue.h src/structures/DoublyLinkedList.h src/structures/CircularDoublyLinkedList.h src/structures/Node.cpp src/structures/Node.h)
 

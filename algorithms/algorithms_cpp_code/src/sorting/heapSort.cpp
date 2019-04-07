@@ -5,7 +5,7 @@
 #include <iostream>
 
 #include "heapSort.h"
-#include "Heap.h"
+#include "../structures/Heap.h"
 
 void heapSort(std::vector<int> &list) {
     buildMaxHeap(list);

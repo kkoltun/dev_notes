@@ -7,9 +7,10 @@
 #include "Queue.h"
 
 Queue::Queue(unsigned size) {
-    // allocate one element more, tail must point to empty space
     this->size = size + 1;
-    this->array = new int[size + 1];
+    this->array = new int[this->size];
+    this->head = 0;
+    this->tail = 0;
 }
 
 bool Queue::empty() {
@@ -17,37 +18,34 @@ bool Queue::empty() {
 }
 
 bool Queue::full() {
-    return tail == size - 1
-           ? head == 0
-           : head == tail + 1;
+    return head == tail + 1;
 }
 
-void Queue::enqueue(int element) {
-    if (this->full()) {
-        throw std::runtime_error("Queue overflow");
+void Queue::enqueue(int value) {
+    if (full()) {
+        throw std::overflow_error("Queue is full");
     }
+    array[tail] = value;
 
-    array[tail] = element;
-
-    if (tail == size - 1) {
-        tail = 0;
-    } else {
+    if (tail < size - 1) {
         ++tail;
+    } else {
+        tail = 0;
     }
 }
 
 int Queue::dequeue() {
-    if (this->empty()) {
-        throw std::runtime_error("Queue underflow");
+    if (empty()) {
+        throw std::underflow_error("Queue is empty");
     }
 
-    int element = array[head];
+    int value = array[head];
 
-    if (head == size - 1) {
-        head = 0;
-    } else {
+    if (head < size - 1) {
         ++head;
+    } else {
+        head = 0;
     }
 
-    return element;
+    return value;
 }

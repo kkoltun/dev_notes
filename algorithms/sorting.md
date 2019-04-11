@@ -258,6 +258,7 @@ COUNTING_SORT(A, B, k)
         C[i] += C[i-1]
     // C[i] now contains the number of elements less than or equal to i
 
+    // going backwards is crucial for stability of the algorithm
     for j = A.length downto 1
       value = A[j]
       numberOfLessOrEqual = C[value]

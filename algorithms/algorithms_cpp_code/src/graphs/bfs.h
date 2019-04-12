@@ -11,6 +11,6 @@
 
 #include "Vertex.h"
 
-void bfs(std::map<Vertex*, std::vector<Vertex*>> graph, Vertex* source);
+void bfs(std::map<Vertex*, std::vector<Vertex*>>, Vertex*);
 
 #endif //ALGORITHMS_CPP_CODE_BFS_H

@@ -11,6 +11,8 @@ Given a graph `G = (V, E)` and a distinguished source vertex `s`, BFS:
 * computes distance (smallest number of edges) from `s` to each reachable vertex;
 * produces "breadth-first tree" with root `s` that contains all reachable vertices.
 
+**BFS runs in time linear to the size of the adjacency-list representation of G.**
+
 ## Mechanics
 
 *As in CLRS we distinguish white, gray and black vertices to enhance understandability of the algorithm.*

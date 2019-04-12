@@ -40,4 +40,8 @@ Properties of the matrix:
 * for an undirected graph, the matrix is symmetric, so only half of it can be stored, thereby cutting the memory needed almost in half;
 * if the graph is weighted, we can simply store the weight `w(u, v)` of the edge `(u, v`) as the entry in row `u` and column `v`; the absence of an edge can be signalled with `nil`, `0`, `inf`, etc.
 
+## Transpose of a graph
+
+The **transpose** of a directed graph `G = (V, E)` is the graph `G^T = (V, E^T)` with all of the edges of `G` reversed.
+
 

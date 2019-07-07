@@ -7,7 +7,7 @@ Facts:
 * The box model describes how the elements are laid out on the page;
 * Setting the `height` and `width` of the element sets only the width and height of the content area inside the element;
 
-![box model](./image/box_model.svg)
+![box model](./image/box_model.jpg)
 
 The acutal area is created by the following dimensions:
 ```

@@ -38,6 +38,12 @@ Great fighters are very relaxed when not fighting, almost sleeping before fight 
 The art is to be a 10/10 when neccessary and be relaxed in other circumstances.
 Ability to avoid the simmering 6 directly affects the ability to ratchet up and get to 10.
 
+10. **Proactive day architecture.**
+People brilliance comes from thinking.
+Time for thinking should have the highest priority.
+It should not be deffered to free moments between meetings or after lunch.
+The time devoted to thinking should be the highest performance time.
+
 10. **Escaping from too much input to be more receptive.**
 Leaving a place with too much crowd can make you open pores that make you more receptive and see more.
 

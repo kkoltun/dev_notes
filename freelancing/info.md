@@ -1,21 +1,26 @@
 # Freelancing
 
 ## TODO
+* Upgrade GitHub - move the portfolio on another level;
+* Choose code that I am proud of;
+* Take part in open-source projects;
+* Fill in the quizes on freelancer pages;
 * Update linkedin;
-* YouTube video, webpage;
+* Create a webpage;
 
 ## Overall information
 [thread on HN about remote salaries](https://news.ycombinator.com/item?id=19024575&utm_source=hackernewsletter&utm_medium=email&utm_term=working)
 [remote companies list 1](https://docs.google.com/spreadsheets/d/1VOehQv0bOs2pY7RkKJ8RmlUbuu8UmSgzfvjR0m5hyxQ/edit#gid=1145296357)
 [remote companies list 2](https://docs.google.com/spreadsheets/d/1TLJSlNxCbwRNxy14Toe1PYwbCTY7h0CNHeer9J0VRzE/edit#gid=1279011369)
 
-## What is paid
+## What counts
 * **Rates and reputation are in fairly strict relationship**;
+* GitHub profile with some work;
+* Code which I am proud of;
 * History of projects;
 * Specific knowledge;
 * Learning fast and finding pointers to the existing knowledge;
 * *I started with cheap rates, about $15/hour, and these days charge an average of $60-70/hour*;
-* 
 
 ## Finding projects
 * Word of mouth - usually works after some work is done for the client and they are happy with it. After some time it becomes a major project source.
@@ -33,7 +38,6 @@
 * The ability to learn fast counts;
 * Do not lie about your experience, nonetheless it the lack of it could be omitted if you present yourself well;
 * *I know I'm not the cheapest developer, but...*
-* 
 
 ## Communication with the client
 * **Be reliable** - answer emails and questions promptly. Send regular status reports and let them know when you achieve a goal;
@@ -86,14 +90,8 @@
 [lookreatywni](http://lookreatywni.pl/prawo-dla-freelancera/rozliczenia-podatkowe-freelancerow/)
 [mamopracuj](https://mamopracuj.pl/freelancer-bez-dzialalnosci-jak-mozesz-sie-rozliczyc/)
 
-## Plans
-Short-term plan (february-march):
-0. 01/02 - 15/02: look at the jobs - what do you need to learn to get them?
-1. 16/02 - 28/02: start looking for jobs on one of the platforms. Until the end, earn 150$ in the website wallet.
-2. 01/03 - ...: apply for the donation in Labour Office. In the meantime work as a freelancer, earn 1000$ in the website wallet.
-3. 01/04 - ...: receive the donation, open the company and get the money from website wallet.
-
-Long-term plan:
-1. Work in projects, earn money on the website's wallet.
-2. Monthly withraw money (usually costs ca. 30$) to a currency account (mBank, free).
-3. Provide an invoice to the website.
+## Long-term plan:
+1. Interesting and creative work in modern technologies.
+2. Work that gives opportunity and money that enables traveling for a long time.
+3. Work better paid than this in Lublin.
+4. Taking advantage of my personal qualities, apart from the technical ones.

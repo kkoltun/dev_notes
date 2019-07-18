@@ -1,5 +1,7 @@
 # REST
+
 ## Hypermedia Services
+
 ### Hypermedia As the Engine of Application State
 `Protocol = a set of conventions governing the treatment and especially the formatting of data in an electronic communications system.`
 
@@ -52,18 +54,23 @@ Having a DAP enables user to understand only the semantic or business context in
 ## REST beyond CRUD
 [crud is bad for REST](http://www.drdobbs.com/architecture-and-design/crud-is-bad-for-rest/228700407)
 
-
 ## Case studies
+
 ### GitHub API starring gists
 [description](https://developer.github.com/v3/gists/#star-a-gist)
+
 ### SunCloudAPI machine reset button
 [description](http://www.tbray.org/ongoing/When/200x/2009/03/20/Rest-Casuistry)
 [Fielding comment](https://roy.gbiv.com/untangled/2009/it-is-okay-to-use-post)
+
 ### 
 
 ## Fielding's dissertation
+
 ### Insights on sofware architecture
+
 #### Software architecure vs structure
+
 `At the heart of software architecture is the principle of abstraction: hiding some of the
 details of a system through encapsulation in order to better identify and sustain its
 properties.`
@@ -75,23 +82,28 @@ properties.`
 `Software structure = a property of the static software source code`
 
 Both modular structure of the source code and having independet software components implemented using parts of the same code have advantages. To focus on the software's run-time characteristics independent of a given component's implementation, the view of the software architecture is spearated from that of the source code.
+
 #### Elements
 ##### Component
 `A component is an abstract unit of software instructions and internal state that provides a transformation of data via its interface.`
 
 A component is defined by its interface and the services it provides to other components, not by its implementation behind the interface. In other words, it is definned by the set of assumptions that other architectural elements can make about the component.
+
 ##### Connector
 `A connector is an abstract mechanism that mediates communication, coordination, or cooperation among components.`
 
 Connectors enable communication between components by transferring data elements from one interface to another without changing the data. Internally, a connector could consist of a subsystem of components transforming data for transport and  reversing the transformation for delivery. However, the external behavioral abstraction captured by the architecture ignores these details.
+
 ##### Data
 `A datum is an element of information that is transferred from a component, or received by a component, via a connector.`
 
 It is worth noting that nature of data elements within a network-based application architecture will often determine whether or not a given architectural style is appropriate (eg. mobile code design paradigms). 
+
 #### Configuration
 `A configuration is the structure of architectural relationships among components, connectors, and data during a period of system run-time.`
 
 Configuration may be considered as being equivalent to a set of specific constraints on component interaction.
+
 #### Properties
 The set of architectural properties of a software architecture aggregates all properties that derive from the selection and arrangement of components, connectors and data within the system.
 
@@ -100,17 +112,20 @@ Properties can be
 * non-functional - for example relative ease of evolution, resuability of components, efficiency, dynamic extensibility.
 
 Properties are induced by the set of constraints within an architecture. Constraints are often motivated by the application of a software engineering principle.
+
 #### Architectural style
 `An architectural style is a coordinated set of architectural constraints that restricts the roles/features of architectural elements and the allowed relationships among those elements within any architecture that conforms to that style.`
 Styles are a mechanism for categorizing architectures and for defining their common characteristics. 
 
 ### Network-based Application Architectures
+
 #### Network-based vs. Distributed
 `The primary distinction between network-based architectures and software architectures in general is that communication between components is restricted to message passing, or the equivalent of message passing if a more efficient mechanism can be selected at run-time based on the location of components.`
 
 Distributed system is one that looks to its users like an ordinary centralized system, but runs on multiple, independent CPUs. Network-based system is one that is capable of operation across a network, but not neccessarily in a fashion that is transparent to the user.
 
 #### Architectural properties of key interest
+
 ##### Performance
 One of the main reasons to focus on styles for network-based applications is because component interactions can be the dominant factor in determining user-perceived performace and network efficiency. Since the architectural style influences the nature of those interactions, selection of an appropriate architectural style can make the difference between success and failuer in the deployment of a network-based application.
 
@@ -150,7 +165,9 @@ In the case of network-distributed application, visibility refers to the ability
 ##### Reliability
 
 #### Representational State Transfer (REST)
+
 ##### Deriving REST
+
 ###### Client-Server
 Client-server architectural style's main principle is separation of concerns. By separating the user interface concerns from the data storage concerns, we improve the portability of the user interface across multiple platforms and improve scalability.
 
@@ -206,13 +223,13 @@ Resource `R` is a temporally varying membersip function `Mr(t)` which for time `
 * L. Bass, P. Clements, and R. Kazman. Software Architecture in Practice. Addison Wesley, Reading, Mass., 1998.
 
 ## Statefull vs stateless
+
 ### Statefull and stateless protocols
 
 ### Stateless vs caching
 [Ion Crowcraft](https://www.cl.cam.ac.uk/~jac22/books/www/book/node39.html)
 
 ## Errors in REST
-
 If resource has not been found:
 * 400 if there is no mapping to it;
 * 404 if there is mapping but it has not been found.
@@ -224,27 +241,36 @@ Furthermore:
 * information passed to FE should be minimal.
 
 ## RPC vs Messaging
+
 ### Remote Procedure Calls
+
 #### Definition
 A generalization of a regular procedure invocation to a case where caller and receiver do not reside in the same process - and are potentially distributed across separate machines.
+
 #### Goal
 The goal is to make remote invocation as similar as possible to regular procedure calls and to hide details of the physical connection.
+
 #### Advantages
 The goal potentially allows to turn the distribution of the final system into a deployment-time decision. In other words, it may not matter for the programmet whether the call is local or remote as it syntactically looks the same.
+
 #### Disadvantages
 The disadvantages mainly come from the fact that the syntax of regular calls leaves no place for the information that might be usefully used if the system is actually distributed. There are two main security and integrity issues:
 * many programming languages provide no security-related tools for managing procedure calls; every call is assumed to be safe;
 * in the statically-typed languages, the compiler ensures that the signature and the protocol of the call matches on both sides.
 Here, neither of the statements is guaranteed.
+
 ### Messaging
+
 #### Definition
 Messaging as a communication concept does not attempt to hide the physical aspects of communication. It is still hiding the implementation details, but not to the point of dismissing the notions related to run-time costs of exchanging data.
+
 #### Advantages
 * Messaging system can have timeouts that are controlled with arbitrary granularity;
 * The progress of physical data transfer can be monitored;
 * Messages can have priorities;
 * Tagging, meta-information and tracing is possible;
 * Security issues can be addressed with the use of digital signatures of data content and access tokens.
+
 ### More to read
 * https://www.safaribooksonline.com/library/view/java-message-service/0596000685/ch01s04.html
 * https://stackoverflow.com/questions/9062475/what-is-the-difference-between-document-style-and-rpc-style-communication

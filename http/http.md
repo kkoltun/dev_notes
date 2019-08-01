@@ -57,7 +57,7 @@ URLs (unified resource locators):
 * example: `https://www.wolnelektury.pl/media/book/pdf/lalka.pdf` - means *1. Use HTTP protocol; 2. Go to server `wolnelektury.pl`; 3. Grab resource `/media/book/pdf/lalka.pdf`;
 * example: `jdbc:mysql://127.0.0.1/hr` - means *1. Use JDBC MySQL protocol; 2. Go to server 127.0.0.1; 3. Grab database hr*;
 
-URNs (unified resource identifiers):
+URNs (unified resource name):
 * specifies unique name of a resource independent of where the resource resides;
 * this elasticity allows for the resource to be moved from place to place;
 * still experimental; requires special support infrastructure to resolve resource locations;

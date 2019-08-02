@@ -5,11 +5,11 @@
 cURL to klient pozwalający na komunikację z serwerami używając różnych protokołów - FTP, HTTP, HTTPS, SMTP i wiele innych.
 Szeroki wybór opcji czyni z niego dość złożone narzędzie do komunikacji.
 
-### Instalacja na Windows
+## Instalacja na Windows
 
 **Jeżeli masz zainstalowany Git Bash na komputerze, masz także cURL.**
 
-Sprawdzenie czy masz cURL wpisz w wierszu polecenia `curl --version`
+Sprawdzenie czy masz cURL wpisz w wierszu polecenia `curl --version`.
 
 Instalacja:
 1) Pobierz i wypakuj pliki odpowiadające twojemu systemowi ze strony `https://curl.haxx.se/windows/`
@@ -18,15 +18,15 @@ Instalacja:
 4) Aby mieć dostęp do `curl` z wiersza polecenia dodaj do zmiennej systemowej `PATH` ścieżkę do folderu `bin`, na przykład: `C:\curl\bin`
 5) Po wykonaniu wszystkich operacji sprawdź czy program działa w wierszu polecenia `curl --version`
 
-### Instalacja na Linux i Mac
+## Instalacja na Linux i Mac
 
 **cURL jest domyślnie zainstalowanym programem.**
 
-### Pierwsze kroki
+## Pierwsze kroki
 
 [Manpage programu](https://curl.haxx.se/docs/manpage.html)
 
-#### Argumenty przydatne z punktu widzenia HTTP
+### Argumenty przydatne z punktu widzenia HTTP
 
 * `-i`, `--include` wyświetl nagłówki odpowiedzi HTTP
 * `-v`, `--verbose` wyświetl szczegóły działania programu (typowy verbose mode)
@@ -35,7 +35,7 @@ Instalacja:
 * `-I`, `--head` wysłanie zapytania z metodą `HEAD`
 * `-H`, `--header` <nagłówek> wysłanie zapytania z określonym nagłówkiem
 
-#### Przykładowe komendy
+### Przykładowe komendy
 
 * `curl -i example.com` wysłanie zapytania `GET` pod adres `example.com` z włączonym wyświetlaniem nagłówków odpowiedzi
 * `curl -i -X HEAD example.com` lub `curl -I example.com` wysłanie zapytania `HEAD` na adres `example.com` z włączonym wyświetlaniem nagłówków (bez tego cURL nie wyświetli nic)

@@ -5,7 +5,7 @@
 Wireshark to oprogramowanie pozwalające na nasłuchiwanie i przechwytywanie pakietów.
 W praktyce oznacza to że można "podsłuchiwać" komunikację sieciową. 
 
-### Instalacja
+## Instalacja
 
 * MacOS / Windows: [tutaj](https://www.wireshark.org/#download)
 * Ubuntu: [tutaj[(https://linuxhint.com/install_wireshark_ubuntu/)

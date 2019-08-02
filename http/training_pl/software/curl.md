@@ -9,7 +9,9 @@ Szeroki wybór opcji czyni z niego dość złożone narzędzie do komunikacji.
 
 **Jeżeli masz zainstalowany Git Bash na komputerze, masz także cURL.**
 
-Sprawdzenie czy masz cURL wpisz w wierszu polecenia `curl --version`.
+Aby sprawdzić czy masz zainstalowany cURL wpisz w wierszu polecenia `curl --version`.
+
+![cURL](../image/curl.png)
 
 Instalacja:
 1) Pobierz i wypakuj pliki odpowiadające twojemu systemowi ze strony `https://curl.haxx.se/windows/`

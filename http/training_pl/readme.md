@@ -1,6 +1,6 @@
 # Szkolenie z protokołu HTTP
 
-## Przygotowanie przed szkoleniem
+## Przygotowanie
 
 1. Zainstalowanie oprogramowania opisanego poniżej
 2. Posiadanie konta na github.com
@@ -16,9 +16,13 @@ W wielu przypadkach potrzebny program jest domyślnie zainstalowany na danym sys
 Ping służy do sprawdzenia połączenia z wybranym serwerem.
 Należy pamiętać że niektóre serwery mają wyłączone odpowiadanie na dane pochodzące z tego narzędzia, co może dać złudne przekonanie że nie mamy połączenia.
 
+#### Instalacja
+
 **Ping jest zazwyczaj zainstalowany domyślnie w systemie.**
 
-Sprawdzenie ping - wpisz w wierszu polecenia (Windows) lub terminalu (Linux/Mac) `ping`.
+#### Sprawdzenie
+
+Wpisz w wierszu polecenia (Windows) lub terminalu (Linux/Mac) `ping`.
 
 ![ping](./image/ping.png)
 
@@ -27,32 +31,46 @@ Sprawdzenie ping - wpisz w wierszu polecenia (Windows) lub terminalu (Linux/Mac)
 Klient pozwalający na komunikację z serwerami używając różnych protokołów - FTP, HTTP, HTTPS, SMTP i wiele innych.
 Szeroki wybór opcji czyni z niego dość złożone narzędzie do komunikacji.
 
-**Jeżeli masz zainstalowany Git Bash na komputerze, masz także cURL.**
+#### Instalacja
 
-Sprawdzenie czy masz cURL - wpisz w wierszu polecenia (Windows) lub terminalu (Linux/Mac) `curl --version`.
+* **Windows:** jeżeli masz zainstalowany Git Bash, masz także cURL. W innym wypadku prawdopodobnie będzie trzeba zainstalować narzędzie.
+* **Linux i Mac:** zazwyczaj narzędzie jest zainstalowane domyślnie.
+
+Informacje dotyczące instalacji i użycia [tutaj](software/curl.md).
+
+#### Sprawdzenie
+
+Wpisz w wierszu polecenia (Windows) lub terminalu (Linux/Mac) `curl --version`.
 
 ![cURL](./image/curl.png)
-
-Informacje dotyczące instalacji [tutaj](software/curl.md)
 
 ### Traceroute
 
 Narzędzie badające trasę jaką przebywają dane do wskazanego serwera.
 
+#### Instalacja
+
+* **Windows:** traceroute jest domyślnie zainstalowany w systemie Windows, dostępny pod nazwą `tracert`.
+* **Linux/Mac:** należy zainstalować narzędzie.
+
+Informacje dotyczące instalacji i użycia [tutaj](software/traceroute.md).
+
+#### Sprawdzenie na Windows
+
+Wpisz w wierszu polecenia `tracert pl.wikipedia.org`.
+
 ![traceroute](./image/traceroute.png)
-
-Informacje dotyczące instalacji i użycia [tutaj](software/traceroute.md)
-
-### Wireshark
-
-Wireshark to oprogramowanie pozwalające na nasłuchiwanie i przechwytywanie pakietów.
-W praktyce oznacza to że można "podsłuchiwać" komunikację sieciową. 
-
-Informacje dotyczące instalacji [tutaj](software/wireshark.md)
 
 ### Postman
 
 Dość rozbudowane narzędzie służące do komunikacji z API wystawionymi na protokole HTTP.
 Poza wysyłaniem zapytań HTTP w różnych wariantach, pozwala na zarządzanie API, tworzenie zestawów testów, mockowanie serwerów.
 
-Informacje dotyczące instalacji [tutaj](software/postman.md)
+Informacje dotyczące instalacji [tutaj](software/postman.md).
+
+### Wireshark
+
+Wireshark to oprogramowanie pozwalające na nasłuchiwanie i przechwytywanie pakietów.
+W praktyce oznacza to że można "podsłuchiwać" komunikację sieciową. 
+
+Informacje dotyczące instalacji [tutaj](software/wireshark.md).

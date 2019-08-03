@@ -7,7 +7,7 @@ Ogólnie rzecz biorąc, Postman służy do komunikacji z interfejsami wystawiony
 
 ## Instalacja
 
-Szczegóły instalacji programu opisane są na [tutaj](https://www.getpostman.com/downloads/).
+Program do pobrania [stąd](https://www.getpostman.com/downloads/).
 
 Instrukcje dotyczące pierwszych kroków w programie są [tutaj](https://learning.getpostman.com/docs/postman/launching_postman/installation_and_updates/).
 

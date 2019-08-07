@@ -108,8 +108,8 @@ This makes it possible to be a SCRUM master in more than one team simultaneously
 
 ## Materials
 
-[Jesper Boeg: My Agile Journey: XP, Scrum, Lean, Kanban & back again](https://www.youtube.com/watch?v=7H67V6noueE)  
-[Scrum.org: What is Scrum: An Introduction to the Scrum Framework](https://www.youtube.com/watch?v=-xudUyGsNfc)
-[Scrum.org: Introduction to Scrum Webinar](https://www.youtube.com/watch?v=GR9-8lOUhwA)
-[Dave Thomas: Agile is Dead](https://www.youtube.com/watch?v=a-BOSpxYJ9M)
-[Jeff Sutherland: How to do twice as much in half the time](https://www.youtube.com/watch?v=s4thQcgLCqk)
+* [Jesper Boeg: My Agile Journey: XP, Scrum, Lean, Kanban & back again](https://www.youtube.com/watch?v=7H67V6noueE)  
+* [Scrum.org: What is Scrum: An Introduction to the Scrum Framework](https://www.youtube.com/watch?v=-xudUyGsNfc)
+* [Scrum.org: Introduction to Scrum Webinar](https://www.youtube.com/watch?v=GR9-8lOUhwA)
+* [Dave Thomas: Agile is Dead](https://www.youtube.com/watch?v=a-BOSpxYJ9M)
+* [Jeff Sutherland: How to do twice as much in half the time](https://www.youtube.com/watch?v=s4thQcgLCqk)

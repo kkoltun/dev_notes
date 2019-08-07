@@ -1,5 +1,10 @@
 # Przydatne materiały do szkolenia z sieci, HTTP i REST
 
+## Znane osoby :)
+
+* [Robert C. Martin i jego książka Clean Code](https://helion.pl/ksiazki/czysty-kod-podrecznik-dobrego-programisty-robert-c-martin,czykov.htm#format/d)
+* [Martin Fowler i jego książka Patterns of Enterprise Application Architecture](https://martinfowler.com/books/eaa.html)
+
 ## Sieci
 
 ### Oglądanie

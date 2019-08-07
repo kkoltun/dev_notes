@@ -52,7 +52,7 @@ public Map<String, int> getCountriesWithPopulation(String regionName) {
 Na przykład:
 ```java
 public List<String> getCountriesWithSameLanguage(String countryName) {
-
+  // ...
 }
 ```
 

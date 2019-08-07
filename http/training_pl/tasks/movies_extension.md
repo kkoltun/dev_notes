@@ -4,7 +4,7 @@
 
 ## Dodanie pobierania reżyserów filmów
 
-Bazując na otrzymanym kodzie kontrolera (klasa `MovieController`), dodaj do aplikacji możlwiość pobrania listy reżyserów filmów w kolekcji:
+Bazując na otrzymanym kodzie kontrolera (klasa `MovieController`), dodaj do aplikacji możliwość pobrania listy reżyserów filmów w kolekcji:
 * adres: `/directors`
 * metoda: `GET`
 * zwraca: lista reżyserów filmów w kolekcji

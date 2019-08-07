@@ -3,13 +3,14 @@
 ## Część pierwsza
 
 1. Zapoznaj się ze specyfikają API: https://restcountries.eu/
-2. Pobierz bibliotekę JSON oraz org.apache.commoins.io i dodaj je do projektu:
-http://mvnrepository.com/artifact/org.json/json/20170516
-https://mvnrepository.com/artifact/org.apache.commons/commons-io/1.3.2
-3. Przejdź na stronę https://restcountries.eu/rest/v2/lang/pl i pobierz informacje dotyczące Polski.
-4. Napisz kod który będzie przyjmował JSONa z danymi w zmiennej String i go interpretował. Przykładowy kod (z błędem :-)) poniżej:
+2. Rozpocznij nowy projekt. Dodaj do niego biblioteki:
+* [JSON](https://mvnrepository.com/artifact/org.json/json/20180813)
+* [Commons IO](https://mvnrepository.com/artifact/commons-io/commons-io/2.6)
+3. Przejdź [tutaj](https://restcountries.eu/rest/v2/lang/pl) i pobierz informacje dotyczące Polski.
+4. Napisz kod który będzie przyjmował JSONa z danymi w zmiennej String i go interpretował. Przykładowy kod poniżej:
 ```java
-public static void main(String[] args) { //w kodzie jest celowo błąd!
+public static void main(String[] args) {
+  // w kodzie jest celowo błąd!
   String json = "tutaj json";
   JSONObject obj = new JSONObject(json);
   String area = obj.get("area").toString();
@@ -74,8 +75,11 @@ public Country getCountryByName(String name) {
 ## Część trzecia
 
 1. Java udostępnia szereg klas umożliwiających mapowanie JSONa na obiekty.
-Jedną z nich jest biblioteka gson dostarczona przez Google.
-Zapoznaj się z biblioteką na stronie https://github.com/google/gson.
+Przykładowe biblioteki:
+* [gson](https://github.com/google/gson) dostarczony przez Google; [tutaj jeden z tutoriali](https://www.baeldung.com/gson-deserialization-guide).
+* [Jackson](https://github.com/FasterXML/jackson) używany przez między innymi Springa; [tutaj tutoriale](https://github.com/eugenp/tutorials/tree/master/jackson).
+
+Zapozna
 
 2. Napisz metodę która będzie przyjmowała nazwę państwa i zwracała stworzony obiekt wcześniej `Country`.
 Tym razem nie parsuj JSONa manualnie, a wykorzystaj do tego biblitotekę.

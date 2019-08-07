@@ -16,8 +16,8 @@ public static void main(String[] args) {
   String area = obj.get("area").toString();
   System.out.println("Polska ma " + area + " km2 powierzchni!");
 
-  JSONArray languagesArr = (JSONArray) obj.get("languages");
-  JSONObject languages = (JSONObject) languagesArr.get(0);
+  JSONArray languagesArr = (JSONArray) obj.get("language");
+  JSONObject languages = (JSONObject) languagesArr.get(1);
   String nativeLanguage = languages.get("nativeName").toString();
   System.out.println("Natywnym językiem w Polsce jest: " + nativeLanguage);
 }
@@ -26,8 +26,10 @@ public static void main(String[] args) {
 ## Część druga
 
 1. Java udostępnia szereg klas umożliwiających pobieranie zasobów z sieci.
-Jedną z nich jest HTTPClients działająca w parze z HttpGet/HttpPost/HttpDelete/HttpPut.
-Skorzystaj z przykładów http://bit.ly/2wPt1aZ i dodaj do aplikacji kod, który będzie pobierał dane ze strony.
+Jedną z nich jest [Apache HTTPClient](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.9).
+Biblioteka działa na zasadzie: stwórz klient, stwórz obiekt zapytania (klasa `HttpGet`, `HttpPost` lub inne), wykonaj zapytanie.
+[Tutaj](https://hc.apache.org/httpcomponents-client-ga/tutorial/html/fundamentals.html) oraz [tutaj](https://www.vogella.com/tutorials/ApacheHttpClient/article.html) można poznać przykłady użycia.
+Użyj biblioteki by pobierać dane ze strony `restcountries`.
 
 2. Napisz metodę która będzie przyjmowała kod języka i zwracała nazwy państw w których tym językiem się operuje.
 
@@ -49,6 +51,7 @@ public Map<String, int> getCountriesWithPopulation(String regionName) {
 ```
 
 4. Napisz metodą która będzie przyjmowała nazwę państwa i zwracała państwa w których mówi się w tym samym języku.
+Jeżeli pod daną nazwą znajdzie się więcej niż jedno państwo, niech metoda wyrzuca `IllegalArgumentException ` z odpowiednią wiadomością w środku.
 
 Na przykład:
 ```java
@@ -64,6 +67,7 @@ public List<String> getCountriesWithSameLanguage(String countryName) {
 * populację.
 
 Napisz metodę która będzie przyjmowała nazwę państwa i zwracała obiekt Country z wypełnionymi wszystkimi polami.
+Jeżeli pod daną nazwą znajdzie się więcej niż jedno państwo (na przykład pod nazwą `pol`), niech metoda wyrzuca `IllegalArgumentException ` z odpowiednią wiadomością w środku.
 
 Na przykład:
 ```java
@@ -76,10 +80,13 @@ public Country getCountryByName(String name) {
 
 1. Java udostępnia szereg klas umożliwiających mapowanie JSONa na obiekty.
 Przykładowe biblioteki:
-* [gson](https://github.com/google/gson) dostarczony przez Google; [tutaj jeden z tutoriali](https://www.baeldung.com/gson-deserialization-guide).
-* [Jackson](https://github.com/FasterXML/jackson) używany przez między innymi Springa; [tutaj tutoriale](https://github.com/eugenp/tutorials/tree/master/jackson).
-
-Zapozna
+* [gson](https://github.com/google/gson) dostarczony przez Google; [tutaj jeden z tutoriali](https://www.baeldung.com/gson-deserialization-guide); [maven](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.5)
+* [Jackson](https://github.com/FasterXML/jackson) używany przez między innymi Springa; [tutaj tutoriale](https://github.com/eugenp/tutorials/tree/master/jackson) [maven](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.9.9.2)
 
 2. Napisz metodę która będzie przyjmowała nazwę państwa i zwracała stworzony obiekt wcześniej `Country`.
 Tym razem nie parsuj JSONa manualnie, a wykorzystaj do tego biblitotekę.
+
+3. W poprzedniej części zostało wspomniane, że przy wysłaniu zapytania do `restcountries` z nazwą państwa, serwis zwraca listę pasujących obiektów.
+Można to sprawdzić wysyłając zapytanie pod adres `restcountries.eu/rest/v2/name/pol` które powinno zwrócić dwa państwa - Polskę i Polinezję Francuską.
+
+Napisz metodę która zamiast jednego obiektu `Country` będzie zwracała ich listę. Do mapowania JSONa z listą państw na obiekt listy użyj wybranej biblioteki.

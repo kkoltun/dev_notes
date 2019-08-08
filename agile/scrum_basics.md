@@ -106,7 +106,31 @@ This makes it possible to be a SCRUM master in more than one team simultaneously
 * making sure the items are well understood between Product Owner and Development Team;
 * **you do not need to build a full sprint backlog to start a sprint, you need just enough items in it**;
 
+## Miscellanea
+
+### Fractured perspective
+
+* Usually after implementing SCRUM in a team;
+* [Blind men an an elephant](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant) - *So while the agile 'elephant' is made up of many great practices, this whole thing is even greater than the sum of the parts*;
+* *The developers think about developer stuff, project managers thing about project manager stff, and they throw the code over the wall to a business user who thinks about business stuff."*
+* The team members are functioning as individuals working separately toward compatible goals, not as a team.
+
 ## Materials
+
+### Reading
+
+#### Waterfall
+
+* [Winston Royce: article that led to defining waterfall](http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf)
+* [Software crysis](https://en.wikipedia.org/wiki/Software_crisis)
+
+#### REST
+
+* []()
+
+* [Lyssa Adkins: Coaching Agile Teams](https://www.amazon.com/Coaching-Agile-Teams-ScrumMasters-Addison-Wesley/dp/0321637704)
+
+### Long watch
 
 * [Jesper Boeg: My Agile Journey: XP, Scrum, Lean, Kanban & back again](https://www.youtube.com/watch?v=7H67V6noueE)  
 * [Scrum.org: What is Scrum: An Introduction to the Scrum Framework](https://www.youtube.com/watch?v=-xudUyGsNfc)

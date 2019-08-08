@@ -1,5 +1,7 @@
 # TODO
 
+## Big bag of everything
+
 * JDBC Lifecycle of EntityManager, Session, Connection;
 * Plain JDBC;
 * OAuth2, OpenID, KeyCloak, JWT;
@@ -14,3 +16,9 @@
 * Futures;
 * weak/soft/phantom reference;
 * hibernate n+1, many to many itd.
+
+## Developing user management
+
+* developing annotations, @target, @retention, etc.
+* Spring Data vs Hibernate vs JPA
+* transactional

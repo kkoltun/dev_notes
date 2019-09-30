@@ -15,38 +15,38 @@
 W każdym z zadań określ każdy wspomniany parametr wewnątrz URL.
 
 1. Wykonaj połączenie w przeglądarce:
-* Używając protokołu: `HTTPS`
-* Z serwerem: `www.google.com`
-* Pod portem: `443`jest to domyślny port HTTPS, ale tym razem napisz go w URL)
+  * Używając protokołu: `HTTPS`
+  * Z serwerem: `www.google.com`
+  * Pod portem: `443`jest to domyślny port HTTPS, ale tym razem napisz go w URL)
 
 2. Wykonaj połączenie w przeglądarce:
-* Protokół: `HTTPS`
-* Serwer: `pl.wikipedia.org`
-* Ścieżka do zasobu: `/wiki/Miedzianka_szmaragdowa`
-* Fragment artykułu: `Ekologia_i_zachowanie`
+  * Protokół: `HTTPS`
+  * Serwer: `pl.wikipedia.org`
+  * Ścieżka do zasobu: `/wiki/Miedzianka_szmaragdowa`
+  * Fragment artykułu: `Ekologia_i_zachowanie`
 
 3. Wykonaj połączenie w przeglądarce:
-* Protokół: `HTTPS`
-* Serwer: `www.youtube.com`
-* Ścieżka: `/results`
-* Parametr URL: nazwa: `search_query`; wartość: `http+explained`
+  * Protokół: `HTTPS`
+  * Serwer: `www.youtube.com`
+  * Ścieżka: `/results`
+  * Parametr URL: nazwa: `search_query`; wartość: `http+explained`
 
 4. Wykonaj połączenie w przeglądarce:
-* Protokół: `HTTP`
-* Serwer: `www.portquiz.net`
-* Port: `8080`
+  * Protokół: `HTTP`
+  * Serwer: `www.portquiz.net`
+  * Port: `8080`
 
 5. Wykonaj połączenie w przeglądarce:
-* Protokół: `FTP`
-* Serwer: `speedtest.tele2.net`
-* (To jest publiczny serwer FTP, nie radzę ściągać z niego plików)
-
+  * Protokół: `FTP`
+  * Serwer: `speedtest.tele2.net`
+  * (To jest publiczny serwer FTP, nie radzę ściągać z niego plików)
+  
 6. Wykonaj połączenie w przeglądarce (określ login i hasło wewnątrz URL):
-* Protokół: `FTP`
-* Serwer: `test.rebex.net/`
-* Login: `demo`
-* Hasło: `password`
-* Ścieżka: `/readme.txt`
+  * Protokół: `FTP`
+  * Serwer: `test.rebex.net/`
+  * Login: `demo`
+  * Hasło: `password`
+  * Ścieżka: `/readme.txt`
 
 ## HTTP - zadania
 
@@ -84,9 +84,9 @@ Operacje w aplikacji:
 1. Pobierz wszystkie zapisane w aplikacji filmy zapytaniem `GET` pod adres `http://localhost:8081/movies`
 2. Zbadaj wszystkie możliwe metody do wykonania na zasobie `/movies` oraz na konkretnym filmie z id równym 1
 3. Dodaj nowy film do kolekcji oraz zbadaj odpowiedź serwera:
-* tytuł: Leviathan
-* reżyser: Andrey Zvyagintsev
-* wydany: 13 listopada 2014
+  * tytuł: Leviathan
+  * reżyser: Andrey Zvyagintsev
+  * wydany: 13 listopada 2014
 4. Spróbuj dodać nowy film do kolekcji ale nie wpisuj reżysera oraz daty wydania. Zbadaj odpowiedź serwera. 
 5. Spróbuj usunąć nieistniejący film w kolekcji.
 6. Zmień tytuł jednego z filmów w kolecji.

@@ -23,7 +23,7 @@ For example, switch persistence providers through configuration without changing
 
 ## Features
 
-* [IoC Container](./core/ioc_containers.md)
+* [IoC Container](./core/ioc.md)
 * [Resources](./core/resources.md)
 * [Aspect Oriented Programming](./core/aop.md)
 * [Null-safety](./core/null_safety.md)

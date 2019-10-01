@@ -25,14 +25,11 @@ Links:
 ## Spring Framework
 
 Features:
-* [Core technologies](spring_framework/core.md)
-* [Testing](spring_framework/testing.md)
-* [Data Access](spring_framework/data_access.md)
-* [Spring MVC](spring_framework/mvc.md)
+* [Core technologies](/spring_framework/core.md)
+* [Testing](/spring_framework/testing.md)
+* [Data Access](/spring_framework/data_access.md)
+* [Spring MVC](/spring_framework/mvc.md)
 * Spring WebFlux: reactive web stack
 * Integration with remoting, JMS, JMX, emails
 * Languages: Kotlin, Groovy, dynamic languages
 
-Links:
-* [Project site](https://spring.io/projects/spring-framework)
-* [Jinkubator #9 - Spring Framework - Jakub Nabrdalik](https://www.youtube.com/watch?v=RQEsSCwsRf0)

@@ -27,7 +27,3 @@ For example, switch persistence providers through configuration without changing
 * [Resources](./core/resources.md)
 * [Aspect Oriented Programming](./core/aop.md)
 * [Null-safety](./core/null_safety.md)
-
-## Links
-
-* [Jinkubator #9 - Spring Framework - Jakub Nabrdalik](https://www.youtube.com/watch?v=RQEsSCwsRf0)

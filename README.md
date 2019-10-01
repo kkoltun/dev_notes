@@ -23,7 +23,9 @@
 
 ## Table of contents
 
-* [Spring](/spring/README.md)
+* [Developing Clean Code](./clean_code/README.md)
+* [Web Security](./security/README.md)
+* [Spring](./spring/README.md)
 
 ## Training materials in Polish language
 

@@ -1,3 +1,0 @@
-# Choosing application name
-
-

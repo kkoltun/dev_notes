@@ -23,11 +23,13 @@
 
 ## Table of contents
 
+* [Notes on algorithms](./algorithms/README.md)
 * [Developing Clean Code](./clean_code/README.md)
 * [Web Security](./security/README.md)
 * [Spring](./spring/README.md)
 
 ## Training materials in Polish language
 
+* [Agile](./agile/training_pl/extension.md)
 * [JVM](./jvm/training_pl/README.md)
 * [HTTP](./http/training_pl/README.md)

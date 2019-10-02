@@ -126,8 +126,6 @@ This makes it possible to be a SCRUM master in more than one team simultaneously
 
 #### REST
 
-* []()
-
 * [Lyssa Adkins: Coaching Agile Teams](https://www.amazon.com/Coaching-Agile-Teams-ScrumMasters-Addison-Wesley/dp/0321637704)
 
 ### Long watch

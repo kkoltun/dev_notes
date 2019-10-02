@@ -21,9 +21,10 @@ For example, switch persistence providers through configuration without changing
 5. Set high standards for code quality.
 6. Provide strong testability.
 
-## Features
+## Contents
 
-* [IoC Container](./core/ioc.md)
+* [IoC Container](./core/spring_ioc.md)
+* [Beans in the IoC Container](./core/beans.md)
 * [Resources](./core/resources.md)
 * [Aspect Oriented Programming](./core/aop.md)
 * [Null-safety](./core/null_safety.md)

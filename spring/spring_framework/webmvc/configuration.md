@@ -1,5 +1,7 @@
 # Spring WebMVC - Servlet configuration
 
+[Big article on Spring contexts configuration](https://www.baeldung.com/spring-web-contexts)
+
 ## File `web.xml`
 
 The `web.xml` file:

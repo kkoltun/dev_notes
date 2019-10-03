@@ -21,6 +21,19 @@
 **This repository contains various notes on programming and software development.**
 **Most of the subjects are constantly under construction and extension.**
 
+## Table of contents
+
+* [Notes on algorithms](./algorithms/README.md)
+* [Developing Clean Code](./clean_code/README.md)
+* [Web Security](./security/README.md)
+* [Spring](./spring/README.md)
+
+## Training materials in Polish language
+
+* [Agile](./agile/training_pl/extension.md)
+* [JVM](./jvm/training_pl/README.md)
+* [HTTP](./http/training_pl/README.md)
+
 ## Purposes
 
 * Documenting and share knowledge in a succinct way.
@@ -36,15 +49,8 @@
 3. Create a pull request
 4. Done :)
 
-## Table of contents
+## Miscellanea
 
-* [Notes on algorithms](./algorithms/README.md)
-* [Developing Clean Code](./clean_code/README.md)
-* [Web Security](./security/README.md)
-* [Spring](./spring/README.md)
-
-## Training materials in Polish language
-
-* [Agile](./agile/training_pl/extension.md)
-* [JVM](./jvm/training_pl/README.md)
-* [HTTP](./http/training_pl/README.md)
+Currently reading:
+* EJB 3 in Action
+* Java Persistence with Hibernate

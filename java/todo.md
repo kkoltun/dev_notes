@@ -2,8 +2,6 @@
 
 ## Big bag of everything
 
-* JDBC Lifecycle of EntityManager, Session, Connection;
-* Plain JDBC;
 * OAuth2, OpenID, KeyCloak, JWT;
 * OWASP top 10;
 * gitkeep;

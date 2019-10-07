@@ -24,6 +24,7 @@
 ## Table of contents
 
 * [Various notes on Java basics](./java/README.md)
+* [Design patterns and architecture](./architecture/README.md)
 * [Notes on algorithms](./algorithms/README.md)
 * [Developing Clean Code](./clean_code/README.md)
 * [Web Security](./security/README.md)

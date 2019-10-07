@@ -1,4 +1,5 @@
 # Software Architecture
+
 ## Why is it important?
 
 Applications lacking a formal architecture are generally:
@@ -45,5 +46,6 @@ For example business layers is responsible for:
 * accessing data from the persistence layer;
 * performing business logic against the data;
 * passing data up the presentation layer.
+
 On the contrary, thanks to the layering, the business layer doesn't need to be concerned about how to format customer data for display on a screen.
 

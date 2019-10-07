@@ -9,11 +9,8 @@
 * SSL (TLS);
 * LDAP;
 * Vanilla Java EE;
-* CI vs CD;
 * Spring scopes;
 * Futures;
-* weak/soft/phantom reference;
-* hibernate n+1, many to many itd.
 
 ## Developing user management
 

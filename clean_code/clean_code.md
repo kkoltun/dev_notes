@@ -52,15 +52,15 @@ It can be summarized in each of the following ways:
 
 ## Miscellaneous Rules
 1. Prefer immutable objects:
-* less error prone;
-* more secure;
-* inherently thread safe.
+  * less error prone;
+  * more secure;
+  * inherently thread safe.
 2. Avoid side effects:
-* do not lie about what the function does - eg. [Java Thread.interrupted()](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted());
-* this is making method unreliable and hard to debug.
+  * do not lie about what the function does - eg. [Java Thread.interrupted()](https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html#interrupted());
+  * this is making method unreliable and hard to debug.
 3. Prefer stateless objects:
-* easier to make the solution thread-safe;
-* easier to debug.
+  * easier to make the solution thread-safe;
+  * easier to debug.
 
 ## Further reading
 * [Google on writing testable code](http://misko.hevery.com/code-reviewers-guide/);

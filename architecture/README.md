@@ -15,6 +15,11 @@
 * [Observer pattern](./heads_first/observer.md)
 * [Decorator pattern](./heads_first/decorator.md)
 
+## Patterns of Enterprise Application Architecture
+
+* [Layerning](./fowler/layering.md)
+
+
 ## Other notes
 
 * [**Very** good material on abstraction, encapsulation and information hiding (not mine)](./abstraction_encapsulation_information_hiding.md)

@@ -22,6 +22,8 @@ Downsides:
 
 ## Three Principal Layers
 
+### Overview
+
 **Presentation**:
 * Handles interaction between the user and the software.
 * Displays information to the user.
@@ -41,5 +43,23 @@ There are two approaches:
 1. (More pure, less often) Domain logic completely hides the data source from the presentation.
 2. (Less pure, more often) Presentation layer accesses the data source directly and lets the domain logic manipulate it before presenting.
 
+**Main rule in the three layer model: domain and data source should never depend on the presentation.**
 
+Checking what belongs to domain logic:
+* Try to change presentation layer from a rich, Web UI to a command-line interface in a web application.
+* Think of deciding what to highlight in an UI - decision should come from business logic.
 
+### Where to run layers
+
+**Data source**:
+* This is usually a database run on an a server.
+* A powerful client might duplicate the server functionality, then synchronization is an issue.
+
+**Presentation layer**:
+* Rich client - running layer on the client-side.
+* Web interface - running on the server.
+* Moving from server-side to client-side - harder maintenance, better responsiveness.
+
+**Domain logic**:
+* Usually run on server-side.
+* If the logic is moved to client-side, it is wise to move all the logic (especially having a rich client).

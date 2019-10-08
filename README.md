@@ -29,6 +29,7 @@
 * [Developing Clean Code](./clean_code/README.md)
 * [Web Security](./security/README.md)
 * [Spring](./spring/README.md)
+* [Persistence with Java](./java_persistence/README.md)
 
 ## Training materials in Polish language
 

@@ -47,6 +47,7 @@ Important facts:
 * **`EntityManager` has a persistence context.**
 * **Persistence context is created by calling `EntityManagerFactory#createEntityManager()`.**
 * **Persistence context is closed by calling `EntityManager#close()`.**
+* **There is one `EntityManagerFactory` per persistence unit.**
 * **The scope of the persistence context demarcates the unit of work.**
 
 1. Automatic dirty checking:

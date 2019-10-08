@@ -1,6 +1,6 @@
 # TODO
 
-## Big bag of everything
+## Big bag of everything todo
 
 * OAuth2, OpenID, KeyCloak, JWT;
 * OWASP top 10;

@@ -43,7 +43,9 @@ There are two approaches:
 1. (More pure, less often) Domain logic completely hides the data source from the presentation.
 2. (Less pure, more often) Presentation layer accesses the data source directly and lets the domain logic manipulate it before presenting.
 
-**Main rule in the three layer model: domain and data source should never depend on the presentation.**
+**Main rules:**
+* Domain and data source should never depend on the presentation.
+* Layers communicate from top to bottom. This way the layer is dependent only on the interface of the layer directly below it.
 
 Checking what belongs to domain logic:
 * Try to change presentation layer from a rich, Web UI to a command-line interface in a web application.

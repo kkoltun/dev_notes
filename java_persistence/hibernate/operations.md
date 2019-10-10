@@ -4,7 +4,8 @@
 * [Enitity state transitions.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/TransitionsTest.java)
 * [Entity references.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/ReferencesTest.java)
 * [Read only operations.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/ReadOnlyOperationsTest.java)
-* [Flushing modes.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/FlushingModeTests.java)
+* [Flushing modes.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/FlushingModeTest.java)
+* [Merging detached and transient instances.]((https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/MergeTest.java))
 
 ## Making data persistent
 
@@ -229,5 +230,47 @@ Automatic flushing of the persistence context happens when:
 Controling flushing mode:
 * `FlushModeType.AUTO` - this is the automatical mode.
 * `FlushModeType.COMMIT` - flushing before queries is disabled, it will happen only when transaction is committed or an explicit call to `EntityManager#flush()` is made.
+
+## Detaching entity instances
+
+```java
+Item item = entityManager.find(Item.class, itemId);
+
+entityManager.detach(item);
+
+assertFalse(entityManager.contains(item));
+```
+
+Facts:
+* You can now work on the `item` reference in detached state.
+* Any changes to the `item` instance has no effect on its persistent representation in the database.
+
+## Merging changes made to detached data
+
+![Making data](./images/merge.svg)
+
+```java
+detachedItem.setName("New Name");
+
+transaction.begin();
+entityManager = JPA.createEntityManager();
+
+Item mergedItem = entityManager.merge(detachedItem); // discards detachedItem; mergedItem is in persistent state
+
+transaction.commit();
+entityManager.close();
+```
+
+When `EntityManager#merge()` is called:
+1. Hibernate checks whether a persistent instance in the persistence context has the same database identifier as the detached instance you are merging.
+2. This time, the persistence context is empty, so Hibernate loads an instance with this identifier from the database.
+3. The detached entity instance is copied **onto** the loaded persistent instance.
+4. The old reference to the stale and outdated detached state is discarded.
+5. Modifications can be continued on the returned `mergedItem`. These will be monitored and commited by Hibernate.
+
+Important facts:
+* If there is no persistent intance with the same identifier in the persistence context, Hibernate will instantiate a fresh `Item`.
+* If a transient instance is passed to `EntityManager#merge()` (an instance without identifier), Hibernate will handle this and make return a fresh, persistent instance.
+* The difference between `EntityManager#merge()` and `EntityManager#persist()` is the return values - `persist()` acts in-place, `merge()` returns a new instance and the old should be discarded.
 
 

@@ -9,6 +9,7 @@ JDBC notes:
 JPA/Hibernate notes:
 * [Persistence life cycle](./hibernate/persistence_life_cycle.md)
 * [Operations on data](./hibernate/operations.md)
+* [Identifying detached instances](./hibernate/detached_state.md)
 
 Problems addressed by persistence tools:
 * **the problem of granularity** - classes in OOP versus used-defined data types in SQL;

@@ -5,7 +5,7 @@
 * [Entity references.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/ReferencesTest.java)
 * [Read only operations.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/ReadOnlyOperationsTest.java)
 * [Flushing modes.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/FlushingModeTest.java)
-* [Merging detached and transient instances.]((https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/MergeTest.java))
+* [Merging detached and transient instances.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/MergeTest.java)
 
 ## Making data persistent
 

@@ -2,9 +2,13 @@
 
 > The data lives londer than any application.
 
+JDBC notes:
+* [Basics](./jdbc/basics.md)
+* [Statement types](./jdbc/statements.md)
+
 JPA/Hibernate notes:
-* [Persistence life cycle](./persistence_life_cycle.md)
-* [Operations on data](./operations.md)
+* [Persistence life cycle](./hibernate/persistence_life_cycle.md)
+* [Operations on data](./hibernate/operations.md)
 
 Problems addressed by persistence tools:
 * **the problem of granularity** - classes in OOP versus used-defined data types in SQL;

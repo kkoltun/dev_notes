@@ -1,9 +1,10 @@
 # Operations on data
 
 **My unit tests for the described features:**
-* [Enitity state transitions.]()
-* [Entity references.]()
-* [Read only operations.]()
+* [Enitity state transitions.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/TransitionsTest.java)
+* [Entity references.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/ReferencesTest.java)
+* [Read only operations.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/ReadOnlyOperationsTest.java)
+* [Flushing modes.](https://github.com/kkoltun/training_java_persistence/blob/master/src/test/java/com/hr/jpa/FlushingModeTests.java)
 
 ## Making data persistent
 

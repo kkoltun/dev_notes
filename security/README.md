@@ -17,3 +17,10 @@
 ## Miscellanea
 
 * [Keycloak](./utils/keycloak.md)
+
+## Links
+
+* [OAuth 2.0 and OpenID Connect (in plain English)](https://www.youtube.com/watch?v=996OiexHze0)
+* [Deconstructing REST Security by David Blevins](https://www.youtube.com/watch?v=9CJ_BAeOmW0)
+* [GOTO 2018 • Introduction to OAuth 2.0 and OpenID Connect • Philippe De Ryck](https://www.youtube.com/watch?v=GyCL8AJUhww)
+* [Securing OAuth 2.0 Resources in Spring Security 5.0](https://www.youtube.com/watch?v=1N-xwmoN83w)

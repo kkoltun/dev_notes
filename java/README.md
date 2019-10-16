@@ -1,6 +1,7 @@
 # Java basics notes
 
 Contents:
+* [Collections](./basics/collections.md)
 * [Reference types](./basics/reference_types.md)
 * [`Object#equals()` and `Object#hashCode()`](./basics/equals_hashcode.md)
 * [Interface versus abstract class](./basics/interface_vs_abstract_class.md)

@@ -1,6 +1,6 @@
 # Java Persistence
 
-> The data lives londer than any application.
+> The data lives longer than any application.
 
 JDBC notes:
 * [Basics](./jdbc/basics.md)

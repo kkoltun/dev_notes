@@ -12,10 +12,10 @@
 ![Entity lifecycle](./images/entity_lifecycle.svg)
 
 **Transient state**:
-* instance create with `new` and garbage-collected when it is no longer needed;
+* instance created with `new` and garbage-collected when it is no longer needed;
 * no rollback mechanisms;
 * **transition from transient to persistent means becoming managed**;
-* from transient to persistent: calling `EntityManager#persist` or creating a refernce of an already-persistent instance with enabled cascading state for thap mapped association.
+* from transient to persistent: calling `EntityManager#persist` or creating a refernce of an already-persistent instance with enabled cascading state for that mapped association.
 
 **Persistent state**:
 * instance has a representation in the database;
@@ -41,7 +41,7 @@ Transitions to the persistent state:
 
 ## Persistence context
 
-* **In JPA, the persistence context is *application-managed* - the application defines it's scope.**
+**In JPA, the persistence context is *application-managed* - the application defines it's scope.**
 
 Important facts:
 * **`EntityManager` has a persistence context.**

@@ -10,7 +10,7 @@
         <path d="M-20 -20 L674 -20 L674 362 L-20 362 L-20 -20 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath3">
-        <path d="M-91.1833 -250 L602.8167 -250 L602.8167 132 L-91.1833 132 L-91.1833 -250 Z"/>
+        <path d="M-346.8167 -250 L347.1833 -250 L347.1833 132 L-346.8167 132 L-346.8167 -250 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath4">
         <path d="M0 0 L0 24 L254 24 L254 0 Z"/>
@@ -19,181 +19,180 @@
         <path d="M-240 -336 L454 -336 L454 46 L-240 46 L-240 -336 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath6">
-        <path d="M-0 0 L-0 24 L212 24 L212 0 Z"/>
+        <path d="M0 0 L0 24 L212 24 L212 0 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath7">
-        <path d="M-20 -336 L674 -336 L674 46 L-20 46 L-20 -336 Z"/>
+        <path d="M-474 -336 L220 -336 L220 46 L-474 46 L-474 -336 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath8">
         <path d="M0 0 L0 24 L198 24 L198 0 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath9">
-        <path d="M-474 -336 L220 -336 L220 46 L-474 46 L-474 -336 Z"/>
+        <path d="M-20 -336 L674 -336 L674 46 L-20 46 L-20 -336 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath10">
-        <path d="M-277 -20 L417 -20 L417 362 L-277 362 L-277 -20 Z"/>
+        <path d="M-315 -20 L379 -20 L379 362 L-315 362 L-315 -20 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath11">
         <path d="M0 0 L0 24 L100 24 L100 0 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath12">
-        <path d="M-375.1 -250 L318.9 -250 L318.9 132 L-375.1 132 L-375.1 -250 Z"/>
+        <path d="M-118.9 -250 L575.1 -250 L575.1 132 L-118.9 132 L-118.9 -250 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath13">
-        <path d="M-112.1833 -173 L581.8167 -173 L581.8167 209 L-112.1833 209 L-112.1833 -173 Z"/>
+        <path d="M-367.8167 -173 L326.1833 -173 L326.1833 209 L-367.8167 209 L-367.8167 -173 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath14">
-        <path d="M0 0 L0 24 L212 24 L212 0 Z"/>
+        <path d="M-287 -96 L407 -96 L407 286 L-287 286 L-287 -96 Z"/>
       </clipPath>
       <clipPath clipPathUnits="userSpaceOnUse" id="clipPath15">
-        <path d="M-249 -96 L445 -96 L445 286 L-249 286 L-249 -96 Z"/>
-      </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
         <path d="M0 0 L0 24 L156 24 L156 0 Z"/>
       </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath17">
-        <path d="M-441.6 -172 L252.4 -172 L252.4 210 L-441.6 210 L-441.6 -172 Z"/>
+      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath16">
+        <path d="M-97.4 -172 L596.6 -172 L596.6 210 L-97.4 210 L-97.4 -172 Z"/>
       </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath18">
+      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath17">
         <path d="M0 0 L0 28 L155 28 L155 0 Z"/>
       </clipPath>
-      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath19">
+      <clipPath clipPathUnits="userSpaceOnUse" id="clipPath18">
         <path d="M0 0 L0 18 L135 18 L135 0 Z"/>
       </clipPath>
     </defs>
-    <g fill="rgb(43,43,43)" transform="translate(20,20)" stroke="rgb(43,43,43)">
+    <g fill="white" transform="translate(20,20)" stroke="white">
       <rect x="-20" width="694" height="382" y="-20" clip-path="url(#clipPath2)" stroke="none"/>
     </g>
-    <g fill="rgb(107,107,107)" stroke="rgb(107,107,107)">
+    <g fill="silver" stroke="silver">
       <path d="M12.3594 362.0156 L12.3594 365.0938 L13.8438 365.0938 Q14.6719 365.0938 15.125 364.6953 Q15.5781 364.2969 15.5781 363.5469 Q15.5781 362.8125 15.125 362.4141 Q14.6719 362.0156 13.8438 362.0156 L12.3594 362.0156 ZM11.1719 361 L13.8438 361 Q15.3281 361 16.0781 361.6406 Q16.8281 362.2812 16.8281 363.5469 Q16.8281 364.7969 16.0781 365.4453 Q15.3281 366.0938 13.8438 366.0938 L12.3594 366.0938 L12.3594 370 L11.1719 370 L11.1719 361 ZM20.9082 363.9531 Q20.0488 363.9531 19.541 364.6328 Q19.0332 365.3125 19.0332 366.5 Q19.0332 367.6875 19.5332 368.3672 Q20.0332 369.0469 20.9082 369.0469 Q21.7676 369.0469 22.2754 368.3672 Q22.7832 367.6875 22.7832 366.5 Q22.7832 365.3281 22.2754 364.6406 Q21.7676 363.9531 20.9082 363.9531 ZM20.9082 363 Q22.3145 363 23.1191 363.9297 Q23.9238 364.8594 23.9238 366.5 Q23.9238 368.1406 23.1191 369.0703 Q22.3145 370 20.9082 370 Q19.502 370 18.6973 369.0703 Q17.8926 368.1406 17.8926 366.5 Q17.8926 364.8594 18.6973 363.9297 Q19.502 363 20.9082 363 ZM25.0781 363 L26.1562 363 L27.5156 368.4688 L28.8438 363 L30.125 363 L31.4688 368.4688 L32.8125 363 L33.8906 363 L32.1719 370 L30.9062 370 L29.4844 364.2656 L28.0781 370 L26.7969 370 L25.0781 363 ZM41.1426 366.3594 L41.1426 366.9219 L36.1738 366.9219 Q36.252 367.9688 36.8535 368.5078 Q37.4551 369.0469 38.5176 369.0469 Q39.1426 369.0469 39.7285 368.9062 Q40.3145 368.7656 40.8926 368.4844 L40.8926 369.4688 Q40.2988 369.7188 39.6895 369.8594 Q39.0801 370 38.4551 370 Q36.8926 370 35.9707 369.0703 Q35.0488 368.1406 35.0488 366.5625 Q35.0488 364.9219 35.9238 363.9609 Q36.7988 363 38.2676 363 Q39.5957 363 40.3691 363.9062 Q41.1426 364.8125 41.1426 366.3594 ZM40.0645 366.0781 Q40.0488 365.1094 39.5645 364.5312 Q39.0801 363.9531 38.2832 363.9531 Q37.377 363.9531 36.8379 364.5078 Q36.2988 365.0625 36.2207 366.0781 L40.0645 366.0781 ZM46.7129 364.0625 Q46.5254 363.9531 46.3145 363.8984 Q46.1035 363.8438 45.8379 363.8438 Q44.9316 363.8438 44.4395 364.4766 Q43.9473 365.1094 43.9473 366.2969 L43.9473 370 L42.8691 370 L42.8691 363 L43.9473 363 L43.9473 364.0781 Q44.291 363.5469 44.8379 363.2734 Q45.3848 363 46.166 363 Q46.2754 363 46.4082 362.9766 Q46.541 362.9531 46.6973 362.9062 L46.7129 364.0625 ZM53.459 366.3594 L53.459 366.9219 L48.4902 366.9219 Q48.5684 367.9688 49.1699 368.5078 Q49.7715 369.0469 50.834 369.0469 Q51.459 369.0469 52.0449 368.9062 Q52.6309 368.7656 53.209 368.4844 L53.209 369.4688 Q52.6152 369.7188 52.0059 369.8594 Q51.3965 370 50.7715 370 Q49.209 370 48.2871 369.0703 Q47.3652 368.1406 47.3652 366.5625 Q47.3652 364.9219 48.2402 363.9609 Q49.1152 363 50.584 363 Q51.9121 363 52.6855 363.9062 Q53.459 364.8125 53.459 366.3594 ZM52.3809 366.0781 Q52.3652 365.1094 51.8809 364.5312 Q51.3965 363.9531 50.5996 363.9531 Q49.6934 363.9531 49.1543 364.5078 Q48.6152 365.0625 48.5371 366.0781 L52.3809 366.0781 ZM59.5449 364.2031 L59.5449 360 L60.623 360 L60.623 370 L59.5449 370 L59.5449 368.9688 Q59.2012 369.4844 58.6855 369.7422 Q58.1699 370 57.4355 370 Q56.248 370 55.498 369.0391 Q54.748 368.0781 54.748 366.5 Q54.748 364.9219 55.498 363.9609 Q56.248 363 57.4355 363 Q58.1699 363 58.6855 363.2969 Q59.2012 363.5938 59.5449 364.2031 ZM55.873 366.5938 Q55.873 367.8281 56.3574 368.5312 Q56.8418 369.2344 57.7012 369.2344 Q58.5605 369.2344 59.0527 368.5312 Q59.5449 367.8281 59.5449 366.5938 Q59.5449 365.3438 59.0527 364.6406 Q58.5605 363.9375 57.7012 363.9375 Q56.8418 363.9375 56.3574 364.6406 Q55.873 365.3438 55.873 366.5938 ZM71.3672 366.5 Q71.3672 365.2969 70.875 364.6172 Q70.3828 363.9375 69.5391 363.9375 Q68.6797 363.9375 68.1875 364.6172 Q67.6953 365.2969 67.6953 366.5 Q67.6953 367.7031 68.1875 368.3828 Q68.6797 369.0625 69.5391 369.0625 Q70.3828 369.0625 70.875 368.3828 Q71.3672 367.7031 71.3672 366.5 ZM67.6953 364.1875 Q68.0391 363.5938 68.5547 363.2969 Q69.0703 363 69.7891 363 Q70.9922 363 71.7422 363.9609 Q72.4922 364.9219 72.4922 366.5 Q72.4922 368.0781 71.7422 369.0391 Q70.9922 370 69.7891 370 Q69.0703 370 68.5547 369.7031 Q68.0391 369.4062 67.6953 368.8125 L67.6953 370 L66.6172 370 L66.6172 360 L67.6953 360 L67.6953 364.1875 ZM77 370.9375 Q76.5469 372.2188 76.1094 372.6094 Q75.6719 373 74.9531 373 L74.0938 373 L74.0938 372.0625 L74.7188 372.0625 Q75.1719 372.0625 75.4141 371.8281 Q75.6562 371.5938 75.9531 370.7188 L76.1562 370.1719 L73.5 363 L74.6406 363 L76.6875 368.7031 L78.75 363 L79.8906 363 L77 370.9375 ZM87.916 370.9375 Q87.4629 372.2188 87.0254 372.6094 Q86.5879 373 85.8691 373 L85.0098 373 L85.0098 372.0625 L85.6348 372.0625 Q86.0879 372.0625 86.3301 371.8281 Q86.5723 371.5938 86.8691 370.7188 L87.0723 370.1719 L84.416 363 L85.5566 363 L87.6035 368.7031 L89.666 363 L90.8066 363 L87.916 370.9375 ZM92.3301 361 L97.3613 361 L97.3613 362.0312 L93.5176 362.0312 L93.5176 365.0781 L96.9863 365.0781 L96.9863 366.1094 L93.5176 366.1094 L93.5176 370 L92.3301 370 L92.3301 361 ZM99.1855 363 L100.2637 363 L100.2637 370 L99.1855 370 L99.1855 363 ZM99.1855 360 L100.2637 360 L100.2637 361.4219 L99.1855 361.4219 L99.1855 360 ZM102.5195 360 L103.5977 360 L103.5977 370 L102.5195 370 L102.5195 360 ZM111.4785 366.3594 L111.4785 366.9219 L106.5098 366.9219 Q106.5879 367.9688 107.1895 368.5078 Q107.791 369.0469 108.8535 369.0469 Q109.4785 369.0469 110.0645 368.9062 Q110.6504 368.7656 111.2285 368.4844 L111.2285 369.4688 Q110.6348 369.7188 110.0254 369.8594 Q109.416 370 108.791 370 Q107.2285 370 106.3066 369.0703 Q105.3848 368.1406 105.3848 366.5625 Q105.3848 364.9219 106.2598 363.9609 Q107.1348 363 108.6035 363 Q109.9316 363 110.7051 363.9062 Q111.4785 364.8125 111.4785 366.3594 ZM110.4004 366.0781 Q110.3848 365.1094 109.9004 364.5312 Q109.416 363.9531 108.6191 363.9531 Q107.7129 363.9531 107.1738 364.5078 Q106.6348 365.0625 106.5566 366.0781 L110.4004 366.0781 ZM117.4238 363.3594 L117.4238 364.4062 Q116.9707 364.1719 116.4785 364.0547 Q115.9863 363.9375 115.4551 363.9375 Q114.6582 363.9375 114.252 364.1875 Q113.8457 364.4375 113.8457 364.9375 Q113.8457 365.3125 114.1348 365.5312 Q114.4238 365.75 115.2988 365.9375 L115.6582 366.0312 Q116.8145 366.2812 117.2988 366.7344 Q117.7832 367.1875 117.7832 368 Q117.7832 368.9219 117.0566 369.4609 Q116.3301 370 115.0645 370 Q114.5332 370 113.9629 369.8984 Q113.3926 369.7969 112.7676 369.5781 L112.7676 368.4375 Q113.3613 368.75 113.9395 368.9062 Q114.5176 369.0625 115.0957 369.0625 Q115.8457 369.0625 116.2598 368.7969 Q116.6738 368.5312 116.6738 368.0625 Q116.6738 367.6094 116.377 367.375 Q116.0801 367.1406 115.0801 366.9219 L114.7051 366.8281 Q113.7051 366.6094 113.2598 366.1719 Q112.8145 365.7344 112.8145 364.9531 Q112.8145 364.0156 113.4707 363.5078 Q114.127 363 115.3301 363 Q115.9238 363 116.4551 363.0938 Q116.9863 363.1875 117.4238 363.3594 Z" stroke="none" clip-path="url(#clipPath1)"/>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(71.1833,230)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(326.8167,230)" stroke="silver">
       <path d="M0 0 L256 0 L256 26 L0 26 L0 0 ZM1 1 L255 1 L255 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath3)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(72.1833,231)" stroke="rgb(60,60,60)">
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(327.8167,231)" stroke="rgb(215,213,172)">
       <rect x="0" width="254" height="26" y="0" clip-path="url(#clipPath4)" stroke="none"/>
       <rect x="0" y="25" clip-path="url(#clipPath4)" fill="rgb(90,90,90)" width="254" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(72.1833,231)" stroke="rgb(169,183,198)">
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(327.8167,231)">
       <image x="2" y="5" clip-path="url(#clipPath4)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/0lEQVR42mNgoDZw&#10;2/mC22bbPV+HLQ+qHbbdnwDGQDZIDCRH0ACghn4gno4D9+PUOHvVJieoAdPxYWS1&#10;cDB//XqBmSs2HCTWAJBakB64AbOWb8yYtWLDGZgBNlvuzDDKbd6t5R58XcvB655e&#10;aPIZq1n7FsEMAKkF6UEyYP0yZAOMcpr26kVkn7RdemK+7brLs01bF66zW35uLqoB&#10;65chGbDhELIBWu6B122XnJiPywsQAzYcImDAUVIMQPdCw17diIxTIENsVlyYY1o7&#10;fbPFxI3L8XgBNRDtN92aCTJE2z3whpaD5x29iIyTtouPLcAZiBRHI8UJiSpJmWqZ&#10;iVQAADXtWk8/Vsr0AAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
       <image x="18" y="5" clip-path="url(#clipPath4)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath4)" stroke="none">AbstractOAuth2IdentityProvider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(220,316)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(220,316)" stroke="silver">
       <path d="M0 0 L214 0 L214 26 L0 26 L0 0 ZM1 1 L213 1 L213 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath5)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(221,317)" stroke="rgb(60,60,60)">
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(221,317)" stroke="rgb(215,213,172)">
       <rect x="0" width="212" height="26" y="0" clip-path="url(#clipPath6)" stroke="none"/>
       <rect x="0" y="25" clip-path="url(#clipPath6)" fill="rgb(90,90,90)" width="212" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(221,317)" stroke="rgb(169,183,198)">
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(221,317)">
       <image x="2" y="5" clip-path="url(#clipPath6)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR42mNgoDZw&#10;2P+Kx277PT+HrQ9q7Lc9mATCIDZYDCiHV7Pt5gdG9lvvT7Tfdn8mVgyUA6nBqdlh&#10;+/0ZODVDMUgNhiHWG2/w4rUZi0tAeuAGgPyHrMB28+1ZRrnNe7Xcg25qOXg80AtJ&#10;Pmc9e98SZDUgPYiAAwcYQtIwp2m/XmTWaZulJxbarbs816x14QbbFefno3gFqAdu&#10;ALrztdwDb9osPrGQkDcIGHCMeAMwvdCwXy8i/QzIENuVF+aZ1U7fajlx40qcXkAP&#10;RPvNt2eDDNF2C7yl6eB1Ty8y47TNoqOLcAYixdFIcUKiSlKmSmYiBwAA7bGJehtB&#10;3/8AAAAASUVORK5CYII=" height="16" preserveAspectRatio="none"/>
       <image x="18" y="5" clip-path="url(#clipPath6)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath6)" stroke="none">FacebookIdentityProvider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(0,316)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(454,316)" stroke="silver">
       <path d="M0 0 L200 0 L200 26 L0 26 L0 0 ZM1 1 L199 1 L199 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath7)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(1,317)" stroke="rgb(60,60,60)">
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(455,317)" stroke="rgb(215,213,172)">
       <rect x="0" width="198" height="26" y="0" clip-path="url(#clipPath8)" stroke="none"/>
       <rect x="0" y="25" clip-path="url(#clipPath8)" fill="rgb(90,90,90)" width="198" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(1,317)" stroke="rgb(169,183,198)">
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(455,317)">
       <image x="2" y="5" clip-path="url(#clipPath8)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR42mNgoDZw&#10;2P+Kx277PT+HrQ9q7Lc9mATCIDZYDCiHV7Pt5gdG9lvvT7Tfdn8mVgyUA6nBqdlh&#10;+/0ZODVDMUgNhiHWG2/w4rUZi0tAeuAGgPyHrMB28+1ZRrnNe7Xcg25qOXg80AtJ&#10;Pmc9e98SZDUgPYiAAwcYQtIwp2m/XmTWaZulJxbarbs816x14QbbFefno3gFqAdu&#10;ALrztdwDb9osPrGQkDcIGHCMeAMwvdCwXy8i/QzIENuVF+aZ1U7fajlx40qcXkAP&#10;RPvNt2eDDNF2C7yl6eB1Ty8y47TNoqOLcAYixdFIcUKiSlKmSmYiBwAA7bGJehtB&#10;3/8AAAAASUVORK5CYII=" height="16" preserveAspectRatio="none"/>
       <image x="18" y="5" clip-path="url(#clipPath8)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath8)" stroke="none">GitHubIdentityProvider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(454,316)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(0,316)" stroke="silver">
       <path d="M0 0 L200 0 L200 26 L0 26 L0 0 ZM1 1 L199 1 L199 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath9)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(455,317)" stroke="rgb(60,60,60)">
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(1,317)" stroke="rgb(215,213,172)">
       <rect x="0" width="198" height="26" y="0" clip-path="url(#clipPath8)" stroke="none"/>
       <rect x="0" y="25" clip-path="url(#clipPath8)" fill="rgb(90,90,90)" width="198" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(455,317)" stroke="rgb(169,183,198)">
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(1,317)">
       <image x="2" y="5" clip-path="url(#clipPath8)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA9UlEQVR42mNgoDZw&#10;2P+Kx277PT+HrQ9q7Lc9mATCIDZYDCiHV7Pt5gdG9lvvT7Tfdn8mVgyUA6nBqdlh&#10;+/0ZODVDMUgNhiHWG2/w4rUZi0tAeuAGgPyHrMB28+1ZRrnNe7Xcg25qOXg80AtJ&#10;Pmc9e98SZDUgPYiAAwcYQtIwp2m/XmTWaZulJxbarbs816x14QbbFefno3gFqAdu&#10;ALrztdwDb9osPrGQkDcIGHCMeAMwvdCwXy8i/QzIENuVF+aZ1U7fajlx40qcXkAP&#10;RPvNt2eDDNF2C7yl6eB1Ty8y47TNoqOLcAYixdFIcUKiSlKmSmYiBwAA7bGJehtB&#10;3/8AAAAASUVORK5CYII=" height="16" preserveAspectRatio="none"/>
       <image x="18" y="5" clip-path="url(#clipPath8)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath8)" stroke="none">GoogleIdentityProvider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(257,0)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(295,0)" stroke="silver">
       <path d="M0 0 L102 0 L102 26 L0 26 L0 0 ZM1 1 L101 1 L101 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath10)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(258,1)" stroke="rgb(60,60,60)">
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(296,1)" stroke="rgb(215,213,172)">
       <rect x="0" width="100" height="26" y="0" clip-path="url(#clipPath11)" stroke="none"/>
       <rect x="0" y="25" clip-path="url(#clipPath11)" fill="rgb(90,90,90)" width="100" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(258,1)" stroke="rgb(169,183,198)">
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(296,1)">
       <image x="2" y="5" clip-path="url(#clipPath11)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR42mNgoDbI&#10;2u/Ak7Td0S95q1NN0janSSAMZgPFQHJ4NSdudjJK2uo8MWmb80ysGCgHUoNTc/J2&#10;5xk4NUMxSA2GIUkbrXnx2ozFJSA9CAOA/kNXZGCv/gAZYxgC1AM3ABJgmDY5pOgf&#10;AWGsXgHqQbgAh/PxGQDSQz0DKPcCpYFIcTRSnJCokpSpkpnIAQAKwz2Q/5iVegAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <image x="18" y="5" clip-path="url(#clipPath11)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath11)" stroke="none">Provider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(355.1,230)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(98.9,230)" stroke="silver">
       <path d="M0 0 L200 0 L200 26 L0 26 L0 0 ZM1 1 L199 1 L199 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath12)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(356.1,231)" stroke="rgb(60,60,60)">
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(99.9,231)" stroke="rgb(215,213,172)">
       <rect x="0" width="198" height="26" y="0" clip-path="url(#clipPath8)" stroke="none"/>
       <rect x="0" y="25" clip-path="url(#clipPath8)" fill="rgb(90,90,90)" width="198" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(356.1,231)" stroke="rgb(169,183,198)">
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(99.9,231)">
       <image x="2" y="5" clip-path="url(#clipPath8)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR42mNgoDbI&#10;2u/Ak7Td0S95q1NN0janSSAMZgPFQHJ4NSdudjJK2uo8MWmb80ysGCgHUoNTc/J2&#10;5xk4NUMxSA2GIUkbrXnx2ozFJSA9CAOA/kNXZGCv/gAZYxgC1AM3ABJgmDY5pOgf&#10;AWGsXgHqQbgAh/PxGQDSQz0DKPcCpYFIcTRSnJCokpSpkpnIAQAKwz2Q/5iVegAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <image x="18" y="5" clip-path="url(#clipPath8)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
       <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath8)" stroke="none">SocialIdentityProvider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(92.1833,153)" stroke="rgb(120,120,120)">
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(347.8167,153)" stroke="silver">
       <path d="M0 0 L214 0 L214 26 L0 26 L0 0 ZM1 1 L213 1 L213 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath13)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(93.1833,154)" stroke="rgb(60,60,60)">
-      <rect x="0" width="212" height="26" y="0" clip-path="url(#clipPath14)" stroke="none"/>
-      <rect x="0" y="25" clip-path="url(#clipPath14)" fill="rgb(90,90,90)" width="212" height="1" stroke="none"/>
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(348.8167,154)" stroke="rgb(215,213,172)">
+      <rect x="0" width="212" height="26" y="0" clip-path="url(#clipPath6)" stroke="none"/>
+      <rect x="0" y="25" clip-path="url(#clipPath6)" fill="rgb(90,90,90)" width="212" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(93.1833,154)" stroke="rgb(169,183,198)">
-      <image x="2" y="5" clip-path="url(#clipPath14)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/0lEQVR42mNgoDZw&#10;2/mC22bbPV+HLQ+qHbbdnwDGQDZIDCRH0ACghn4gno4D9+PUOHvVJieoAdPxYWS1&#10;cDB//XqBmSs2HCTWAJBakB64AbOWb8yYtWLDGZgBNlvuzDDKbd6t5R58XcvB655e&#10;aPIZq1n7FsEMAKkF6UEyYP0yZAOMcpr26kVkn7RdemK+7brLs01bF66zW35uLqoB&#10;65chGbDhELIBWu6B122XnJiPywsQAzYcImDAUVIMQPdCw17diIxTIENsVlyYY1o7&#10;fbPFxI3L8XgBNRDtN92aCTJE2z3whpaD5x29iIyTtouPLcAZiBRHI8UJiSpJmWqZ&#10;iVQAADXtWk8/Vsr0AAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
-      <image x="18" y="5" clip-path="url(#clipPath14)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
-      <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath14)" stroke="none">AbstractIdentityProvider</text>
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(348.8167,154)">
+      <image x="2" y="5" clip-path="url(#clipPath6)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA/0lEQVR42mNgoDZw&#10;2/mC22bbPV+HLQ+qHbbdnwDGQDZIDCRH0ACghn4gno4D9+PUOHvVJieoAdPxYWS1&#10;cDB//XqBmSs2HCTWAJBakB64AbOWb8yYtWLDGZgBNlvuzDDKbd6t5R58XcvB655e&#10;aPIZq1n7FsEMAKkF6UEyYP0yZAOMcpr26kVkn7RdemK+7brLs01bF66zW35uLqoB&#10;65chGbDhELIBWu6B122XnJiPywsQAzYcImDAUVIMQPdCw17diIxTIENsVlyYY1o7&#10;fbPFxI3L8XgBNRDtN92aCTJE2z3whpaD5x29iIyTtouPLcAZiBRHI8UJiSpJmWqZ&#10;iVQAADXtWk8/Vsr0AAAAAElFTkSuQmCC" height="16" preserveAspectRatio="none"/>
+      <image x="18" y="5" clip-path="url(#clipPath6)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
+      <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath6)" stroke="none">AbstractIdentityProvider</text>
     </g>
-    <g fill="rgb(120,120,120)" transform="matrix(1,0,0,1,20,20) translate(229,76)" stroke="rgb(120,120,120)">
-      <path d="M0 0 L158 0 L158 26 L0 26 L0 0 ZM1 1 L157 1 L157 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath15)" stroke="none"/>
+    <g fill="silver" transform="matrix(1,0,0,1,20,20) translate(267,76)" stroke="silver">
+      <path d="M0 0 L158 0 L158 26 L0 26 L0 0 ZM1 1 L157 1 L157 25 L1 25 L1 1 Z" fill-rule="evenodd" clip-path="url(#clipPath14)" stroke="none"/>
     </g>
-    <g fill="rgb(60,60,60)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(230,77)" stroke="rgb(60,60,60)">
-      <rect x="0" width="156" height="26" y="0" clip-path="url(#clipPath16)" stroke="none"/>
-      <rect x="0" y="25" clip-path="url(#clipPath16)" fill="rgb(90,90,90)" width="156" height="1" stroke="none"/>
+    <g fill="rgb(215,213,172)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(268,77)" stroke="rgb(215,213,172)">
+      <rect x="0" width="156" height="26" y="0" clip-path="url(#clipPath15)" stroke="none"/>
+      <rect x="0" y="25" clip-path="url(#clipPath15)" fill="rgb(90,90,90)" width="156" height="1" stroke="none"/>
     </g>
-    <g fill="rgb(169,183,198)" font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(230,77)" stroke="rgb(169,183,198)">
-      <image x="2" y="5" clip-path="url(#clipPath16)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR42mNgoDbI&#10;2u/Ak7Td0S95q1NN0janSSAMZgPFQHJ4NSdudjJK2uo8MWmb80ysGCgHUoNTc/J2&#10;5xk4NUMxSA2GIUkbrXnx2ozFJSA9CAOA/kNXZGCv/gAZYxgC1AM3ABJgmDY5pOgf&#10;AWGsXgHqQbgAh/PxGQDSQz0DKPcCpYFIcTRSnJCokpSpkpnIAQAKwz2Q/5iVegAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
-      <image x="18" y="5" clip-path="url(#clipPath16)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
-      <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath16)" stroke="none">IdentityProvider</text>
+    <g font-family="'DejaVu Sans Mono'" transform="matrix(1,0,0,1,20,20) translate(268,77)">
+      <image x="2" y="5" clip-path="url(#clipPath15)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAkUlEQVR42mNgoDbI&#10;2u/Ak7Td0S95q1NN0janSSAMZgPFQHJ4NSdudjJK2uo8MWmb80ysGCgHUoNTc/J2&#10;5xk4NUMxSA2GIUkbrXnx2ozFJSA9CAOA/kNXZGCv/gAZYxgC1AM3ABJgmDY5pOgf&#10;AWGsXgHqQbgAh/PxGQDSQz0DKPcCpYFIcTRSnJCokpSpkpnIAQAKwz2Q/5iVegAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
+      <image x="18" y="5" clip-path="url(#clipPath15)" width="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAASUlEQVR42mNgGAUo&#10;IHmrs0fyVqelSVudlqVscQki2QCQxozNTtIpG53FgQatJdmAxK3OmxCGOW8m3Qvb&#10;IAaANGPDJHhl1IARBgCtgVHpGtjhcQAAAABJRU5ErkJggg==" height="16" preserveAspectRatio="none"/>
+      <text x="40" xml:space="preserve" y="17" clip-path="url(#clipPath15)" stroke="none">IdentityProvider</text>
     </g>
-    <g fill="rgb(79,82,82)" font-size="15px" font-family="'Ubuntu'" transform="matrix(1,0,0,1,20,20) translate(421.6,152)" stroke="rgb(79,82,82)">
-      <rect x="1" y="1" clip-path="url(#clipPath18)" width="153" rx="8" ry="8" height="26" stroke="none"/>
-      <rect x="1" y="1" clip-path="url(#clipPath18)" fill="none" width="153" rx="8" ry="8" height="26" stroke="rgb(112,115,117)"/>
+    <g fill="rgb(249,254,213)" font-size="15px" font-family="'Ubuntu'" transform="matrix(1,0,0,1,20,20) translate(77.4,152)" stroke="rgb(249,254,213)">
+      <rect x="1" y="1" clip-path="url(#clipPath17)" width="153" rx="8" ry="8" height="26" stroke="none"/>
+      <rect x="1" y="1" clip-path="url(#clipPath17)" fill="none" width="153" rx="8" ry="8" height="26" stroke="rgb(204,204,0)"/>
     </g>
-    <g fill="rgb(187,187,187)" font-size="15px" font-family="monospace" transform="matrix(1,0,0,1,20,20) translate(431.6,157)" stroke="rgb(187,187,187)">
-      <text x="0" xml:space="preserve" y="14" clip-path="url(#clipPath19)" stroke="none">Empty interface</text>
+    <g font-family="monospace" font-size="15px" transform="matrix(1,0,0,1,20,20) translate(87.4,157)">
+      <text x="0" xml:space="preserve" y="14" clip-path="url(#clipPath18)" stroke="none">Empty interface</text>
     </g>
-    <g stroke-linecap="butt" transform="matrix(1,0,0,1,20,20)" fill-opacity="0.4" fill="rgb(187,187,187)" stroke="rgb(187,187,187)" stroke-opacity="0.4" stroke-miterlimit="1.45">
-      <path fill="none" d="M505.1 229.9512 L505.1 205 L499.1 205 L499.1 180.0488" clip-path="url(#clipPath2)"/>
+    <g fill="rgb(88,157,246)" stroke-miterlimit="1.45" transform="matrix(1,0,0,1,20,20)" stroke-linecap="butt" stroke="rgb(88,157,246)">
+      <path fill="none" d="M604 315.9609 L604 296 L540.15 296 L540.15 267.0391" clip-path="url(#clipPath2)"/>
     </g>
-    <g fill="rgb(96,147,80)" stroke-miterlimit="1.45" stroke-dasharray="6,2" transform="matrix(1,0,0,1,20,20)" stroke-linecap="butt" stroke="rgb(96,147,80)">
-      <path fill="none" d="M199.1833 152.9746 L199.1833 127 L268.5 127 L268.5 113.0488" clip-path="url(#clipPath2)"/>
-      <path d="M268.5 102.0488 L262.5 114.0488 L274.5 114.0488 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" stroke-dasharray="none" d="M405.1 229.9512 L405.1 205 L411.1 205 L411.1 127 L347.5 127 L347.5 113.0488" clip-path="url(#clipPath2)"/>
-      <path stroke-dasharray="none" d="M347.5 102.0488 L341.5 114.0488 L353.5 114.0488 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" stroke-dasharray="none" d="M308 75.9512 L308 37.0488" clip-path="url(#clipPath2)"/>
-      <path stroke-dasharray="none" d="M308 26.0488 L302 38.0488 L314 38.0488 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" stroke-dasharray="none" d="M199.1833 229.9502 L199.1833 190.0498" clip-path="url(#clipPath2)" stroke="rgb(88,157,246)"/>
-      <path fill="rgb(88,157,246)" stroke-dasharray="none" d="M199.1833 179.0498 L193.1833 191.0498 L205.1833 191.0498 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" d="M604 315.9609 L604 296 L521.7667 296 L521.7667 267.0391" clip-path="url(#clipPath2)"/>
-      <path d="M521.7667 256.0391 L515.7667 268.0391 L527.7667 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" d="M150 315.9707 L150 286 L388.4333 286 L388.4333 267.0293" clip-path="url(#clipPath2)"/>
-      <path d="M388.4333 256.0293 L382.4333 268.0293 L394.4333 268.0293 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" d="M380.5 315.9609 L380.5 296 L455.1 296 L455.1 267.0391" clip-path="url(#clipPath2)"/>
-      <path d="M455.1 256.0391 L449.1 268.0391 L461.1 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" stroke-dasharray="none" d="M504 315.9609 L504 276 L284.5167 276 L284.5167 267.0391" clip-path="url(#clipPath2)" stroke="rgb(88,157,246)"/>
-      <path fill="rgb(88,157,246)" stroke-dasharray="none" d="M284.5167 256.0391 L278.5167 268.0391 L290.5167 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" stroke-dasharray="none" d="M273.5 315.9609 L273.5 276 L199.1833 276 L199.1833 267.0391" clip-path="url(#clipPath2)" stroke="rgb(88,157,246)"/>
-      <path fill="rgb(88,157,246)" stroke-dasharray="none" d="M199.1833 256.0391 L193.1833 268.0391 L205.1833 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
-      <path fill="none" stroke-dasharray="none" d="M50 315.9609 L50 296 L113.85 296 L113.85 267.0391" clip-path="url(#clipPath2)" stroke="rgb(88,157,246)"/>
-      <path fill="rgb(88,157,246)" stroke-dasharray="none" d="M113.85 256.0391 L107.85 268.0391 L119.85 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
+    <g fill="rgb(88,157,246)" stroke-miterlimit="1.45" transform="matrix(1,0,0,1,20,20)" stroke-linecap="butt" stroke="rgb(88,157,246)">
+      <path d="M540.15 256.0391 L534.15 268.0391 L546.15 268.0391 Z" stroke="none" clip-path="url(#clipPath2)"/>
+      <path fill="none" d="M380.5 315.9609 L380.5 296 L454.8167 296 L454.8167 267.0391" clip-path="url(#clipPath2)"/>
+      <path d="M454.8167 256.0391 L448.8167 268.0391 L460.8167 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" d="M150 315.9609 L150 296 L369.4833 296 L369.4833 267.0391" clip-path="url(#clipPath2)"/>
+      <path d="M369.4833 256.0391 L363.4833 268.0391 L375.4833 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" stroke-dasharray="6,2" d="M273.5 315.9707 L273.5 286 L198.9 286 L198.9 267.0293" clip-path="url(#clipPath2)" stroke="rgb(96,147,80)"/>
+      <path fill="rgb(96,147,80)" stroke-dasharray="6,2" d="M198.9 256.0293 L192.9 268.0293 L204.9 268.0293 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" stroke-dasharray="6,2" d="M504 315.9609 L504 276 L265.5667 276 L265.5667 267.0391" clip-path="url(#clipPath2)" stroke="rgb(96,147,80)"/>
+      <path fill="rgb(96,147,80)" stroke-dasharray="6,2" d="M265.5667 256.0391 L259.5667 268.0391 L271.5667 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" stroke-dasharray="6,2" d="M50 315.9609 L50 296 L132.2333 296 L132.2333 267.0391" clip-path="url(#clipPath2)" stroke="rgb(96,147,80)"/>
+      <path fill="rgb(96,147,80)" stroke-dasharray="6,2" d="M132.2333 256.0391 L126.2333 268.0391 L138.2333 268.0391 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" d="M454.8167 229.9502 L454.8167 190.0498" clip-path="url(#clipPath2)"/>
+      <path d="M454.8167 179.0498 L448.8167 191.0498 L460.8167 191.0498 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" d="M346 75.9512 L346 37.0488" clip-path="url(#clipPath2)" stroke="rgb(96,147,80)"/>
+      <path fill="rgb(96,147,80)" d="M346 26.0488 L340 38.0488 L352 38.0488 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" d="M248.9 229.9512 L248.9 205 L242.9 205 L242.9 127 L306.5 127 L306.5 113.0488" clip-path="url(#clipPath2)" stroke="rgb(96,147,80)"/>
+      <path fill="rgb(96,147,80)" d="M306.5 102.0488 L300.5 114.0488 L312.5 114.0488 Z" clip-path="url(#clipPath2)" stroke="none"/>
+      <path fill="none" stroke-dasharray="6,2" d="M454.8167 152.9746 L454.8167 127 L385.5 127 L385.5 113.0488" clip-path="url(#clipPath2)" stroke="rgb(96,147,80)"/>
+      <path fill="rgb(96,147,80)" stroke-dasharray="6,2" d="M385.5 102.0488 L379.5 114.0488 L391.5 114.0488 Z" clip-path="url(#clipPath2)" stroke="none"/>
+    </g>
+    <g stroke-linecap="butt" transform="matrix(1,0,0,1,20,20)" fill-opacity="0.4" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-opacity="0.4" stroke-miterlimit="1.45">
+      <path fill="none" d="M148.9 229.9512 L148.9 205 L154.9 205 L154.9 180.0488" clip-path="url(#clipPath2)"/>
     </g>
   </g>
 </svg>

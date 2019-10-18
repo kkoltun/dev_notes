@@ -16,7 +16,7 @@
 
 **`SoftReference`**:
 * This reference may stick around after the object became **weakly reachable** and before it is collected.
-* **Object recurrection**: calling `get()` on an object that is **weakly reachable** but before the garbage collector collects it.
+* **Object resurrection**: calling `get()` on an object that is **weakly reachable** but before the garbage collector collects it.
 * The object will surely be collected before 
 
 **`Phantom reference`**:

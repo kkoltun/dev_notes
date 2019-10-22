@@ -64,4 +64,10 @@ Important facts:
   * Changes made in a particular persistence context are immediately visible to all other code executed inside that unit of work and its persistence context.
   * Only one instance represents a particular database row within one persistence context (other idea is process-scoped identity).
 
+## Creating `EntityManager`
+
+When `EntityManagerFactory#createEntityManager()` is called:
+* The `EntityManager` looks for an ongoing transaction on the same thread and *joins* the transaction by listening to transaction events.
+* If there is no transaction going, it enters a special *unsynchronized* mode. In this mode, JPA will not automatically flush the persistence context.
+* **If you want the `EntityManager` to join the transaction, create it in the same thread as the transaction.**
 

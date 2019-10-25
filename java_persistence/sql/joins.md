@@ -26,7 +26,7 @@
 
 **Selects all rows from both participating tables as long as there is a match.**
 
-`SELECT * FROM table_A INNER JOIN table_B on table_a.A=table_B.A;`
+`SELECT * FROM table_A INNER JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
@@ -36,7 +36,7 @@
 
 **Selects all rows from the first table and rows from the second table as long as there is a match.**
 
-`SELECT * FROM table_A LEFT JOIN table_B on table_a.A=table_B.A;`
+`SELECT * FROM table_A LEFT JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
@@ -48,7 +48,7 @@
 
 **Selects all rows from the second table and rows from the first table as long as there is a match.**
 
-`SELECT * FROM table_A LEFT JOIN table_B on table_a.A=table_B.A;`
+`SELECT * FROM table_A LEFT JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
@@ -60,7 +60,7 @@
 
 **Combines results of the both left and right outer joins.**
 
-`SELECT * FROM table_A FULL OUTER JOIN table_B on table_a.A=table_B.A;`
+`SELECT * FROM table_A FULL OUTER JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
@@ -74,7 +74,7 @@
 
 **Selects all rows from both participating tables as long as there are matches in ALL same named and typed columns. The common columns appear only once in the results.**
 
-`SELECT * FROM table_A NATURAL JOIN table_B on table_a.A=table_B.A;`
+`SELECT * FROM table_A NATURAL JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | N |
 |---|---|---|
@@ -98,6 +98,7 @@ WHERE table_A.A=table_B.A;
 | first_name | 2 | varchar(20) |
 | last_name | 3 | varchar(20) |
 | manager_id | 4 | int(11) unsigned |
+| department_id | 5 | int(11) unsigned |
 
 **Table `departments`:**
 
@@ -130,6 +131,7 @@ WHERE e.department_id=d.department_id AND e.manager_id = d.manager_id;
 ## 6. CROSS JOIN
 
 * **Produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table.**
+* **The result is a Carthesian product of two tables.**
 * **If `WHERE` clause is used with `CROSS JOIN`, it functions like an `INNER JOIN`.**
 
 `SELECT * FROM table_A CROSS JOIN table_B;`

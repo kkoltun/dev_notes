@@ -18,6 +18,9 @@ JPA/Hibernate notes:
 6. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
 7. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
 
+Spring:
+1. [Guide to @Transactional by Marco Behler](https://www.marcobehler.com/guides/spring-transaction-management-unconventional-guide?utm_source=newsletter&utm_medium=sendy)
+
 Problems addressed by persistence tools:
 * **the problem of granularity** - classes in OOP versus used-defined data types in SQL;
 * **the problem of subtypes** - moving inheritance from code to database;
@@ -27,7 +30,7 @@ Problems addressed by persistence tools:
 
 Materials:
 * [Repository and Unit of Work Patterns](https://www.programmingwithwolfgang.com/repository-and-unit-of-work-pattern/)
-* [A guide to accessing databases in Java](https://www.marcobehler.com/guides/a-guide-to-accessing-databases-in-java)
+* [A guide to accessing databases in Java by Marco Behler](https://www.marcobehler.com/guides/a-guide-to-accessing-databases-in-java)
 
 Todo:
 * Relational model and theory;
@@ -35,6 +38,5 @@ Todo:
 * CAP theorem;
 * Carthesian product;
 * n+1 problem;
-* Can I use UserTransaction with eg. HikariCP;
 * Identifier generation strategies in Hibernate.
 

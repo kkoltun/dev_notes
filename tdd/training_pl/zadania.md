@@ -26,7 +26,7 @@ Przed napisaniem testów i metody zastanów się jakie są odpowiednie typy dany
 **Liczenie kwoty brutto**:
 
 Do klasy `SimpleCalculator` dodaj metodę która będzie przyjmować kwotę netto oraz wymiar podatku VAT (liczba procent) oraz obliczać kwotę brutto.
-Weź pod uwagę odpowiednie zaokrąglanie zwracanej kwoty, metoda nie powinna zwracać więcej niż dwie cyfry po przecinku.
+Weź pod uwagę odpowiednie zaokrąglanie zwracanej kwoty, metoda nie powinna zwracać więcej niż dwie cyfry po przecinku i odpowiednio zaokrąglać kwoty.
 
 Materiały:
 * [Jak obsłużyć pieniądze w Javie 1](http://www.javapractices.com/topic/TopicAction.do?Id=13)
@@ -36,7 +36,7 @@ Materiały:
 
 Do metody `calculate` klasy `TextCalculator` dodaj obsługę:
 1. Liczb większych niż jednocyfrowe.
-2. Obsługa liczb ujemnych.
+2. Liczb ujemnych.
 
 ## Nowa klasa `BankAccount`
 
@@ -50,6 +50,10 @@ Zaimplementuj następujące metody:
 Zaimplementuj następujące zachowanie konta:
 1. Maksymalny debet równy `-1000`. Wypłata powyżej debetu: `IllegalStateException`.
 2. Gdy ktoś wchodzi czyli wypłaca kwotę większą niż ma jest dostępna na koncie, należy mu naliczyć koszt debetu równy `5`.
+
+## Prawdziwy serwis CurrencyService korzystający z API NBP
+
+[Zadanie tutaj, **polecam**!](./nbp_client.md)
 
 ## Pozostałe zadania z prezentacji
 

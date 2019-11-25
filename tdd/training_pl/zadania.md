@@ -1,11 +1,53 @@
 # Zadania z TDD
 
-```
+## Uwagi
+
+### Test Driven Development
+
 Wszystkie zadania najlepiej robić zgodnie z procesem Test Driven Development, w skrócie:
 1. Napisanie testu w którym sprawdzamy czy kod spełnia wymaganie. Test nie przechodzi.
 2. Napisanie najprostszego kodu który sprawia że test przechodzi.
 3. Poprawki kodu i testów.
 4. Przejście do kolejnych testów.
+
+### Porównywanie zmiennych BigDecimal
+
+#### W kodzie
+
+Domyślna metoda `equals()` w klasie `BigDecimal` porównuje dwie liczby biorąc pod uwagę skalę - liczbę cyfr po przecinku.
+Powoduje to, że porównywanie obiektów klasy `BigDecimal` może doprowadzić do nieprzewidzianych wyników, na przykład:
+```
+BigDecimal x = new BigDecimal("1");
+BigDecimal y = new BigDecimal("1.00");
+System.out.println(x.equals(y)); // false
+```
+
+**W związku z tym, do porównywania obiektów `BigDecimal` w kodzie używamy ich metody `compareTo`, która porównuje liczby wewnątrz obietków. Więcej informacji o metodzie [tutaj](https://www.geeksforgeeks.org/bigdecimal-compareto-function-in-java/).**
+
+```
+BigDecimal x = new BigDecimal("1");
+BigDecimal y = new BigDecimal("1.00");
+System.out.println(x.compareTo(y) == 0); // true
+```
+
+#### W asercjach
+
+Asercje `assertEquals` w JUnit oraz `assertThat(obj).isEqualTo(other)` w JAssert używają metody `equals()`, w związku z czym ich użycie do porównywania `BigDecimal` może być nietrafione.
+
+```
+BigDecimal x = new BigDecimal("1");
+BigDecimal y = new BigDecimal("1.00");
+assertEquals(x, y); // nie przechodzi
+assertThat(x).isEqualTo(y); // nie przechodzi
+```
+
+**W związku z tym, do porównywania obiektów `BigDecimal` w asercjach używamy metody assertThat(liczba1).isEqualByComparingTo(liczba2).**
+
+```
+BigDecimal x = new BigDecimal("1");
+BigDecimal y = new BigDecimal("1.00");
+assertEquals(0, x.compareTo(y)); // przechodzi, ale nie jest najczystszym podejściem
+assertThat(x).isEqualByComparingTo(y); // przechodzi
 ```
 
 ## Rozszerzenie SimpleCalculator

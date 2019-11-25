@@ -1,6 +1,8 @@
 # TDD - materiały i zadania
 
-[**Różne zadania domowe**](./zadania.md)
+## Do zaprogramowania
+
+[**Różne zadania domowe**](./zadania.md#)
 
 ## Do oglądania
 

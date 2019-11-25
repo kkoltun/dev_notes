@@ -6,10 +6,10 @@ NBP wystawia internetowe API REST do pobierania kursów walut.
 Zapoznaj się z dokumentacją API [tutaj](http://api.nbp.pl/en.html).
 Pod różnymi adresami dostępnę są różne dane dotyczące kursu walut, ceny złota i innych.
 
-Pod adresem http://api.nbp.pl/api/exchangerates/rates/{typ_tabeli}/{kod_waluty}/{data} można pobrac kurs danej waluty:
-* {typ_tabeli} - są tabele A, B i C, zawierające różne dane. W najprostszym przypadku interesuje tabela A.
-* {kod_waluty} - każda waluta ma swój kod - złotówka to `PLN`, dolar `USD`, euro `EUR` i tak dalej.
-* {data} - data w formacie `YYYY-MM-DD` lub `today`. Pamiętaj że kursy walut są zwracane tylko dla dni roboczych.
+Pod adresem `http://api.nbp.pl/api/exchangerates/rates/{typ_tabeli}/{kod_waluty}/{data}` można pobrac kurs danej waluty:
+* `{typ_tabeli}` - są tabele A, B i C, zawierające różne dane. W najprostszym przypadku interesuje tabela A.
+* `{kod_waluty}` - każda waluta ma swój kod - złotówka to `PLN`, dolar `USD`, euro `EUR` i tak dalej.
+* `{data}` - data w formacie `YYYY-MM-DD` lub tekst `today`. Pamiętaj że kursy walut są zwracane tylko dla dni roboczych.
 
 Przykładowe użycie API:
 * Wysłanie zapytania pod adres `http://api.nbp.pl/api/exchangerates/rates/A/usd/today` pobiera dzisiejszy kurs dolara.
@@ -33,13 +33,13 @@ Jedną z nich jest dostarczana razem z Javą począwszy od wersji 9.
 1. Dodaj do projektu [JSON in Java](https://mvnrepository.com/artifact/org.json/json).
 2. W paczce `dev.karolkoltun.currency` stwórz nowy plik `ExampleCurrencyClient` i wypróbuj kod zamieszczony [tutaj](./ExampleCurrencyClient.java).
 3. Zbadaj przykładowy kod i przerób go tak, by pobierał kursy innych walut dla innych dat.
-4. Przykładowy kod pobiera średni kurs waluty. Przerób go by pobierał kurs kupna i sprzedaży waluty - te kursy są w przechowywane w tabeli C.
+4. Przykładowy kod pobiera średni kurs waluty. Przerób go by pobierał kurs kupna `bid` i sprzedaży `ask` danej waluty. Te kursy są w przechowywane w tabeli C.
 5. Dodaj do klasy `ExampleCurrencyClient` metody:
   * `public double getTodayAverageRate(String currencyCode)` - pobiera średni dzisiejszy kurs wybranej waluty.
   * `public double getTodayBidRate(String currencyCode)` - pobiera dzisiejszy kurs kupna wybranej waluty.
   * `public double getTodayAskRate(String currencyCode)` - pobiera dzisiejszy kurs sprzedaży wybranej waluty.
 6. Dodaj takie same metody które będą przyjmowały dodatkowo datę dla której należy pobrać kurs.
-7. W przypadku w którym serwer może znaleźć danych o które zapyta użytkownik, zwraca odpowiedź `404`.
+7. W przypadku w którym serwer nie może znaleźć danych o które zapyta klient, zwraca odpowiedź HTTP `404`.
 [Tutaj](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404) możesz poznać szczegóły tej odpowiedzi.
 Zadbaj o to, by w razie takiego błędu aplikacja rzucała wyjątek `RateNotFoundException`.
 

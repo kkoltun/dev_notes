@@ -33,10 +33,10 @@
 
 ## Training materials in Polish language
 
-* [Agile](./agile/training_pl/extension.md)
-* [JVM](./jvm/training_pl/README.md)
-* [HTTP](./http/training_pl/README.md)
-* [TDD](./tdd/training_pl/README.md)
+* [Agile](./agile/training_pl/extension.md#)
+* [JVM](./jvm/training_pl/README.md#)
+* [HTTP](./http/training_pl/README.md#)
+* [TDD](./tdd/training_pl/README.md#)
 
 ## Purposes
 

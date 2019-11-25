@@ -8,7 +8,7 @@ Wszystkie zadania najlepiej robić zgodnie z procesem Test Driven Development, w
 4. Przejście do kolejnych testów.
 ```
 
-## Rozszerzenie `SimpleCalculator`
+## Rozszerzenie SimpleCalculator
 
 **Potęga z liczby**:
 
@@ -38,7 +38,7 @@ Do metody `calculate` klasy `TextCalculator` dodaj obsługę:
 1. Liczb większych niż jednocyfrowe.
 2. Liczb ujemnych.
 
-## Nowa klasa `BankAccount`
+## Nowa klasa BankAccount
 
 Dodaj nową klasę `BankAccount`.
 
@@ -53,7 +53,7 @@ Zaimplementuj następujące zachowanie konta:
 
 ## Prawdziwy serwis CurrencyService korzystający z API NBP
 
-[Zadanie tutaj, **polecam**!](./nbp_client.md)
+[Zadanie tutaj, **polecam**!](./nbp_client.md#)
 
 ## Pozostałe zadania z prezentacji
 

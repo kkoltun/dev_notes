@@ -23,7 +23,8 @@ BigDecimal y = new BigDecimal("1.00");
 System.out.println(x.equals(y)); // false
 ```
 
-**W związku z tym, do porównywania obiektów `BigDecimal` w kodzie używamy ich metody `compareTo`, która porównuje liczby wewnątrz obietków. Więcej informacji o metodzie [tutaj](https://www.geeksforgeeks.org/bigdecimal-compareto-function-in-java/).**
+**W związku z tym, do porównywania obiektów `BigDecimal` w kodzie używamy ich metody `compareTo`, która porównuje liczby wewnątrz obietków.**
+**Więcej informacji o metodzie [tutaj](https://www.geeksforgeeks.org/bigdecimal-compareto-function-in-java/).**
 
 ```java
 BigDecimal x = new BigDecimal("1");
@@ -42,7 +43,8 @@ assertEquals(x, y); // nie przechodzi
 assertThat(x).isEqualTo(y); // nie przechodzi
 ```
 
-**W związku z tym, do porównywania obiektów `BigDecimal` w asercjach używamy metody assertThat(liczba1).isEqualByComparingTo(liczba2).**
+**W związku z tym, do porównywania obiektów `BigDecimal` w asercjach używamy metody `assertThat(liczba1).isEqualByComparingTo(liczba2)`, która wewnątrz używa metody `BigDecimal#compareTo()`.**
+**Więcej informacji o porównywaniu liczb w AssertJ [tutaj](https://github.com/joel-costigliola/assertj-examples/blob/master/assertions-examples/src/test/java/org/assertj/examples/NumberAssertionsExamples.java).**
 
 ```java
 BigDecimal x = new BigDecimal("1");

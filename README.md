@@ -57,3 +57,14 @@
 Currently reading:
 * EJB 3 in Action
 * Java Persistence with Hibernate
+
+## Books
+
+* [The Pragmatic Programmer: From Journeyman to Master](https://www.amazon.com/gp/product/020161622X/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=020161622X&linkId=b986402d7089608afe577a7bf8755e68)
+* [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/gp/product/0132350882/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0132350882&linkId=ba767f45615c5c20b5f358f9a999e126)
+* [Agile Software Development, Principles, Patterns, and Practices](https://www.amazon.com/gp/product/0135974445/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0135974445&linkId=74ca15ade6ca727cafe5d97d74ff8c48)
+* [Refactoring to Patterns](https://www.amazon.com/gp/product/0321213351/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321213351&linkId=6b2fc185b2769b18f658450bbacbb481)
+* [Working Effectively with Legacy Code](https://www.amazon.com/gp/product/0131177052/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0131177052&linkId=4b69970d70713bf53ac39e24e220759c)
+* [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/gp/product/0201485672/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0201485672&linkId=da77d80ca71a20f6862156fed62e779b)
+* [Refactoring: Improving the Design of Existing Code (2nd Edition)](https://www.amazon.com/gp/product/0134757599/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0134757599&linkId=2fe8e02bf9998a2b3c5419dd1a374c5b)
+* [Test Driven Development: By Example](https://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321146530&linkId=ec4179a2a0749f0433740765e89abbd7)

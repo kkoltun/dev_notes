@@ -75,7 +75,7 @@ Zwróć uwagę na różnicę pomiędzy podaniem do programu ścieżki do pliku, 
 
 ## Zadanie 5: Class loadery oraz wyjątki rzucane przez JVM
 
-Wykonaj zadania 5 oraz 7 podane w prezentacji.
+Wykonaj zadania 5 oraz 9 podane w prezentacji.
 
 ## Zadanie 6: Zbadanie działania Intellij za pomocą Visual VM (bez GC)
 

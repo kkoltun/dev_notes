@@ -21,7 +21,7 @@ Example of CSRF:
 <img src="http://bank.example.com/withdraw?account=bob&amount=10000&for=mallory">
 ```
 2. This is a request to bank's server to withdraw money.
-3. If you are logged into your bank account, your cookies are still valid and there is no confirmation of withdrawal, an money will be transfered.
+3. If you are logged into your bank account, your cookies are still valid and there is no confirmation of withdrawal, an money will be transferred.
 
 To mitigate this attack:
 * filter the user input;

@@ -85,7 +85,7 @@ MERGE_SORT(A, p, r)
 ### Heaps
 
 Features:
-* aray object that can be viewed as nearly complete binary tree;
+* array object that can be viewed as nearly complete binary tree;
 * each node of the tree corresponds to an element of an array;
 * the tree is completely filled on all levels except possibly the lowest;
 
@@ -157,7 +157,7 @@ The heapsort algorithm:
 2. The resultant array is a max-heap, however it is not sorted. 
 3. Since the maximum element of the array is stored at the root `A[1]` we can put it into its correct final position - exchange values with `A[n]`.
 4. Discard the node `n` by decrementing A.heap_size.
-5. The children of the root remain max-heaps, but the new rootelemnt might violate the max-heap property.
+5. The children of the root remain max-heaps, but the new root element might violate the max-heap property.
 6. Call `MAX_HEAPIFY(A, 1)`.
 7. Go to point 1.
 
@@ -210,8 +210,8 @@ PARTITION(A, p, r)
 
 ### Performance of quicksort
 
-The running time of quicksort depends on whether the partioning is balanced or unbalanced, which in turn depends on which elements are used for partitioning:
-* for balanced partitioning, the algorithm runs asymptoticalyl as fast as merge sort;
+The running time of quicksort depends on whether the partitioning is balanced or unbalanced, which in turn depends on which elements are used for partitioning:
+* for balanced partitioning, the algorithm runs asymptotically as fast as merge sort;
 * for unbalanced, it can run asymptotically as slow as insertion sort.
 
 The two boundary cases are:
@@ -329,7 +329,7 @@ Algorithm      | Worst-case r.t. | Best-case r.t. | Average-case r.t | Assumptio
 * Overall: even faster than quicksort which uses itin small subproblems. Threshold depends on machine but is around 10.
 
 **Quicksort**:
-* Worst-case (unbalanced partitioning): in the worst case, `PARTITION` partitioning routine produces one subproblem with n-1 elements and one with 0 elements. When unbalanced partitionng arises in each recursive call, running time is quadratic.
+* Worst-case (unbalanced partitioning): in the worst case, `PARTITION` partitioning routine produces one subproblem with n-1 elements and one with 0 elements. When unbalanced partitioning arises in each recursive call, running time is quadratic.
 * Best-case (balanced partitioning): `PARTITION` routine produces two subproblems, each of size no more than `n/2` (one of size `n/2`, one of size `n/2-1`).
 * Average-case: the average-case running time of quicksort is much closer to the best case than to the worst case (good and bad splits are distributed randomly throughout the tree).
 

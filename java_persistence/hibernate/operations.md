@@ -43,7 +43,7 @@ if (item != null)
 
 Facts:
 * The retrieved instance is in persistent state and can be modified inside the unit of work.
-* Hibernate will perform dirty checking to know if an `UPDATE` is neccessary.
+* Hibernate will perform dirty checking to know if an `UPDATE` is necessary.
 * If any changes were made, Hibernate will try to propagate state changes to the database as late as possible, toward the end of the transaction.
 
 What is updated:
@@ -227,8 +227,8 @@ Automatic flushing of the persistence context happens when:
 * Before a query is executed with `javax.persistence.Query` or similar Hibernate API.
 * When application calls `EntityManager#flush()` explicitly.
 
-Controling flushing mode:
-* `FlushModeType.AUTO` - this is the automatical mode.
+Controlling flushing mode:
+* `FlushModeType.AUTO` - this is the automatic mode.
 * `FlushModeType.COMMIT` - flushing before queries is disabled, it will happen only when transaction is committed or an explicit call to `EntityManager#flush()` is made.
 
 ## Detaching entity instances
@@ -269,7 +269,7 @@ When `EntityManager#merge()` is called:
 5. Modifications can be continued on the returned `mergedItem`. These will be monitored and commited by Hibernate.
 
 Important facts:
-* If there is no persistent intance with the same identifier in the persistence context, Hibernate will instantiate a fresh `Item`.
+* If there is no persistent instance with the same identifier in the persistence context, Hibernate will instantiate a fresh `Item`.
 * If a transient instance is passed to `EntityManager#merge()` (an instance without identifier), Hibernate will handle this and make return a fresh, persistent instance.
 * The difference between `EntityManager#merge()` and `EntityManager#persist()` is the return values - `persist()` acts in-place, `merge()` returns a new instance and the old should be discarded.
 

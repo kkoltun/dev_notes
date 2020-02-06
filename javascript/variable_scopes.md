@@ -23,7 +23,7 @@ console.log(
 2. As a part of a global object. (**more recommended**)
 
 Using global namespace for variables can result in unexpected bugs. 
-It is a good idea to namespace these variables so that they bocome properties of a global object.
+It is a good idea to namespace these variables so that they become properties of a global object.
 
 ```javascript
 var app = {}; // a global object

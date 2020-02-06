@@ -44,4 +44,4 @@ Being persistent means that entity's data is stored to the database when the tra
 
 New entity instances become managed and persistent either by:
 * invoking `persist` method;
-* a acscading `persist` operation invoked from related entities that have the `cascade=PERSIST` or `cascade=ALL` elementts set in the relationship annotation.
+* a cascading `persist` operation invoked from related entities that have the `cascade=PERSIST` or `cascade=ALL` elements set in the relationship annotation.

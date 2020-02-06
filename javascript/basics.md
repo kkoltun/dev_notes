@@ -111,7 +111,7 @@ let blackRabbit = new Rabbit("black");
 ```
 
 Keyword `class`:
-* starts a class declaraction which allows constructor and methods definition;
+* starts a class declaration which allows constructor and methods definition;
 * the `constructor` method provides constructor function, which will be bound to the name `Rabbit`;
 * functions inside the class definitions are methods - properties that hold functions;
 * all things apart from `constructor` are packaged into constructor's prototype.
@@ -403,7 +403,7 @@ There is a way to achieve a certain degree of isolation:
 
 ```javascript
 const weekDay = function() {
-  const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday', "Saturday']
+  const names = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
   return {
     name(number) { return names[number]; },

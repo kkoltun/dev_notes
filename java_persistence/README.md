@@ -36,7 +36,7 @@ Todo:
 * Relational model and theory;
 * Data normalization;
 * CAP theorem;
-* Carthesian product;
+* Cartesian product;
 * n+1 problem;
 * Identifier generation strategies in Hibernate.
 

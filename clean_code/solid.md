@@ -9,7 +9,7 @@
 
 ### Rationale
 * software is easier to implement, debug and test;
-* any change does not add/remove responsibilites from class;
+* any change does not add/remove responsibilities from class;
 * classes are easier to understand and explain;
 * prevents unexpected side-effects of future changes;
 * classes are easier to name clearly.
@@ -52,8 +52,8 @@ A module is:
 ### Rationale
 OCP for architect is for:
 * separating the functionality based on how, why and when it changes;
-* organizing the separated functionality into a hierarchy of compontents;
-* protecting higher-level components in that hierarchy from changes to lower-level compontents.
+* organizing the separated functionality into a hierarchy of components;
+* protecting higher-level components in that hierarchy from changes to lower-level components.
 
 ### Example
 * an **anti-example** could be `switch` statement that requires change every time you add an option to menu;
@@ -150,7 +150,7 @@ This not only applies to making subclasses breaking the API of the super class, 
 
 ### Description
 * *clients should not be forced to implement interfaces they do not use* by Robert Martin;
-* favor composition over inheritance - separate roles (resposibilities);
+* favor composition over inheritance - separate roles (responsibilities);
 * favor decoupling over coupling - do not couple derivative classes with unneeded responsibilities inside a monolith.
 
 ### Rationale
@@ -168,7 +168,7 @@ Small iterfaces:
 
 #### Solution with ISP
 ![solution](./image/isp_2.svg)
-* by seggregating the operations into interface, the source code of `User1` depends on `Operation1` interface and `operation1()`, but **will not** depend on `OPS`;
+* by segregating the operations into interface, the source code of `User1` depends on `Operation1` interface and `operation1()`, but **will not** depend on `OPS`;
 * change to `OPS` that `User1` does not care about will not cause `User1` to be recompiled and redeployed.
 
 ### Example at architectural level

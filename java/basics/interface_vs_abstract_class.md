@@ -24,7 +24,7 @@ When to use abstract class:
 When to use interface:
 * **Unrelated classes** would implement the interface (eg. `Comparable` and `Cloneable`);
 * Specifying a behavior but not thinking about who implements it.
-* Enabling multple inheritance of type.
+* Enabling multiple inheritance of type.
 
 ## Example from Keycloak
 

@@ -55,7 +55,7 @@ Command to use:
 
 #### Build Phases That Are Not Called via CLI
 
-The phases starings with `pre-*`, `post-*`, `process-*` are usually not directly called via CLI. These phases sequence the build, producing intermediate results that are not useful outside the build. **In the case of invoking `integration-test`, the environment may be left in a hanging state.**
+The phases starting with `pre-*`, `post-*`, `process-*` are usually not directly called via CLI. These phases sequence the build, producing intermediate results that are not useful outside the build. **In the case of invoking `integration-test`, the environment may be left in a hanging state.**
 
 ## Assigning tasks to each of build phases
 ### Packaging
@@ -119,7 +119,7 @@ Configuring plugins is the second way of adding goals to phases.
 Plugins characteristics:
 * they are artifacts that provide goals to Maven;
 * they may have one or more goals; **each goal represents a capability of the plugin**;
-* example: Complier plugin with two goals: `compile` (compile main code) and `testCompile` (compile test code).
+* example: Compiler plugin with two goals: `compile` (compile main code) and `testCompile` (compile test code).
 
 Steps of working with plugins:
 1. Add the plugin;

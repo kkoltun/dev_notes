@@ -25,12 +25,12 @@
 A design strategy which:
 * allows to reduce the inter-dependencies between components of a system;
 * reduces the risk of changes in one component that will require changes in other ones;
-* improves thinking about the problem in a genneric manner;
+* improves thinking about the problem in a generic manner;
 * improves maintainability.
 
 Tight coupling:
 * makes introducing changes harder;
-* impar testability;
+* impair testability;
 * increases the probability of "spaghetti code".
 
 ### Law of Demeter (principle of least knowledge)

@@ -4,8 +4,8 @@
 
 Terms used:
 * **Dynamic set** - a set which can grow, shrink, or otherwise change over time.
-* **Pointer** - in a typical implemenation of a dynamic set each element is represented by an object whose attributes can be examined and manipulated if we have a pointer to it.
-* **Satelite data** - data carried arround in the object attributes, but unused by set implementation.
+* **Pointer** - in a typical implementation of a dynamic set each element is represented by an object whose attributes can be examined and manipulated if we have a pointer to it.
+* **Satellite data** - data carried around in the object attributes, but unused by set implementation.
 * **Key** - some kinds of dynamic sets assume that one of the object's attributes is an identifying key. If the keys are all different, we can think of the dynamic set as being a set of key values.
 * **Totally ordered set** - some dynamics sets presuppose that the keys are drawn from a totally ordered set, such as the real numbers.
 
@@ -105,7 +105,7 @@ DEQUEUE(Q)
 **Linked list** is a dynamic set having the following features:
 * objects are arranged in a linear order;
 * the linear order is by a pointer in each object (unlike an array where it is determined by array indices);
-* supports all operations listed for dynamic sets (though not neccessarily efficiently).
+* supports all operations listed for dynamic sets (though not necessarily efficiently).
 
 A doubly linked list can be implemented with objects that have:
 * attribute `x.next` pointing to next element;

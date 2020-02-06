@@ -18,7 +18,7 @@ Benefits:
 Downsides:
 * Not all things can be encapsulated well. In a layered enterprise application, adding a new field to UI requires changes in the database and everywhere between.
 * Extra layers can harm performance. Data is usually transformed from one representation to another from layer to layer.
-* Deciding what layers to have and what the resposibilities each layer should have is hard.
+* Deciding what layers to have and what the responsibilities each layer should have is hard.
 
 ## Three Principal Layers
 

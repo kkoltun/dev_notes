@@ -31,7 +31,13 @@ public static void main(String[] args) {
 #### 2.1 Biblioteki HTTP
 
 Java udostępnia szereg klas umożliwiających pobieranie zasobów z sieci.
-Jedną z nich jest [Apache HTTPClient](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.9).
+
+Pierwszym z rozwiązań jest klient HTTP dostarczony wraz z Javą począwszy od wersji 11.
+Rozwiązanie opiera się na klasie `HttpClient`.
+Obiekty zapytania oraz odpowiedzi to klasy odpowiednio `HttpRequest` oraz `HttpResponse`.
+[Tutaj](https://openjdk.java.net/groups/net/httpclient/intro.html) oraz [tutaj](https://openjdk.java.net/groups/net/httpclient/recipes.html) można poznać przykłady użycia.
+
+Innym z rozwiązań jest biblioteka [Apache HTTPClient](https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient/4.5.9).
 Biblioteka działa na zasadzie:
 1. Stwórz klient
 2. Stwórz obiekt zapytania (klasa `HttpGet`, `HttpPost` lub inne).
@@ -39,7 +45,7 @@ Biblioteka działa na zasadzie:
 
 [Tutaj](https://hc.apache.org/httpcomponents-client-ga/tutorial/html/fundamentals.html) oraz [tutaj](https://www.vogella.com/tutorials/ApacheHttpClient/article.html) można poznać przykłady użycia.
 
-**Użyj biblioteki by pobierać dane ze strony `restcountries`.**
+**Użyj jedno z powyższych rozwiązań by pobierać dane ze strony `restcountries`.**
 
 #### 2.2 Pobieranie państw po kodzie języka
 
@@ -97,7 +103,7 @@ public Country getCountryByName(String name) {
 1. Java udostępnia szereg klas umożliwiających mapowanie JSONa na obiekty.
 Przykładowe biblioteki:
   * [gson](https://github.com/google/gson) dostarczony przez Google; [tutaj jeden z tutoriali](https://www.baeldung.com/gson-deserialization-guide); [maven](https://mvnrepository.com/artifact/com.google.code.gson/gson/2.8.5)
-  * [Jackson](https://github.com/FasterXML/jackson) używany przez między innymi Springa; [tutaj tutoriale](https://github.com/eugenp/tutorials/tree/master/jackson) [maven](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.9.9.2)
+  * [Jackson](https://github.com/FasterXML/jackson) używany przez między innymi Springa; [tutaj poradnik użycia](https://docs.google.com/presentation/d/1-3UgItqwFcyNR7fmWyy5YZvNe-hFHXAXUHCLdILtZJk/edit?usp=sharing), [tutaj tutoriale](https://github.com/eugenp/tutorials/tree/master/jackson) [maven](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind/2.9.9.2)
 
 2. Napisz metodę która będzie przyjmowała nazwę państwa i zwracała stworzony obiekt wcześniej `Country`.
 Tym razem nie parsuj JSONa manualnie, a wykorzystaj do tego biblitotekę.

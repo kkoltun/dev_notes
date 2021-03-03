@@ -121,7 +121,7 @@ The main features of HTTP messages are the following:
 * They are line-oriented sequences of characters;
 * The request and response messages are very similar;
 
-Mesages consist of three parts:
+Messages consist of three parts:
 1. *Start line* - the first line of the message.
 2. *Header fields* - zero or more headers following the start line.
 Each header field consists of the header name, colon (:) and value. This part ends with a blank line.

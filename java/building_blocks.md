@@ -56,7 +56,7 @@ And... **This is default in java - package scope!**
 This way **making class public is not a default option, it is a deliberate choice to publish it.**
 As a result, among `Controller`, `Repository`, `Factory`, `Entity` classes, none has to be public!
 
-As long as we do not call the `Facade` or `Controller`, the only calls come from the framework mamanging HTTP requests - it does not require the controller to be public.
+As long as we do not call the `Facade` or `Controller`, the only calls come from the framework managing HTTP requests - it does not require the controller to be public.
 Furthermore, the controller does not have to be public, because it is not a part of the contract. It is called from a HTTP client, so the HTTP API is part of the contract.
 
 So, what should be public?
@@ -69,7 +69,7 @@ So, what should be public?
 In this structure querying/searching can be done with CQRS - Command Query Response Segregation.
 
 There are two sides:
-* **comand side** - the domain side in which different things happen;
+* **command side** - the domain side in which different things happen;
 * **query side** - handle me the data from where it is stored and let me sort/filter/... it.
 
 In this structure, the command part is this class:
@@ -154,7 +154,7 @@ class ArticleConfiguration {
 ```
 
 This way:
-* an entrypoint is clearly signalled to the environment;
+* an entry point is clearly signalled to the environment;
 * every required inside class is created and injected into constructor;
 * external infrastructure (IO, etc.) is accepted as arguments;
 * in testing one will be able to mock the external infrastructure.

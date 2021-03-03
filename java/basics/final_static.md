@@ -6,7 +6,7 @@ A final class cannot be subclassed. Many classes in Java are final - `java.lang.
 
 ## Final methods
 
-A final method cannot be overriden or hidden by subclasses.
+A final method cannot be overridden or hidden by subclasses.
 This is usually used to prevent unexpected behavior from a subclass altering a method that may be crucial to the function or consistency of the class.
 
 ## Final variables

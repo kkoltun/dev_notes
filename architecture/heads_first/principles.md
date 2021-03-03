@@ -18,7 +18,7 @@ Patterns:
 
 #### Strive for loosely coupled designs between objects that interact.
 
-This means obtaining flexible OO systems, that can handle change because they minimize the interdepencency between objects.
+This means obtaining flexible OO systems, that can handle change because they minimize the interdependency between objects.
 
 Patterns:
 * observer.

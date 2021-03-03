@@ -39,7 +39,7 @@ Resource state is a combination of:
 * values of information items belonging to the resource;
 * links to related resources;
 * links that represent a transition to a possible future state of the current resource;
-* the results of evaluation any busienss rules that relate the resource to other local resources.
+* the results of evaluation any business rules that relate the resource to other local resources.
 
 Resource state is partly dependent on the state of other local resources. Importantly, the rules that control the state of a resource are internal to the service that governs the resource. They do not leak into the external representation.
 
@@ -81,7 +81,7 @@ properties.`
 
 `Software structure = a property of the static software source code`
 
-Both modular structure of the source code and having independet software components implemented using parts of the same code have advantages. To focus on the software's run-time characteristics independent of a given component's implementation, the view of the software architecture is spearated from that of the source code.
+Both modular structure of the source code and having independent software components implemented using parts of the same code have advantages. To focus on the software's run-time characteristics independent of a given component's implementation, the view of the software architecture is separated from that of the source code.
 
 #### Elements
 ##### Component
@@ -122,12 +122,12 @@ Styles are a mechanism for categorizing architectures and for defining their com
 #### Network-based vs. Distributed
 `The primary distinction between network-based architectures and software architectures in general is that communication between components is restricted to message passing, or the equivalent of message passing if a more efficient mechanism can be selected at run-time based on the location of components.`
 
-Distributed system is one that looks to its users like an ordinary centralized system, but runs on multiple, independent CPUs. Network-based system is one that is capable of operation across a network, but not neccessarily in a fashion that is transparent to the user.
+Distributed system is one that looks to its users like an ordinary centralized system, but runs on multiple, independent CPUs. Network-based system is one that is capable of operation across a network, but not necessarily in a fashion that is transparent to the user.
 
 #### Architectural properties of key interest
 
 ##### Performance
-One of the main reasons to focus on styles for network-based applications is because component interactions can be the dominant factor in determining user-perceived performace and network efficiency. Since the architectural style influences the nature of those interactions, selection of an appropriate architectural style can make the difference between success and failuer in the deployment of a network-based application.
+One of the main reasons to focus on styles for network-based applications is because component interactions can be the dominant factor in determining user-perceived performance and network efficiency. Since the architectural style influences the nature of those interactions, selection of an appropriate architectural style can make the difference between success and failure in the deployment of a network-based application.
 
 Application's overall performance consists of various factors:
 * network performance;
@@ -174,7 +174,7 @@ Client-server architectural style's main principle is separation of concerns. By
 Possibly most significant to the Web, is thtat the separation allows the components to evolve independently.
 
 ###### Stateless
-Communication must be stateless in nature, as in the client-stateless-server (CSS) style. Each request from client to server must contain all of the information neccessary to understand the request, and cannot take advantage of an stored context on the server. **Session state is therefore kept entirely on the client**
+Communication must be stateless in nature, as in the client-stateless-server (CSS) style. Each request from client to server must contain all of the information necessary to understand the request, and cannot take advantage of an stored context on the server. **Session state is therefore kept entirely on the client**
 
 This induces:
 * visibility - monitoring system does not have to look beyond a single request datum in orded to determine the full nature of the request;
@@ -213,7 +213,7 @@ Overall rules:
 
 ###### Resources and Resource Identifiers
 `Resource is any information that can be named. In other words, it can be any concept that might be the target of an author's hypertext reference.`
-Resource `R` is a temporally varying membersip function `Mr(t)` which for time `t` maps to a set of entities, or valuse which are equivalent. The values in the set may be resource *resource representations* and/or *resource identifiers&.
+Resource `R` is a temporally varying membership function `Mr(t)` which for time `t` maps to a set of entities, or values which are equivalent. The values in the set may be resource *resource representations* and/or *resource identifiers&.
 
 ### Books
 * C. Ghezzi, M. Jazayeri, and D. Mandrioli. Fundamentals of Software Engineering. Prentice-Hall, 1991.
@@ -222,9 +222,9 @@ Resource `R` is a temporally varying membersip function `Mr(t)` which for time `
 * Shaw. Toward higher-level abstractions for software systems. Data & Knowledge Engineering, 5, 1990, pp. 119–128.
 * L. Bass, P. Clements, and R. Kazman. Software Architecture in Practice. Addison Wesley, Reading, Mass., 1998.
 
-## Statefull vs stateless
+## Stateful vs stateless
 
-### Statefull and stateless protocols
+### Stateful and stateless protocols
 
 ### Stateless vs caching
 [Ion Crowcraft](https://www.cl.cam.ac.uk/~jac22/books/www/book/node39.html)
@@ -251,7 +251,7 @@ A generalization of a regular procedure invocation to a case where caller and re
 The goal is to make remote invocation as similar as possible to regular procedure calls and to hide details of the physical connection.
 
 #### Advantages
-The goal potentially allows to turn the distribution of the final system into a deployment-time decision. In other words, it may not matter for the programmet whether the call is local or remote as it syntactically looks the same.
+The goal potentially allows to turn the distribution of the final system into a deployment-time decision. In other words, it may not matter for the programmer whether the call is local or remote as it syntactically looks the same.
 
 #### Disadvantages
 The disadvantages mainly come from the fact that the syntax of regular calls leaves no place for the information that might be usefully used if the system is actually distributed. There are two main security and integrity issues:

@@ -27,7 +27,7 @@ document_root/WEB-INF/classes/
 
 Purposes:
 * any required Java classes for the application that are not combined into JAR files;
-* associated resorces.
+* associated resources.
 
 4. Libraries:
 ```
@@ -37,7 +37,7 @@ document_root/WEB-INF/lib/
 Purposes:
 * JAR files that contain Java class files required for the application - libs, JDBC drivers.
 
-5. Tomcatt specific configuration options
+5. Tomcat specific configuration options
 ```
 document_root/META-INF/context.xml
 ```

@@ -4,12 +4,12 @@
 * create computer representations of concepts in the problem space;
 
 ## CRC Cards
-*  Component, Responisibilty, Collaborators;
+*  Component, Responsibility, Collaborators;
 * prototyping and simulating design;
 * far from implementation, enables to focus on the problem;
 
 ## Design types
-* conceptual design - Component, Responisibilty, Collaborators (CRC) cards method;
+* conceptual design - Component, Responsibility, Collaborators (CRC) cards method;
 * technical design - Unified Modeling Language (UML) method.
 
 ## Types of objects
@@ -32,7 +32,7 @@
 #### Properties
 * used when dealing with complexity;
 * abstraction of a concept should make sense for the concept's purpose;
-* Rule Of Least Astonishment - the abstraction captures the essential attributes and behavior for a concept with no surprieses and no definitions that fall beyonds its scope.
+* Rule Of Least Astonishment - the abstraction captures the essential attributes and behavior for a concept with no surprises and no definitions that fall beyonds its scope.
 
 Abstraction describes:
 * attributes;
@@ -96,12 +96,12 @@ Abstraction describes:
 
 #### Aggregation
 * weak "has-a" relationship;
-* weak relationship - the whole can exist without its parts and vice versa (`Crewmember` can exist without `Plane` aggregting it and vice versa);
+* weak relationship - the whole can exist without its parts and vice versa (`Crewmember` can exist without `Plane` aggregating it and vice versa);
 * parts can be shared;
 * symbol - line with empty diamond and quantities on each side.
 
 #### Composition
-* striong "has-a" relationship;
+* strong "has-a" relationship;
 * strong relationship - the whole cannot exist without its parts; if it looses its parts it ceases to exist; if whole is destroyed, parts are destroyed too;
 * parts are exclusive to the whole;
 * symbol - line with filled diamond and quantity on the other side.

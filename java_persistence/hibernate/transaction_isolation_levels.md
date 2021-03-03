@@ -53,7 +53,7 @@ Table from [Patterns of Enterprise Application Architecture by Martin Fowler](ht
 
 **Overview of the topic:**
 * Most applications do not need *serializable isolation*, phantom reads are usually not that problematic.
-* *Read uncomitted* isolation is extremely dangerous to use, it should be eliminated from the beginning.
+* *Read uncommitted* isolation is extremely dangerous to use, it should be eliminated from the beginning.
 * You usually do not need a *repeatable read* in every transaction.
 
 ### JPA specification
@@ -66,4 +66,4 @@ Table from [Patterns of Enterprise Application Architecture by Martin Fowler](ht
   * This is why, the read is repeatable and the client won't see conflicting committed data.
   * There still can be phantom reads, but this is a much less severe problem.
 
-2. Enabling **versioning** of the domain model entities tunrs the *last commit wins* problem into *first commit wins* mechanism. Hibernate can deal with versioning automatically.
+2. Enabling **versioning** of the domain model entities turns the *last commit wins* problem into *first commit wins* mechanism. Hibernate can deal with versioning automatically.

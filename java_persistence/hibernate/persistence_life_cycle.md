@@ -5,7 +5,7 @@
 * **Persistence life cycle** - states an entity goes through during its life.
 * **Unit of work** - set of (possibly) state-changing operations considered one (usually atomic) group.
 * **Persistence service** - a service that provides persistence context.
-* **Persistence context** - overally it can be treated as a service that remembers all the modifications and state changes made to the data in a particular unit of work.
+* **Persistence context** - overall it can be treated as a service that remembers all the modifications and state changes made to the data in a particular unit of work.
 
 ## Entity Life Cycle
 
@@ -15,7 +15,7 @@
 * instance created with `new` and garbage-collected when it is no longer needed;
 * no rollback mechanisms;
 * **transition from transient to persistent means becoming managed**;
-* from transient to persistent: calling `EntityManager#persist` or creating a refernce of an already-persistent instance with enabled cascading state for that mapped association.
+* from transient to persistent: calling `EntityManager#persist` or creating a reference of an already-persistent instance with enabled cascading state for that mapped association.
 
 **Persistent state**:
 * instance has a representation in the database;

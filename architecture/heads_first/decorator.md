@@ -2,7 +2,7 @@
 
 ![decorator](./image/decorator.svg)
 
-**Definition**: attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to sublassing for extending functionality.
+**Definition**: attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 
 **Advantages**:
 * enables to add its own behavior either before and/or after delegating to the decorated object to do the rest of the job;
@@ -16,8 +16,8 @@
 
 **Disadvantages**:
 * decorator patterns often results in a lot of small classes to design;
-* used uncarefully can increase complexity of the code;
-* usually makes constructing objects more complicated - the compontent and decorators have to be instantiated.
+* used carelessly can increase complexity of the code;
+* usually makes constructing objects more complicated - the component and decorators have to be instantiated.
 
 ## Decorators in Java I/O
 

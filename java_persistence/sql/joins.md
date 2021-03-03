@@ -131,7 +131,7 @@ WHERE e.department_id=d.department_id AND e.manager_id = d.manager_id;
 ## 6. CROSS JOIN
 
 * **Produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table.**
-* **The result is a Carthesian product of two tables.**
+* **The result is a Cartesian product of two tables.**
 * **If `WHERE` clause is used with `CROSS JOIN`, it functions like an `INNER JOIN`.**
 
 `SELECT * FROM table_A CROSS JOIN table_B;`

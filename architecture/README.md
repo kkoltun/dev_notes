@@ -2,9 +2,9 @@
 
 ## Why patterns are important
 
-1. They help to create flexible designs that are mainainable and can cope with change.
+1. They help to create flexible designs that are maintainable and can cope with change.
 2. They provide vocabulary to communicate with other developers.
-3. They enable to stay at the "design level" a bit longer, analize the abstraction before getting down to implementation.
+3. They enable to stay at the "design level" a bit longer, analyze the abstraction before getting down to implementation.
 4. Widen the variety of solutions to problems in mind.
 5. They are more than only OO design principles - they are (sometimes non-obvious) ways of constructing object-oriented systems, that otherwise would be achieved by hard, iterative work.
 

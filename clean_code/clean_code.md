@@ -33,7 +33,7 @@ Tight coupling:
 * impair testability;
 * increases the probability of "spaghetti code".
 
-### Law of Demeter (principle of least knowledge)
+### Law of Demeter (principle of the least knowledge)
 LoD is a specific case of loose coupling.
 It can be summarized in each of the following ways:
 * each unit should have only limited knowledge about other units: only units "closely" related to the current unit;

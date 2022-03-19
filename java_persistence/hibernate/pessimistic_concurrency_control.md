@@ -11,7 +11,7 @@ To obtain pessimistic locking in `EntityManager#createQuery` method, two `LockMo
 * `LockModeType.PESSIMISTIC_WRITE` to guarantee repeatable reads, serialize data access and no phantom reads.
 * If the specified lock cannot be obtained within a specified timeout, the query throws an exception.
 
-**Is is up to JPA provider to implement those requirements:**
+**It is up to JPA provider to implement those requirements:**
 * `H2`:
   * There is only one type of exclusive lock, so only `SELECT * FROM ITEM ... FOR UPDATE` is chosen.
 * `PostgreSQL`:

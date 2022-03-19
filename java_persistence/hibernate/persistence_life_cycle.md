@@ -55,7 +55,7 @@ Important facts:
   * When unit of work completes, usually the state held in memory is propagated to database.
 
 2. Persistence context as a `first-level cache`:
-  * All the entitiy instances handled in a particular unit of work are remembered.
+  * All the entity instances handled in a particular unit of work are remembered.
   * If lookup by identifier is requested, Hibernate will first check if the entity instance is present in the persistence context.
 
 3. Persistence context cache ensures:

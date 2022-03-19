@@ -40,7 +40,7 @@ Why do we need collections:
 * Cannot contain duplicate keys.
 
 **`NavigableSet` and `NavigableMap`**:
-* A SortedSet and SortedMap extended with navigation methods reporting closest matches for given search targets.
+* A SortedSet and SortedMap extended with navigation methods reporting the closest matches for given search targets.
 * Has methods `lower`, `floor`, `ceiling` and `higher` returning elements basing on the comparison.
 
 ## Classes
@@ -69,7 +69,7 @@ Why do we need collections:
 
 There are different kinds of wrappers;
 * **Synchronized wrappers** - collections with automatic synchronization (thread-safety).
-* **Unmodifiable wrappers** - used for example to provide clients with a reference to which they have a read-only access while you have a reference to the backing collection.
+* **Unmodifiable wrappers** - used for example to provide clients with a reference to which they have read-only access while you have a reference to the backing collection.
 * **Thread-safe collections** - collections that allow to be modified while iterating. By default, the iterator is fail-fast and throws `ConcurrentModificationException`.
 
 

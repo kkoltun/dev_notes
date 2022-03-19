@@ -19,7 +19,7 @@ The number of edges that are incident to a vertex is called its **degree** (loop
 ### Adjacency-list representation
 
 For a graph `G = (V, E)`, the adjacency-list representation consists of an array `Adj` of `|V|` lists, one for each vertex in `V`.
-For every vertex `u`, list `Adj[u]` contains all the vertives adjacent to `u` in `G`.
+For every vertex `u`, list `Adj[u]` contains all the vertices adjacent to `u` in `G`.
 
 Properties of `Adj`:
 * it can represent both undirected and directed graphs;

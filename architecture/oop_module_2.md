@@ -41,7 +41,7 @@ Abstraction describes:
 #### Abstraction with a class
 * class - like a template for its instances. Each instance can have other properties;
 * for creating a class using abstraction a **context** is needed;
-* attributes and behaviors of a class will vary depending from a **context**.
+* attributes and behaviors of a class will vary depending on a **context**.
 
 ### Encapsulation
 > Encapsulation forms a self-contained object by bundling the data and functions it requires to work, exposes an interface whereby other objects can access and use it, and restricts access to certain inside details.
@@ -68,7 +68,7 @@ Abstraction describes:
 
 ### Generalization
 > generalization of behaviors achieved by methods used in different places;
-> generatlization of classes achieved by inheritance;
+> generalization of classes achieved by inheritance;
 
 #### Properties
 * reduces redundancy;
@@ -79,7 +79,7 @@ Abstraction describes:
 ### UML Class Diagram
 * class name, properties and operations;
 * directly mapped to code; as opposed to vague **CRC Cards which are far from the implementation, this enables to focus on the problem**.
-* CRC resposibilities map Class Diagram to properties/operations
+* CRC responsibilities map Class Diagram to properties/operations
 
 ### Encapsulation in Java and UML
 * restricting access to properties to getters and setters;

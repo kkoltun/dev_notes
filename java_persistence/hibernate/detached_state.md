@@ -50,7 +50,7 @@ Problems with creating an `equals()` methods basing on id:
 * Identifier values are assigned by Hibernate when instance becomes persistent.
 * If the instance is already in `Set`, the hash value change would break the collection.
 
-Introcution of a notion of a **business key** (in contrast with **natural primary key** and **surrogate key**):
+Introduction of a notion of a **business key** (in contrast with **natural primary key** and **surrogate key**):
 * This is a property of a combination of properties that is unique for each instance with the same database identity.
 * Unlike **natural primary key**, the business key may change, as long as it changes rarely.
 * The **business key** is what the user thinks of as uniquely identifying a particular record.
@@ -89,5 +89,5 @@ Overall ideas for the implementation:
 * Think of how users tell the difference between one element and another.
 * Every immutable is probably a good candidate for the business key. Mutable attributes may be good too, provided they are updated rarely or that you can control the case when they're updated.
 * Every attribute that has a `UNIQUE` database constraint is a good candidate for the business key.
-* Any date or time-based attributem such as the creation timestamp of the record is usually a good component of a business key. Pay attention to the accuracy of `System.currentTimeMilis()` which is JVM-specific.
+* Any date or time-based attributes such as the creation timestamp of the record is usually a good component of a business key. Pay attention to the accuracy of `System.currentTimeMilis()` which is JVM-specific.
 * You may use the database identifier of an associated entity instance. This is applicable in cases in which the entity is completely dependent on another and requires an already-persistent object in construction.

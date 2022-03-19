@@ -36,4 +36,4 @@
 
 ![Phantom read](./images/isolation_issues_phantom_read.svg)
 
-* Transaction excecutes a query twice and the second result includes data that wasn't visible in the first result or less data because something was deleted.
+* Transaction executes a query twice and the second result includes data that wasn't visible in the first result or less data because something was deleted.

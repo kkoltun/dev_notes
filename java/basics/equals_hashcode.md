@@ -25,4 +25,4 @@ Java method `hashCode()` returns hashcode value as an Integer. **This method mus
 The general contract of `hashCode()` is:
 * it must be consistent, although it is not necessary that it returns the same numbers from one execution of the application to another;
 * if two objects are equal, according to `equals()` method, then `hashCode()` method must produce the same `Integer` on each of the two objects;
-* if two objects are unequal, according to `equals()` method, is is not necessary `hashCode()` will produce two distinct numbers. However, producing distinct values on each of the two objects is better for improving performance of hashing based collections.
+* if two objects are unequal, according to `equals()` method, it is not necessary for `hashCode()` to produce two distinct numbers. However, producing distinct values on each of the two objects is better for improving performance of hashing based collections.

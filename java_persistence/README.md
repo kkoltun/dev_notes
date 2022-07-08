@@ -2,6 +2,8 @@
 
 > The data lives longer than any application.
 
+See the code repository [here](https://github.com/kkoltun/dev_notes_code_java_persistence).
+
 SQL notes:
 * [Join types](./sql/joins.md)
 
@@ -10,18 +12,20 @@ JDBC notes:
 * [Statement types](./jdbc/statements.md)
 
 JPA/Hibernate notes:
-1. [Persistence life cycle](./hibernate/persistence_life_cycle.md)
-2. [Operations on data](./hibernate/operations.md)
-3. [Identifying detached instances](./hibernate/detached_state.md)
-4. [Transaction isolation issues](./hibernate/transaction_isolation_issues.md)
-5. [Transaction isolation levels](./hibernate/transaction_isolation_levels.md)
-6. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
-7. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
+* [Loose notes on JPA](jpa.md)
+* [JPA vs Hibernate](./hibernate/jpa_vs_hibernate.md)
+* [Persistence life cycle](./hibernate/persistence_life_cycle.md)
+* [Operations on data](./hibernate/operations.md)
+* [Identifying detached instances](./hibernate/detached_state.md)
+* [Transaction isolation issues](./hibernate/transaction_isolation_issues.md)
+* [Transaction isolation levels](./hibernate/transaction_isolation_levels.md)
+* [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
+* [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
 
 Spring:
-1. [Guide to @Transactional by Marco Behler](https://www.marcobehler.com/guides/spring-transaction-management-unconventional-guide?utm_source=newsletter&utm_medium=sendy)
+* [Guide to @Transactional by Marco Behler](https://www.marcobehler.com/guides/spring-transaction-management-unconventional-guide?utm_source=newsletter&utm_medium=sendy)
 
-Problems addressed by persistence tools:
+Problems addressed by the persistence tools:
 * **the problem of granularity** - classes in OOP versus used-defined data types in SQL;
 * **the problem of subtypes** - moving inheritance from code to database;
 * **the problem of identity** - Java instance identity (`a==b`) and instance equality versus (`equals()`) versus identity of a database row;

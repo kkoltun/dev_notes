@@ -1,0 +1,16 @@
+Session vs transaction:
+* Session may be spanning over multiple transactions.
+* Over the same connection multiple (begin transaction - commit) are possible.
+
+Transaction classes:
+* JDBC Transaction - transaction managed through a JDBC Connection.
+* CMT Transaction - all work done in the context of a container managed transaction. CMT is not neccessarily container-managed, the point is that the transactions are managed by something other than Hibernate.
+
+XA transaction = global transaction:
+* May span multiple resources.
+* Talking to multiple resources in a single transaction.
+* Websphere, Weblogic or JBoss acting as a TransactionManager.
+* Various resources - Oracle Sybase, IBM MQ, JMS, SAP acting as *transaction resources*.
+* *Commit* - results are commited across all of the resources.
+* *Rollback* - everything is rolled back across all resources.
+* Two phase commit protocol is used.

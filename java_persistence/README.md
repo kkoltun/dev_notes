@@ -13,7 +13,7 @@ JDBC notes:
 
 JPA/Hibernate notes:
 * [Loose notes on JPA](jpa.md)
-* [JPA vs Hibernate](./hibernate/jpa_vs_hibernate.md)
+* [JPA and Hibernate](./hibernate/jpa_and_hibernate.md)
 * [Persistence life cycle](./hibernate/persistence_life_cycle.md)
 * [Operations on data](./hibernate/operations.md)
 * [Identifying detached instances](./hibernate/detached_state.md)

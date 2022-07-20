@@ -1,4 +1,12 @@
 # JPA
+
+Problems addressed by the persistence tools:
+* **the problem of granularity** - classes in OOP versus used-defined data types in SQL;
+* **the problem of subtypes** - moving inheritance from code to database;
+* **the problem of identity** - Java instance identity (`a==b`) and instance equality versus (`equals()`) versus identity of a database row;
+* **the problems relating to associations** - `object references` versus `foreign key-constrained columns`;
+* **the problem of data navigation** - moving along the object network in Java vs minimizing the number of requests to the database, `n+1 selects` problem.
+
 ## `Entity`
 Entity is:
 * a lightweight persistence domain object;
@@ -45,3 +53,18 @@ Being persistent means that entity's data is stored to the database when the tra
 New entity instances become managed and persistent either by:
 * invoking `persist` method;
 * a cascading `persist` operation invoked from related entities that have the `cascade=PERSIST` or `cascade=ALL` elements set in the relationship annotation.
+
+## Transactions
+
+Transaction classes:
+* JDBC Transaction - transaction managed through a JDBC Connection.
+* CMT Transaction - all work done in the context of a container managed transaction. CMT is not neccessarily container-managed, the point is that the transactions are managed by something other than Hibernate.
+
+XA transaction = global transaction:
+* May span multiple resources.
+* Talking to multiple resources in a single transaction.
+* Websphere, Weblogic or JBoss acting as a TransactionManager.
+* Various resources - Oracle Sybase, IBM MQ, JMS, SAP acting as *transaction resources*.
+* *Commit* - results are commited across all of the resources.
+* *Rollback* - everything is rolled back across all resources.
+* Two phase commit protocol is used.

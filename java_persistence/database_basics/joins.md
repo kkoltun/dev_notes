@@ -2,7 +2,9 @@
 
 ![Join types](./images/joins.png)
 
-[*Why wenn diagrams are wrong when explaining JOINS. :)*](https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
+[Why wenn diagrams are wrong when explaining JOINS. :-)](https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
+
+[Code examples TODO - fix the link here](https://github.com/kkoltun/dev_notes_code_java_persistence)
 
 ### Tables used in examples
 
@@ -22,15 +24,37 @@
 | 3 | q |
 | 5 | r |
 
-## 1. INNER JOIN
+## 1. INNER JOIN ON condition
 
-**Selects all rows from both participating tables as long as there is a match.**
+This does a cross product, but keeping only those tuples which satisfy the condition.
+
+`table_A ⋈ table_B with condition table_A.A = table_B.A`
 
 `SELECT * FROM table_A INNER JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
 | 2 | n | 2 | p |
+
+## 2. NATURAL JOIN
+
+This is the natural join in the relational algebra.
+It equates columns across tables of the same name.
+It also eliminates the duplicate columns that are created.
+
+`table_A ⋈ table_B`
+
+`SELECT * FROM table_A NATURAL JOIN table_B`
+
+| A | M | A | N |
+|---|---|---|---|
+| 2 | n | 2 | p |
+
+## 3. INNER JOIN USING (attributes)
+
+This is kind of the same as the NATURAL JOIN, but you explicitly list the attributes that you want to be equated.
+
+`SELECT * FROM table_A INNER JOIN table_B USING (A)`
 
 ## 2. LEFT JOIN or LEFT OUTER JOIN
 
@@ -72,7 +96,8 @@
 
 ## 5. NATURAL JOIN
 
-**Selects all rows from both participating tables as long as there are matches in ALL same named and typed columns. The common columns appear only once in the results.**
+**Selects all rows from both participating tables as long as there are matches in ALL same named and typed columns. The
+common columns appear only once in the results.**
 
 `SELECT * FROM table_A NATURAL JOIN table_B ON table_a.A=table_B.A;`
 
@@ -84,8 +109,9 @@
 
 ```sql
 SELECT table_A.A, table_A.M, table_B.N
-FROM table_A, table_B
-WHERE table_A.A=table_B.A;
+FROM table_A,
+     table_B
+WHERE table_A.A = table_B.A;
 ```
 
 ### NATURAL JOIN example
@@ -111,8 +137,9 @@ WHERE table_A.A=table_B.A;
 **Command:**
 
 ```sql
-SELECT * FROM employees e
-  NATURAL JOIN departments d;
+SELECT *
+FROM employees e
+         NATURAL JOIN departments d;
 ```
 
 **Results:**
@@ -124,13 +151,16 @@ SELECT * FROM employees e
 
 ```sql
 SELECT e.first_name, e.last_name, e.department_id, e.manager_id, d.department_name
-FROM employees e, departments d
-WHERE e.department_id=d.department_id AND e.manager_id = d.manager_id;
+FROM employees e,
+     departments d
+WHERE e.department_id = d.department_id
+  AND e.manager_id = d.manager_id;
 ```
 
 ## 6. CROSS JOIN
 
-* **Produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table.**
+* **Produces a result set which is the number of rows in the first table multiplied by the number of rows in the second
+  table.**
 * **The result is a Cartesian product of two tables.**
 * **If `WHERE` clause is used with `CROSS JOIN`, it functions like an `INNER JOIN`.**
 
@@ -155,7 +185,8 @@ WHERE e.department_id=d.department_id AND e.manager_id = d.manager_id;
 ## 7. SELF JOIN
 
 * **A table is joined with itself.**
-* **It is useful when the table has a `FOREIGN KEY` which references its own `PRIMARY KEY` (eg. `employees` has `manager_id` which references `employee_id`)**
+* **It is useful when the table has a `FOREIGN KEY` which references its own `PRIMARY KEY` (eg. `employees`
+  has `manager_id` which references `employee_id`)**
 
 `SELECT * FROM table_A X, table_A Y WHERE X.A=Y.A;`
 
@@ -180,11 +211,72 @@ WHERE e.department_id=d.department_id AND e.manager_id = d.manager_id;
 
 ```sql
 SELECT e.first_name, e.last_name, e.manager_id, m.first_name, m.last_name, m.employee_id
-FROM employees e, employees m
-WHERE e.manager_id=m.employee_id
+FROM employees e,
+     employees m
+WHERE e.manager_id = m.employee_id
 ```
 
 **Results:**
 
 1. List of employees with respective managers.
 2. Employees with `manager_id=NULL` are not listed.
+
+## OUTER JOIN features
+
+There are two important features of the operators:
+
+* Comutativity `(A op B) = (B op A)`
+* Associativity `(A op B) op C = A op (B op C)`
+
+Most of the SQL operators are comutative and associative. OUTER JOIN operators are not.
+
+### Example
+
+T1:
+
+| A   | B   |
+|-----|-----|
+| 1   | 2   |
+
+T2:
+
+| B   | C   |
+|-----|-----|
+| 2   | 3   |
+
+T3:
+
+| A   | C   |
+|-----|-----|
+| 4   | 5   |
+
+First query:
+
+```
+SELECT A, B, C
+FROM (T1 NATURAL FULL OUTER JOIN T2) NATURAL FULL OUTER JOIN T3
+```
+
+produces:
+
+| A   | B | C |
+|-----| --- | --- |
+| 1   | 2 | 3 |
+| 4   | `NULL` | 5 |
+
+Second query:
+
+```
+SELECT A, B, C
+FROM T1 NATURAL FULL OUTER JOIN (T2 NATURAL FULL OUTER JOIN T3)
+```
+
+produces:
+
+| A | B | C |
+|---| --- | --- |
+| 4 | `NULL` | 5 |
+| `NULL` | 2 | 3 |
+| 1 | 2 | `NULL` |
+
+The second query produces different results, because we started with unmatched relations.

@@ -24,11 +24,11 @@ JDBC notes:
 JPA/Hibernate notes:
 1. [Basics](hibernate/basics.md)
 2. [JPA and Hibernate](./hibernate/jpa_and_hibernate.md)
-3. [Persistence life cycle](./hibernate/persistence_life_cycle.md)
-4. [Operations on data](./hibernate/operations.md)
-5. [Identifying detached instances](./hibernate/detached_state.md)
-6. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
-7. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
+3. [Operations on data](./hibernate/operations.md)
+4. [Identifying detached instances](./hibernate/detached_state.md)
+5. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
+6. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
+7. [Unit tests of these mechanisms in a separate project]([unit tests of these mechanisms](https://github.com/kkoltun/dev_notes_code_java_persistence/tree/master/src/test/java/com/hr/jpa))
 
 Spring:
 * [Guide to @Transactional by Marco Behler](https://www.marcobehler.com/guides/spring-transaction-management-unconventional-guide?utm_source=newsletter&utm_medium=sendy)

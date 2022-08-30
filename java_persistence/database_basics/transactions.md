@@ -151,7 +151,7 @@ Actually, serializability has some overhead (locks) and reduces the concurrency.
 * Read Committed
 * Repeatable Read
 
-See [the transaction isolation levels for details](../hibernate/transaction_isolation_levels.md).
+See [the transaction isolation levels for details](transaction_isolation_levels.md).
 
 ### Durability
 

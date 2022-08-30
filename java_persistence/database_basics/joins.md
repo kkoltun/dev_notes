@@ -1,9 +1,5 @@
 # SQL JOIN types
 
-![Join types](./images/joins.png)
-
-[Why wenn diagrams are wrong when explaining JOINS. :-)](https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/)
-
 [Code examples TODO - fix the link here](https://github.com/kkoltun/dev_notes_code_java_persistence)
 
 ### Tables used in examples
@@ -24,7 +20,7 @@
 | 3 | q |
 | 5 | r |
 
-## 1. INNER JOIN ON condition
+### 1. INNER JOIN ON condition
 
 This does a cross product, but keeping only those tuples which satisfy the condition.
 
@@ -36,7 +32,7 @@ This does a cross product, but keeping only those tuples which satisfy the condi
 |---|---|---|---|
 | 2 | n | 2 | p |
 
-## 2. NATURAL JOIN
+### 2. NATURAL JOIN
 
 This is the natural join in the relational algebra.
 It equates columns across tables of the same name.
@@ -50,17 +46,19 @@ It also eliminates the duplicate columns that are created.
 |---|---|---|---|
 | 2 | n | 2 | p |
 
-## 3. INNER JOIN USING (attributes)
+### 3. INNER JOIN USING (attributes)
 
 This is kind of the same as the NATURAL JOIN, but you explicitly list the attributes that you want to be equated.
 
 `SELECT * FROM table_A INNER JOIN table_B USING (A)`
 
-## 2. LEFT JOIN or LEFT OUTER JOIN
+### 4. LEFT JOIN, LEFT OUTER JOIN
 
-**Selects all rows from the first table and rows from the second table as long as there is a match.**
+Selects all rows from the first table and rows from the second table as long as there is a match.*
 
-`SELECT * FROM table_A LEFT JOIN table_B ON table_a.A=table_B.A;`
+The `OUTER` keyword does not make any difference here.
+
+`SELECT * FROM table_A LEFT [ OUTER ] JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
@@ -68,11 +66,13 @@ This is kind of the same as the NATURAL JOIN, but you explicitly list the attrib
 | 1 | m | null | null |
 | 4 | o | null | null |
 
-## 3. RIGHT JOIN or RIGHT OUTER JOIN
+### 5. RIGHT JOIN, RIGHT OUTER JOIN
 
-**Selects all rows from the second table and rows from the first table as long as there is a match.**
+Selects all rows from the second table and rows from the first table as long as there is a match.
 
-`SELECT * FROM table_A LEFT JOIN table_B ON table_a.A=table_B.A;`
+The `OUTER` keyword does not make any difference here.
+
+`SELECT * FROM table_A RIGHT [ OUTER ] JOIN table_B ON table_a.A=table_B.A;`
 
 | A | M | A | N |
 |---|---|---|---|
@@ -80,9 +80,9 @@ This is kind of the same as the NATURAL JOIN, but you explicitly list the attrib
 | null | null | 3 | p |
 | null | null | 5 | q |
 
-## 4. FULL OUTER JOIN
+### 6. FULL OUTER JOIN
 
-**Combines results of the both left and right outer joins.**
+Combines results of the both left and right outer joins.
 
 `SELECT * FROM table_A FULL OUTER JOIN table_B ON table_a.A=table_B.A;`
 
@@ -94,27 +94,50 @@ This is kind of the same as the NATURAL JOIN, but you explicitly list the attrib
 | null | null | 3 | p |
 | null | null | 5 | q |
 
-## 5. NATURAL JOIN
+### 7. CROSS JOIN
 
-**Selects all rows from both participating tables as long as there are matches in ALL same named and typed columns. The
-common columns appear only once in the results.**
+Produces a result set which is the number of rows in the first table multiplied by the number of rows in the second table.
 
-`SELECT * FROM table_A NATURAL JOIN table_B ON table_a.A=table_B.A;`
+The result is a Cartesian product of two tables.
 
-| A | M | N |
-|---|---|---|
-| 2 | n | p |
+If `WHERE` clause is used with `CROSS JOIN`, it functions like an `INNER JOIN`.
 
-**Command producing the same results:**
+`SELECT * FROM table_A CROSS JOIN table_B;`
 
-```sql
-SELECT table_A.A, table_A.M, table_B.N
-FROM table_A,
-     table_B
-WHERE table_A.A = table_B.A;
-```
+| A | M | A | N |
+|---|---|---|---|
+| 1 | m | 2 | p |
+| 2 | n | 2 | p |
+| 4 | o | 2 | p |
+| 1 | m | 3 | q |
+| 2 | n | 3 | q |
+| 4 | o | 3 | q |
+| 1 | m | 5 | r |
+| 2 | n | 5 | r |
+| 4 | o | 5 | r |
 
-### NATURAL JOIN example
+Command producing the same results:
+
+`SELECT * FROM table_A, table_B;`
+
+### 8. SELF JOIN
+
+A table is joined with itself. 
+
+It is useful when the table has a `FOREIGN KEY` which references its own `PRIMARY KEY` (eg. `employees`
+  has `manager_id` which references `employee_id`).
+
+`SELECT * FROM table_A X, table_A Y WHERE X.A=Y.A;`
+
+| A | M | A | M |
+|---|---|---|---|
+| 1 | m | 1 | m |
+| 2 | n | 2 | n |
+| 4 | o | 4 | o |
+
+## Other information
+
+### 1. NATURAL JOIN example
 
 **Table `employees`:**
 
@@ -157,46 +180,7 @@ WHERE e.department_id = d.department_id
   AND e.manager_id = d.manager_id;
 ```
 
-## 6. CROSS JOIN
-
-* **Produces a result set which is the number of rows in the first table multiplied by the number of rows in the second
-  table.**
-* **The result is a Cartesian product of two tables.**
-* **If `WHERE` clause is used with `CROSS JOIN`, it functions like an `INNER JOIN`.**
-
-`SELECT * FROM table_A CROSS JOIN table_B;`
-
-| A | M | A | N |
-|---|---|---|---|
-| 1 | m | 2 | p |
-| 2 | n | 2 | p |
-| 4 | o | 2 | p |
-| 1 | m | 3 | q |
-| 2 | n | 3 | q |
-| 4 | o | 3 | q |
-| 1 | m | 5 | r |
-| 2 | n | 5 | r |
-| 4 | o | 5 | r |
-
-**Command producing the same results:**
-
-`SELECT * FROM table_A, table_B;`
-
-## 7. SELF JOIN
-
-* **A table is joined with itself.**
-* **It is useful when the table has a `FOREIGN KEY` which references its own `PRIMARY KEY` (eg. `employees`
-  has `manager_id` which references `employee_id`)**
-
-`SELECT * FROM table_A X, table_A Y WHERE X.A=Y.A;`
-
-| A | M | A | M |
-|---|---|---|---|
-| 1 | m | 1 | m |
-| 2 | n | 2 | n |
-| 4 | o | 4 | o |
-
-### SELF JOIN example
+### 2. SELF JOIN example
 
 **Table `employees`:**
 
@@ -221,7 +205,7 @@ WHERE e.manager_id = m.employee_id
 1. List of employees with respective managers.
 2. Employees with `manager_id=NULL` are not listed.
 
-## OUTER JOIN features
+### 3. OUTER JOIN features
 
 There are two important features of the operators:
 

@@ -24,6 +24,22 @@ TODO
 * *Read uncommitted* isolation is extremely dangerous to use, it should be eliminated from the beginning.
 * You usually do not need a *repeatable read* in every transaction.
 
+## Transaction classes:
+
+* JDBC Transaction - transaction managed through a JDBC Connection.
+* CMT Transaction - all work done in the context of a container managed transaction. CMT is not neccessarily container-managed, the point is that the transactions are managed by something other than Hibernate.
+
+## XA transactions
+
+* Global transactions.
+* May span multiple resources.
+* Talking to multiple resources in a single transaction.
+* Websphere, Weblogic or JBoss acting as a TransactionManager.
+* Various resources - Oracle Sybase, IBM MQ, JMS, SAP acting as *transaction resources*.
+* *Commit* - results are commited across all of the resources.
+* *Rollback* - everything is rolled back across all resources.
+* Two phase commit protocol is used.
+
 ### JPA specification
 
 **JPA specification assumes that *read committed* is the default isolation level. This means there can be *unrepeatable reads*, *phantom reads* and *last commit wins* problems.**

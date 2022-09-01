@@ -1,6 +1,6 @@
-# Transactions in Hibernate and JPA
+## Transactions in Hibernate and JPA
 
-## Managing transactions
+### Managing transactions
 
 1. If there is only one transactional resource, unit of work involves one system:
   * **Use JDBC API.**
@@ -13,23 +13,19 @@
   * **End transaction**: use `UserTransaction#commit()`.
   * **Other transaction managers**: use JTA wherever you can and avoid proprietary transaction APIS such as `org.hibernate.Transcation` or `javax.persistence.EntityTransaction`.
 
-## Handling exceptions
-
-TODO
-
-## Choosing an isolation level
+### Choosing an isolation level
 
 **Overview of the topic:**
 * Most applications do not need *serializable isolation*, phantom reads are usually not that problematic.
 * *Read uncommitted* isolation is extremely dangerous to use, it should be eliminated from the beginning.
 * You usually do not need a *repeatable read* in every transaction.
 
-## Transaction classes:
+### Transaction classes:
 
 * JDBC Transaction - transaction managed through a JDBC Connection.
 * CMT Transaction - all work done in the context of a container managed transaction. CMT is not neccessarily container-managed, the point is that the transactions are managed by something other than Hibernate.
 
-## XA transactions
+### XA transactions
 
 * Global transactions.
 * May span multiple resources.
@@ -40,7 +36,7 @@ TODO
 * *Rollback* - everything is rolled back across all resources.
 * Two phase commit protocol is used.
 
-### JPA specification
+### Transaction-isolation level vs JPA specification
 
 **JPA specification assumes that *read committed* is the default isolation level. This means there can be *unrepeatable reads*, *phantom reads* and *last commit wins* problems.**
 

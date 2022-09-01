@@ -27,7 +27,7 @@ JPA/Hibernate notes:
 3. [JPA and Hibernate](./hibernate/jpa_and_hibernate.md)
 3. [Transactions](./hibernate/transactions.md)
 4. [Operations on data](./hibernate/operations.md)
-5. [Identifying detached instances](./hibernate/detached_state.md)
+5. [The identity of detached state instances](./hibernate/detached_state.md)
 5. [Persistence lifecycle](./hibernate/persistence_lifecycle.md)
 6. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
 7. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)

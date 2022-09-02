@@ -74,7 +74,7 @@ The `FIND_MAX_CROSSING_SUBARRAY` is linear-time.
 
 ### The final algorithm
 
-Now pseudocode for a divide-and-conquer algorithm to solve the maximum-subarray problem can be written (assuming `RETURN_MAX` returns the result with largest sum of the provided):
+Now pseudocode for a divide-and-conquer algorithm to solve the maximum-subarray problem can be written (assuming `RETURN_MAX` returns the result with the largest sum of the provided):
 
 ```
 FIND_MAX_SUBARRAY(A, low, high)

@@ -30,8 +30,8 @@
 ## Facts
 
 Some facts about SCRUM:
-* you must deliver at least once per sprint, not neccessarily for production but for client;
-* it is about planning and forecasting, not commiting;
+* you must deliver at least once per sprint, not necessarily for production but for client;
+* it is about planning and forecasting, not committing;
 * **you are always sprinting, the minute you stop the last sprint, you begin another**;
 * 
 
@@ -47,7 +47,7 @@ Some facts about SCRUM:
 * make a shield above the team to help them focus;
 * shield off people from outside wanting to add more tasks etc.
 
-A good SCRUM master teaches the team to be self-relian, independent and to scale out.
+A good SCRUM master teaches the team to be self-reliant, independent and to scale out.
 This makes it possible to be a SCRUM master in more than one team simultaneously.
 
 ### Product Owner
@@ -112,7 +112,7 @@ This makes it possible to be a SCRUM master in more than one team simultaneously
 
 * Usually after implementing SCRUM in a team;
 * [Blind men an an elephant](https://en.wikipedia.org/wiki/Blind_men_and_an_elephant) - *So while the agile 'elephant' is made up of many great practices, this whole thing is even greater than the sum of the parts*;
-* *The developers think about developer stuff, project managers thing about project manager stff, and they throw the code over the wall to a business user who thinks about business stuff."*
+* *The developers think about developer stuff, project managers think about project manager stuff, and they throw the code over the wall to a business user who thinks about business stuff."*
 * The team members are functioning as individuals working separately toward compatible goals, not as a team.
 
 ## Materials

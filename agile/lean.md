@@ -92,7 +92,7 @@ This means:
 
 ### Optimize the whole
 
-**Every business represents a value stream - the sequence of activities required to desing, produce and deliver a product or service.**
+**Every business represents a value stream - the sequence of activities required to design, produce and deliver a product or service.**
 
 This means:
 * **Identifying value streams** - how value flows though teams.
@@ -122,7 +122,7 @@ Optimizing may include:
 
 Example of `Tandberg` in Norway:
 * **every** employee knew the purpose of the company - *everything we do here to make it easy for people for communicate*;
-* **every** employee knew their commitmend to the purpose of the company - *here is the problems I am going to solve this month*;
+* **every** employee knew their commitment to the purpose of the company - *here is the problems I am going to solve this month*;
 * **we make great stuff and we sell it** - developers and sales people are most valued in the company, everyone else is support.
 
 Example of `Standard Life`:
@@ -147,12 +147,12 @@ This means:
 #### Deliberate practice
 
 What makes people really good at what they do?
-The Theory of Expertise: *the most accomplished people need around ten years of "deliberate practice" before becomming world-class.*
+The Theory of Expertise: *the most accomplished people need around ten years of "deliberate practice" before becoming world-class.*
 10 years or 10000 hours of practice 3 hours a day.
 
 Deliberate practice is about:
 * identify a specific area that needs improvement;
-* devise or learn from a teacher a focused exercise - desinged to improve the skill;
+* devise or learn from a teacher a focused exercise - designed to improve the skill;
 * keep practicing repeatedly;
 * obtain immediate feedback - adjust accordingly;
 * focus on pushing the limits - expect repeated failures;
@@ -166,7 +166,7 @@ Deliberate practice includes:
 
 ### Persistence
 
-Dijkstra's challenge: *If you wan more effective programmers, you will discover that they should not waste their time debugging - they should not introduce bugs to start with.*
+Dijkstra's challenge: *If you want more effective programmers, you will discover that they should not waste their time debugging - they should not introduce bugs to start with.*
 
 The challenge is about:
 * **not allowing defect injection in the first place**;

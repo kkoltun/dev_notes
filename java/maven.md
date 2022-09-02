@@ -28,7 +28,7 @@ Default lifecycle comprises of the following phases:
 **Build phase is made up of plugin goals.**
 
 Plugin goals characteristics:
-* the are finer than a build phase;
+* they are finer than a build phase;
 * they are a way of customising the build phases;
 * they are **bound** to zero or more build phases;
 * in case a goal is not bound to any build phase, it could be executed outside of the build lifecycle by direct invocation;
@@ -132,7 +132,7 @@ Plugin goal `modello:java`:
   * generates Java source codes;
   * is bound to `generate-sources` phase.
 
-To has it generate sources from a model and incorporate that into the build:
+To have it generate sources from a model and incorporate that into the build:
 ```xml
  <plugin>
    <groupId>org.codehaus.modello</groupId>

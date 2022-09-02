@@ -64,8 +64,8 @@ The `INSERT` operation on a queue is often called `ENQUEUE`. The delete operatio
 A queue of at most `n` elements can be implemented with:
 * an array `Q[1..n]`;
 * attribute `Q.head` that indexes or points to its head;
-* attribute `Q.tail` that indexes to **the next location** at which a newly arriving element will be insterted;
-* initally we have `Q.head == Q.tail == 1`.
+* attribute `Q.tail` that indexes to **the next location** at which a newly arriving element will be inserted;
+* initially we have `Q.head == Q.tail == 1`.
 
 The queue has the following features:
 * if `Q.head == Q.tail` the queue is **empty**;

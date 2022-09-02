@@ -7,7 +7,7 @@ Main purposes of cookies:
 2. **Personalization** - user preferences, themes.
 3. **Tracking** - recording and analyzing user behavior.
 
-In past, cookies were used for general client-side storage - they were the only way to store data on the client. Nowadays modern storage APIs are preferred - `localStorage`, `sessionStorage` and indexedDB.
+In the past, cookies were used for general client-side storage - they were the only way to store data on the client. Nowadays modern storage APIs are preferred - `localStorage`, `sessionStorage` and indexedDB.
 
 `Set-Cookie` header is used to create a cookie.
 

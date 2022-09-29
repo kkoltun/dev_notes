@@ -23,7 +23,7 @@ The mechanics are the following:
 2. When a vertex is **discovered** the first time it is encountered during the search; then it becomes nonwhite.
 3. Gray and black vertices, have been discovered.
 4. Black vertex means that all verices adjacent to it have been discovered. In other words, vertex `u` is black so for an edge `(u, v)` vertex `v` is either gray or black.
-5. Gray vertes represents the frontier between discovered and undiscovered vertices. In other words, gray vertics may have some adjacent white verices.
+5. Gray vertex represents the frontier between discovered and undiscovered vertices. In other words, gray vertics may have some adjacent white vertices.
 
 ## Breadth-first tree
 
@@ -36,8 +36,8 @@ The algorithm produces a breadth-first tree which:
 
 The procedure below:
 * assumes that the input graph `G = (V, E)` is represented using adjacency lists;
-* stores the color of the vertes in attribute `u.color`;
-* stores the predecessor of the vertes in attribute `u.pred`;
+* stores the color of the vertex in attribute `u.color`;
+* stores the predecessor of the vertex in attribute `u.pred`;
 * stores the distance from the source `s` to vertex `u` computed by the algorithm in attribute `u.dist`;
 * uses FIFO queue `Q` to manage the set of gray vertices.
 

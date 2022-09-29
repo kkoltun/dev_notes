@@ -2,7 +2,7 @@
 
 ## Properties
 
-Depth-first search explores edges out of the most recently discovered vertex `v` that still has unexplored egdes leaving it.
+Depth-first search explores edges out of the most recently discovered vertex `v` that still has unexplored edges leaving it.
 Once all of `v`'s edges have been explored, the search "backtracks" to explore edges leaving the vertex from v was discovered.
 
 Given a graph, DFS:
@@ -16,14 +16,14 @@ Given a graph, DFS:
 
 The DFS colors vertices during the search to indicate their state:
 * each vertex is initially white;
-* when vertex is **discovered** it it grayed;
-* when vertes is **finished** - its adjacency list has been examined completely - it is blackened.
+* when vertex is **discovered** it is grayed;
+* when vertex is **finished** - its adjacency list has been examined completely - it is blackened.
 
 This technique guarantees that each vertex ends up in exactly one depth-first tree, so that these trees are disjoint.
 
 ## Timestamps
 
-DFS timestamps each vertes with two values:
+DFS timestamps each vertex with two values:
 * first timestamp `v.d` when `v` is first discovered (and grayed);
 * second timestamp `v.f` when the search finishes examining `v`'s adjacency list (and `v` is blackened).
 
@@ -66,9 +66,9 @@ DFS_VISIT(G, u)
 ## DFS and parenthesis structure
 
 In DFS, the discovery and finishing times have **parenthesis structure**:
-1. We represent the discovery of vertex `u` with left parentesis `[u`;
+1. We represent the discovery of vertex `u` with left parenthesis `[u`;
 2. The finishing is represented with right parenthesis `u]`.
-3. The history of discoveries and finishings makes a well-formed expression in the sense that the parenteses are properly nested.
+3. The history of discoveries and finishings makes a well-formed expression in the sense that the parentheses are properly nested.
 
 This way in any DFS of a (directed or undirected) graph `G = (V, E)`, for any two vertices `u` and `v`, exactly one of the following conditions holds: (*Parenthesis theorem*)
 * the intervals `[u.d, u.f]` and `[v.d, v.f]` are entirely disjoint and neither `u` nor `v` is a descendant of the other in depth-first forest (`s` and `t` in figure below);

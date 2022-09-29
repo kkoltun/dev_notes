@@ -6,7 +6,7 @@
 
 **Definition**:
 
-The strategy patterns defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+The strategy patterns defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently of clients that use it.
 
 **Advantages**:
 * New behavior can be added without modifying any of the existing ones and without touching any of the client classes (**open for extension, closed for modification**).

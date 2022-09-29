@@ -49,7 +49,7 @@ Examples:
 URIs (unified resource identifiers) uniquely identify and locate information resources around the world.
 For example `http://www.example.com/index.html` specifies the HTTP protocol to access the `index.html` document on `example.com` server.
 
-**URIs come in two flawours called URLs and URNs.**
+**URIs come in two flavours called URLs and URNs.**
 
 URLs (unified resource locators):
 * specifies the location of a specific resource on a particular server;
@@ -61,7 +61,7 @@ URNs (unified resource name):
 * specifies unique name of a resource independent of where the resource resides;
 * this elasticity allows for the resource to be moved from place to place;
 * still experimental; requires special support infrastructure to resolve resource locations;
-* example: `urn:isbn:978-83-7779-206-3` - means *1. Use ISBN as an namespace identifier; 2. Go to book 978-83-7779-206-3 (Lalka, B. Prus)*;
+* example: `urn:isbn:978-83-7779-206-3` - means *1. Use ISBN as a namespace identifier; 2. Go to book 978-83-7779-206-3 (Lalka, B. Prus)*;
 
 ### Transactions
 
@@ -111,9 +111,9 @@ the code should be used for temporary conditions where the server is down or ove
 Some additional facts:
 * `200 OK` means different things depending on the HTTP method; for `GET` it means that the requested resource is in the response body;
 for `POST` and `PUT` it means that the result of the requested action is sent in the message body;
-* `401 Unauthorized` is in fact an semantical error - it is all about the difference between `authentication` and `authorization`;
+* `401 Unauthorized` is in fact a semantic error - it is all about the difference between `authentication` and `authorization`;
 * `418 I'm a teapot` is a reference to Hyper Text Coffee Pot Control Protocol, part of the 1998 April Fools` joke;
-* The textual phrase after the code (eg. `Forbidden`) is supposed to provide a description and is arbitrary - the numeric code is used for all processing.
+* The textual phrase after the code (e.g. `Forbidden`) is supposed to provide a description and is arbitrary - the numeric code is used for all processing.
 
 #### Messages
 

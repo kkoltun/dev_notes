@@ -13,7 +13,7 @@ Benefits:
 * Layers can be substituted with alternative implementations of the same basic services.
 * Dependencies between layers are minimized.
 * Once a layers is built, there can be many higher-level services built on it.
-* Layers can be standardized (`TCP` and `IP` are standards defininig how the layers should operate).
+* Layers can be standardized (`TCP` and `IP` are standards defining how the layers should operate).
 
 Downsides:
 * Not all things can be encapsulated well. In a layered enterprise application, adding a new field to UI requires changes in the database and everywhere between.
@@ -31,9 +31,9 @@ Downsides:
 * Interprets requests into actions upon the domain.
 
 **Data source**:
-* Communicates with other systems taht carry out tasks on behalf of the application.
+* Communicates with other systems that carry out tasks on behalf of the application.
 * Examples: transaction monitors, messaging systems, etc.
-* Usually biggest piece of data source logic is a database.
+* Usually the biggest piece of data source logic is a database.
 
 **Domain logic**:
 * Calculating based on inputs and stored data.
@@ -49,12 +49,12 @@ There are two approaches:
 
 Checking what belongs to domain logic:
 * Try to change presentation layer from a rich, Web UI to a command-line interface in a web application.
-* Think of deciding what to highlight in an UI - decision should come from business logic.
+* Think of deciding what to highlight in a UI - decision should come from business logic.
 
 ### Where to run layers
 
 **Data source**:
-* This is usually a database run on an a server.
+* This is usually a database run on a server.
 * A powerful client might duplicate the server functionality, then synchronization is an issue.
 
 **Presentation layer**:

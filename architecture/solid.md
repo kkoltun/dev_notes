@@ -133,7 +133,7 @@ This not only applies to making subclasses breaking the API of the super class, 
 
 #### Strengthening preconditions
 1. Base method accepts an int.
-2. Derived requires that in to be positive (strenghtened precondition).
+2. Derived requires that in to be positive (strengthened precondition).
 3. Code that worked perfectly fine before with a negative ints now is broken.
 
 #### Weakening preconditions
@@ -154,7 +154,7 @@ This not only applies to making subclasses breaking the API of the super class, 
 * favor decoupling over coupling - do not couple derivative classes with unneeded responsibilities inside a monolith.
 
 ### Rationale
-Small iterfaces:
+Small interfaces:
 * are easier to utilize;
 * are less prone to breaking.
 
@@ -196,4 +196,4 @@ Small iterfaces:
 * Design Patterns book.
 
 ## TODO
-* dependence does not have to mean expicit code use - it means also one module has to be recompiled and redeployed if other is changed - how does it apply to CI and CD in Java? How does it impair these mechanisms?
+* dependence does not have to mean explicit code use - it means also one module has to be recompiled and redeployed if other is changed - how does it apply to CI and CD in Java? How does it impair these mechanisms?

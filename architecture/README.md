@@ -22,6 +22,8 @@
 
 ## Other notes
 
+* [S.O.L.I.D](./solid.md)
+* [Writing clean code](./clean_code.md)
 * [**Very** good material on abstraction, encapsulation and information hiding (not mine)](./abstraction_encapsulation_information_hiding.md)
 * [Overall notes on architecture](./architecture.md)
 * [Notes from Coursera OOP Course Module 2](./oop_module_2.md)

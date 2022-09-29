@@ -26,10 +26,9 @@
 * [Various notes on Java basics](./java/README.md)
 * [Design patterns and architecture](./architecture/README.md)
 * [Notes on algorithms](./algorithms/README.md)
-* [Developing Clean Code](./clean_code/README.md)
 * [Web Security](./security/README.md)
 * [Spring](./spring/README.md)
-* [Persistence with Java](./java_persistence/README.md)
+* [Databases and persistence](./java_persistence/README.md)
 
 ## Training materials in Polish language
 

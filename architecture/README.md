@@ -27,6 +27,7 @@
 * [**Very** good material on abstraction, encapsulation and information hiding (not mine)](./abstraction_encapsulation_information_hiding.md)
 * [Overall notes on architecture](./architecture.md)
 * [Notes from Coursera OOP Course Module 2](./oop_module_2.md)
+* [Design Patterns quiz question - good for learning & revising them](./design_patterns_quiz_questions.md)
 
 ## Resources
 

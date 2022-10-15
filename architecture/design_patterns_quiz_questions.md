@@ -1,5 +1,33 @@
 ### Design patterns quiz questions
 
+#### UML (Unified Modeling Language)
+
+*UML is good to describe class structures. However, it becomes less usable with larger architectures (n class diagrams are not readable).*
+
+[Additional information on the merononmy and relationships.](https://stackoverflow.com/questions/885937/what-is-the-difference-between-association-aggregation-and-composition/34069760#34069760)
+
+[Robert Martin on examples of association, aggregation, composition.](https://groups.google.com/g/comp.object/c/_j4g-I9jqVg/m/rouCJeVXzR4J)
+
+[UML Class diagram reference](https://web.archive.org/web/20070103141438/http://www.objectmentor.com/resources/articles/umlClassDiagrams.pdf)
+
+1. How to describe in UML:
+   1. Method with an argument and a returned type
+   2. *implements* relationship
+   3. *extends* relationship
+   4. public, private, protected, package-private fields
+   5. static fields or methods
+   6. abstract methods
+   7. direction and multiplicity
+   8. dependency
+   9. association
+   10. aggregation
+   11. composition
+2. Meronomy:
+   1. What is a meronomy?
+   2. What are the three requirements of the merononmy?
+   3. List 4 relationships, 2 non-meronomy, 2 meronony, what are the differences between them?
+   4. Where meronomy and ownership matters?
+
 #### Intrinsic vs extrinsic state
 
 *Sometimes it is really important to choose between storing a pointer to an object and passing it to the method when it is used.* 

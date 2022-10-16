@@ -1,5 +1,10 @@
 ### Design patterns quiz questions
 
+TODO items:
+
+1. [Design Patterns Revisited in Modern Java by Venkat Subramaniam](https://www.youtube.com/watch?v=yTuwi--LFsM)
+2. [Performance Impact of Design Patterns](https://www.javaspecialists.eu/archive/Issue267-Performance-Impact-of-Design-Patterns.html)
+
 #### 1. UML (Unified Modeling Language)
 
 *UML is good to describe class structures. However, it becomes less usable with larger architectures (n class diagrams are not readable).*
@@ -50,8 +55,9 @@ How to describe in UML:
 4. When this pattern should be used (3 cases)?
 5. What are the advantages of using it (2 examples)?
 6. What are the drawbacks of using it (3 examples)?
-7. What should be minimized? What is intentionally shared (behavior vs state)? Why?
-8. Where is the common behavior, where is the specific one?
+7. What are the implementation hints for this pattern?
+8. What should be minimized? What is intentionally shared (behavior vs state)? Why?
+9. Where is the common behavior, where is the specific one?
 
 #### 5. Builder
 
@@ -62,9 +68,10 @@ How to describe in UML:
 1. What is the intent?
 2. What is the UML diagram? Describe the roles in the diagram.
 3. What are the example usages in JDK, libraries?
-4. When this pattern should be used (2 cases)?
+4. When this pattern should be used (3 cases)? What major language limitation is avoided?
 5. What are the advantages of using it (3 examples)?
 6. What is the general disadvantage of using it?
-7. What is special about this pattern in the group of creational patterns?
-8. Who returns the result of the creation? This depends on...?
-9. What is a "Simple Builder" pattern referenced in Effective Java, how it is different from the Builder pattern? What is the intent of that one?
+7. What are the implementation hints for this pattern?
+8. What is special about this pattern in the group of creational patterns?
+9. Who returns the result of the creation? This depends on...?
+10. What is a "Simple Builder" pattern referenced in Effective Java, how it is different from the Builder pattern? What is the intent of that one?

@@ -1,6 +1,6 @@
 ### Design patterns quiz questions
 
-#### UML (Unified Modeling Language)
+#### 1. UML (Unified Modeling Language)
 
 *UML is good to describe class structures. However, it becomes less usable with larger architectures (n class diagrams are not readable).*
 
@@ -10,25 +10,29 @@
 
 [UML Class diagram reference](https://web.archive.org/web/20070103141438/http://www.objectmentor.com/resources/articles/umlClassDiagrams.pdf)
 
-1. How to describe in UML:
-   1. Method with an argument and a returned type
-   2. *implements* relationship
-   3. *extends* relationship
-   4. public, private, protected, package-private fields
-   5. static fields or methods
-   6. abstract methods
-   7. direction and multiplicity
-   8. dependency
-   9. association
-   10. aggregation
-   11. composition
-2. Meronomy:
-   1. What is a meronomy?
-   2. What are the three requirements of the merononmy?
-   3. List 4 relationships, 2 non-meronomy, 2 meronony, what are the differences between them?
-   4. Where meronomy and ownership matters?
+How to describe in UML:
+1. Method with an argument and a returned type
+2. *implements* relationship
+3. *extends* relationship
+4. public, private, protected, package-private fields
+5. static fields or methods
+6. abstract methods
+7. direction and multiplicity
+8. dependency
+9. association
+10. aggregation
+11. composition
 
-#### Intrinsic vs extrinsic state
+#### 2. Meronomy
+
+[Meronomy definition](https://en.wikipedia.org/wiki/Meronomy)
+
+1. What is a meronomy?
+2. What are the three requirements of the merononmy?
+3. List 4 relationships, 2 non-meronomy, 2 meronony, what are the differences between them?
+4. Where meronomy and ownership matters?
+
+#### 3. Intrinsic vs extrinsic state
 
 *Sometimes it is really important to choose between storing a pointer to an object and passing it to the method when it is used.* 
 
@@ -36,10 +40,31 @@
 2. What is CompressedOops?
 3. Give an example of how extrinsic vs intrinsic state choice can affect the memory usage (with numbers).
 
-#### Abstract class
+#### 4. Abstract class
+
+[Definition and explanation by Bobby Woolf.](https://web.archive.org/web/20221015195647/https://www.javaspecialists.eu/courses/dpc/archive/AbstractClass-Woolf.pdf)
 
 1. What is the intent?
 2. What is the UML diagram?
-3. What is an example UML structure?
-4. What should be minimized? What is intentionally shared (behavior vs state)? Why?
-5. Where is the common behavior, where is the specific one?
+3. What are example usages in JDK, libraries?
+4. When this pattern should be used (3 cases)?
+5. What are the advantages of using it (2 examples)?
+6. What are the drawbacks of using it (3 examples)?
+7. What should be minimized? What is intentionally shared (behavior vs state)? Why?
+8. Where is the common behavior, where is the specific one?
+
+#### 5. Builder
+
+[Introduction to the pattern #1.](https://web.archive.org/web/20221015200947/https://www.pmi.org/disciplined-agile/the-design-patterns-repository/the-builder-pattern)
+
+[Introduction to the pattern #2.](https://refactoring.guru/design-patterns/builder)
+
+1. What is the intent?
+2. What is the UML diagram? Describe the roles in the diagram.
+3. What are the example usages in JDK, libraries?
+4. When this pattern should be used (2 cases)?
+5. What are the advantages of using it (3 examples)?
+6. What is the general disadvantage of using it?
+7. What is special about this pattern in the group of creational patterns?
+8. Who returns the result of the creation? This depends on...?
+9. What is a "Simple Builder" pattern referenced in Effective Java, how it is different from the Builder pattern? What is the intent of that one?

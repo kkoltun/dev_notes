@@ -61,9 +61,7 @@ How to describe in UML:
 
 #### 5. Builder
 
-[Introduction to the pattern #1.](https://web.archive.org/web/20221015200947/https://www.pmi.org/disciplined-agile/the-design-patterns-repository/the-builder-pattern)
-
-[Introduction to the pattern #2.](https://refactoring.guru/design-patterns/builder)
+[Builder in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/builder)
 
 1. What is the intent?
 2. What is the UML diagram? Describe the roles in the diagram.
@@ -75,3 +73,26 @@ How to describe in UML:
 8. What is special about this pattern in the group of creational patterns?
 9. Who returns the result of the creation? This depends on...?
 10. What is a "Simple Builder" pattern referenced in Effective Java, how it is different from the Builder pattern? What is the intent of that one?
+
+#### 6. Essence
+
+[Essence by Andy Carlson.](https://web.archive.org/web/20221016192230/https://www.javaspecialists.eu/courses/dpc/archive/Essence-Carlson.pdf)
+
+1. What is the intent?
+2. What is the UML diagram? Describe the roles in the diagram.
+3. When can validation be done? What can be done with the constructor of the Target class?
+4. When this pattern should be used (3 cases)? What major language limitation is avoided?
+5. What is the flow of the actions in this pattern (see the PDF above)?
+
+#### 7. Memento
+
+[Memento in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/memento)
+
+1. What is the intent?
+2. What is the UML diagram? Describe the roles in the diagram.
+3. What is the flow diagram?
+4. What is an important implementation detail of the Memento class to avoid memory leaks?
+5. When this pattern should be used (2 cases)? What is not exposed here (this is special feature of the pattern)?
+6. What are the advantages of using it (2 examples)?
+7. What are the disadvantages of using it (2 examples)?
+8. Sometimes you need to verify that the right memento is set in the right source object. The memento needs to store the source. How to achieve this without leaking the memory in Java?

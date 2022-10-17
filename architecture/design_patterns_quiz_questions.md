@@ -45,8 +45,6 @@ How to describe in UML:
 
 #### 3. Intrinsic vs extrinsic state
 
----
-
 *Sometimes it is really important to choose between storing a pointer to an object and passing it to the method when it is used.* 
 
 1. How to calculate an object size basing on the class layout?

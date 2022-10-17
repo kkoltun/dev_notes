@@ -5,6 +5,8 @@ TODO items:
 1. [Design Patterns Revisited in Modern Java by Venkat Subramaniam](https://www.youtube.com/watch?v=yTuwi--LFsM)
 2. [Performance Impact of Design Patterns](https://www.javaspecialists.eu/archive/Issue267-Performance-Impact-of-Design-Patterns.html)
 
+---
+
 #### 1. UML (Unified Modeling Language)
 
 *UML is good to describe class structures. However, it becomes less usable with larger architectures (n class diagrams are not readable).*
@@ -28,6 +30,8 @@ How to describe in UML:
 10. aggregation
 11. composition
 
+---
+
 #### 2. Meronomy
 
 [Meronomy definition](https://en.wikipedia.org/wiki/Meronomy)
@@ -37,13 +41,19 @@ How to describe in UML:
 3. List 4 relationships, 2 non-meronomy, 2 meronony, what are the differences between them?
 4. Where meronomy and ownership matters?
 
+---
+
 #### 3. Intrinsic vs extrinsic state
+
+---
 
 *Sometimes it is really important to choose between storing a pointer to an object and passing it to the method when it is used.* 
 
 1. How to calculate an object size basing on the class layout?
 2. What is CompressedOops?
 3. Give an example of how extrinsic vs intrinsic state choice can affect the memory usage (with numbers).
+
+---
 
 #### 4. Abstract class
 
@@ -58,6 +68,8 @@ How to describe in UML:
 7. What are the implementation hints for this pattern?
 8. What should be minimized? What is intentionally shared (behavior vs state)? Why?
 9. Where is the common behavior, where is the specific one?
+
+---
 
 #### 5. Builder
 
@@ -74,6 +86,8 @@ How to describe in UML:
 9. Who returns the result of the creation? This depends on...?
 10. What is a "Simple Builder" pattern referenced in Effective Java, how it is different from the Builder pattern? What is the intent of that one?
 
+---
+
 #### 6. Essence
 
 [Essence by Andy Carlson.](https://web.archive.org/web/20221016192230/https://www.javaspecialists.eu/courses/dpc/archive/Essence-Carlson.pdf)
@@ -83,6 +97,8 @@ How to describe in UML:
 3. When can validation be done? What can be done with the constructor of the Target class?
 4. When this pattern should be used (3 cases)? What major language limitation is avoided?
 5. What is the flow of the actions in this pattern (see the PDF above)?
+
+---
 
 #### 7. Memento
 

@@ -110,3 +110,19 @@ How to describe in UML:
 6. What are the advantages of using it (2 examples)?
 7. What are the disadvantages of using it (2 examples)?
 8. Sometimes you need to verify that the right memento is set in the right source object. The memento needs to store the source. How to achieve this without leaking the memory in Java?
+
+---
+
+#### 8. Proxy
+
+[Proxy in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/proxy)
+
+[Static proxy generation in Java Part 1](https://www.javaspecialists.eu/archive/Issue180-Generating-Static-Proxy-Classes---Part-1.html)
+and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-Proxy-Classes---Part-2.html)
+
+1. What is the intent?
+2. What is the UML diagram? Describe the roles in the diagram.
+3. When this pattern should be used (3 cases)?
+5. What are two important consequences of the Proxy usage?
+6. What about equals()? What are its general requirements which can be hard to achieve here?
+7. What are two ways of modern Proxy implementation in Java?

@@ -66,6 +66,7 @@ How to describe in UML:
 7. What are the implementation hints for this pattern?
 8. What should be minimized? What is intentionally shared (behavior vs state)? Why?
 9. Where is the common behavior, where is the specific one?
+10. What SOLID can be broken in particular when Abstract Class is incorrectly implemented?
 
 ---
 
@@ -83,6 +84,7 @@ How to describe in UML:
 8. What is special about this pattern in the group of creational patterns?
 9. Who returns the result of the creation? This depends on...?
 10. What is a "Simple Builder" pattern referenced in Effective Java, how it is different from the Builder pattern? What is the intent of that one?
+11. What SOLID principle is expressed here in particular?
 
 ---
 
@@ -122,7 +124,9 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 
 1. What is the intent?
 2. What is the UML diagram? Describe the roles in the diagram.
-3. When this pattern should be used (3 cases)?
-5. What are two important consequences of the Proxy usage?
-6. What about equals()? What are its general requirements which can be hard to achieve here?
-7. What are two ways of modern Proxy implementation in Java?
+3. When this pattern should be used (5 cases)?
+4. What are two important consequences of the Proxy usage?
+5. What about equals()? What are its general requirements which can be hard to achieve here?
+6. What are two ways of modern Proxy implementation in Java?
+7. What SOLID principle is expressed here in particular?
+8. What is the relationship between the Service and the ServiceProxy in terms of their lifecycles?

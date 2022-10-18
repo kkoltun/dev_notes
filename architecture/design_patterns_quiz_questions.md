@@ -130,3 +130,16 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 6. What are two ways of modern Proxy implementation in Java?
 7. What SOLID principle is expressed here in particular?
 8. What is the relationship between the Service and the ServiceProxy in terms of their lifecycles?
+
+---
+
+#### 9. Flyweight
+
+[Proxy in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/flyweight)
+
+1. What is the intent?
+2. What is the UML diagram? Describe the roles in the diagram.
+3. What are the case to use this pattern (5 requirements)?
+4. What is the general requirement for the Flyweight objects?
+5. What is the Java mechanism that could be used to create the Flyweight instances? What was introduced in Java 9 and is a better choice here? :-)
+6. What are flyweight examples from the JDK (at least three examples, two more obvious, one less)?

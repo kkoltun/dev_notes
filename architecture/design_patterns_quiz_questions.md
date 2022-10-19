@@ -138,7 +138,9 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 [Proxy in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/flyweight)
 
 1. What is the intent?
-2. What is the UML diagram? Describe the roles in the diagram.
+2. UML diagrams:
+   1. (GoF) What is the UML diagram with two types of Flyweight objects? Describe the roles in the diagram.
+   2. (refactoring.guru) What is the UML diagram with a shared and unshared part of the Flyweight? Describe the roles in the diagram.
 3. What are the case to use this pattern (5 requirements)?
 4. What is the general requirement for the Flyweight objects?
 5. What is the Java mechanism that could be used to create the Flyweight instances? What was introduced in Java 9 and is a better choice here? :-)

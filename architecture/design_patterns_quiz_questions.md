@@ -1,9 +1,6 @@
 ### Design patterns quiz questions
 
-TODO items:
-
-1. [Design Patterns Revisited in Modern Java by Venkat Subramaniam](https://www.youtube.com/watch?v=yTuwi--LFsM)
-2. [Performance Impact of Design Patterns](https://www.javaspecialists.eu/archive/Issue267-Performance-Impact-of-Design-Patterns.html)
+**The most important part of the pattern is the intent.**
 
 ---
 
@@ -145,3 +142,12 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 4. What is the general requirement for the Flyweight objects?
 5. What is the Java mechanism that could be used to create the Flyweight instances? What was introduced in Java 9 and is a better choice here? :-)
 6. What are flyweight examples from the JDK (at least three examples, two more obvious, one less)?
+
+---
+
+### 10. Strategy
+
+*The name is Policy in GoF book.*
+
+1. What is the intent?
+2. What is the UML diagram? Describe the roles in the diagram.

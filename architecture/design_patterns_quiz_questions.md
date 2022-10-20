@@ -151,3 +151,5 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 
 1. What is the intent?
 2. What is the UML diagram? Describe the roles in the diagram.
+3. What are two approaches to the state in the strategy?
+4. What are the consequences of using the pattern (3 positive, 3 negative)?

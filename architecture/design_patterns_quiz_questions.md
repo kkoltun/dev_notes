@@ -134,6 +134,8 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 
 [Proxy in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/flyweight)
 
+See also the GoF book.
+
 1. What is the intent?
 2. UML diagrams:
    1. (GoF) What is the UML diagram with two types of Flyweight objects? Describe the roles in the diagram.
@@ -146,6 +148,10 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 ---
 
 ### 10. Strategy
+
+[Strategy in the Refactoring Guru site (Alexander Shvets)](https://refactoring.guru/design-patterns/strategy)
+
+See also the GoF book.
 
 1. What is the intent?
 2. What is the UML diagram? Describe the roles in the diagram.

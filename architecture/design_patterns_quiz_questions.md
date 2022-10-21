@@ -147,8 +147,6 @@ and [Part 2](https://www.javaspecialists.eu/archive/Issue181-Generating-Static-P
 
 ### 10. Strategy
 
-*The name is Policy in GoF book.*
-
 1. What is the intent?
 2. What is the UML diagram? Describe the roles in the diagram.
 3. What are two approaches to the state in the strategy?

@@ -14,7 +14,7 @@
    2. Disable treating C/C++ compilation warnings as errors.
    3. (Most importantly) Force building a linux version. If you see the point where Jose is actually accessing the final build, you can see that it is the linux build. He is doing it on an Ubuntu VM which is "slightly different situation" than running Ubuntu on WSL. Apparently, the autoconf software used in the build process returns host_os="wsl" when ran on WSL Ubuntu. The configuration script gets this and translates this into doing a windows build. Then it fails on lacking Microsoft toolchain and all of other strange errors (lacking Visual Studio, WTF). So I just forced it to do the linux build and then it used a linux gcc toolchain. 🙂 
 
-Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --build=x86_64-linux-gnu --disable-warnings-as-errors`
+Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --openjdk-target=x86_64-linux-gnu --disable-warnings-as-errors`
 
 ### Debugging the JVM instance
 
@@ -28,7 +28,7 @@ Additional configure arguments:
 1. Build the debug variant of the JVM: `--with-debug-level=slowdebug`.
 2. Include native debug symbols (?): `--with-native-debug-symbols=internal`.
 
-Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --build=x86_64-linux-gnu --disable-warnings-as-errors --with-debug-level=slowdebug --with-native-debug-symbols=internal`. For other options check `make\autoconf\jdk-options.m4`.
+Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --openjdk-target=x86_64-linux-gnu --disable-warnings-as-errors --with-debug-level=slowdebug --with-native-debug-symbols=internal`. For other options check `make\autoconf\jdk-options.m4`.
 
 ### Topics to investigate
 

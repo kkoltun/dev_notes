@@ -17,7 +17,7 @@
 
 ### Topics
 
-#### Swallowing exceptions
+#### JVM applyingg Flyweight pattern to the exceptions
 
 1. Uncommon traps: https://shipilev.net/jvm/anatomy-quarks/29-uncommon-traps/
 2. Bug report: https://bugs.java.com/bugdatabase/view_bug.do?bug_id=4292742

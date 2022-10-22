@@ -13,11 +13,26 @@
    1. Install the java 12, 13 or 14 JDK on Ubuntu (do a local installation, just like you would do on ordinary Ubuntu). Point to it in the configure step.
    2. Disable treating C/C++ compilation warnings as errors.
    3. (Most importantly) Force building a linux version. If you see the point where Jose is actually accessing the final build, you can see that it is the linux build. He is doing it on an Ubuntu VM which is "slightly different situation" than running Ubuntu on WSL. Apparently, the autoconf software used in the build process returns host_os="wsl" when ran on WSL Ubuntu. The configuration script gets this and translates this into doing a windows build. Then it fails on lacking Microsoft toolchain and all of other strange errors (lacking Visual Studio, WTF). So I just forced it to do the linux build and then it used a linux gcc toolchain. 🙂 
-   4. Summing up, this command that incorporates all the three elements above: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --build=x86_64-linux-gnu --disable-warnings-as-errors`
 
-### Topics
+Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --build=x86_64-linux-gnu --disable-warnings-as-errors`
 
-#### JVM applyingg Flyweight pattern to the exceptions
+### Debugging the JVM instance
+
+Links:
+* [SO topic: Debugging the JVM](https://stackoverflow.com/questions/44491385/how-to-use-gdb-to-trace-compiled-jdk9-hotspot)
+* [SO topic: Debugging the JVM interpreter](https://stackoverflow.com/questions/68391777/openjdk-8-interpreter-debug)
+* [SO topic: Debug JVM in Eclipse](https://stackoverflow.com/questions/42052262/how-to-debug-the-openjdk-9-mainly-the-hotspot-source-code-in-eclipse)
+* [Quite old presentation about this](https://www.youtube.com/watch?v=k7IX_diKCEo)
+
+Additional configure arguments:
+1. Build the debug variant of the JVM: `--with-debug-level=slowdebug`.
+2. Include native debug symbols (?): `--with-native-debug-symbols=internal`.
+
+Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --build=x86_64-linux-gnu --disable-warnings-as-errors --with-debug-level=slowdebug --with-native-debug-symbols=internal`. For other options check `make\autoconf\jdk-options.m4`.
+
+### Topics to investigate
+
+#### JVM applying Flyweight pattern to the exceptions
 
 1. Uncommon traps: https://shipilev.net/jvm/anatomy-quarks/29-uncommon-traps/
 2. Bug report: https://bugs.java.com/bugdatabase/view_bug.do?bug_id=4292742

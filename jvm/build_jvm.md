@@ -1,9 +1,12 @@
 ## Build your own JVM instance
 
-#### TODO
+### TODO
 
-1. Watch this: https://www.youtube.com/watch?v=5AFgNuGwLos
-2. Debug JVM from Visual Studio
+1. Watch this: https://www.youtube.com/watch?v=5AFgNuGwLos.
+2. Debug JVM from Visual Studio.
+3. Investigate topics below.
+
+---
 
 ### Steps to build the actual JVM instance
 
@@ -14,6 +17,8 @@
    3. (Most importantly) Force building a linux version. If you see the point where Jose is actually accessing the final build, you can see that it is the linux build. He is doing it on an Ubuntu VM which is "slightly different situation" than running Ubuntu on WSL. Apparently, the autoconf software used in the build process returns host_os="wsl" when ran on WSL Ubuntu. The configuration script gets this and translates this into doing a windows build. Then it fails on lacking Microsoft toolchain and all of other strange errors (lacking Visual Studio, WTF). So I just forced it to do the linux build and then it used a linux gcc toolchain. 🙂 
 
 Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --openjdk-target=x86_64-linux-gnu --disable-warnings-as-errors`
+
+---
 
 ### Debugging the JVM instance
 
@@ -34,6 +39,8 @@ Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --open
 #### Debugging with gdb
 
 `gdb --args /path/to/jvm/code/root/build/linux-x86_64-server-slowdebug/images/jdk/bin/java ExampleClass`
+
+---
 
 ### Topics to investigate
 
@@ -58,3 +65,14 @@ Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --open
 
 1. Check how class is defined and put into the memory.
 2. Check what is the class header internally and why it weights 12 bytes.
+
+#### String pooling investigation
+
+1. Provide a native Java API to pull the actual state of the string pool.
+2. Get the string pool state from the Java code and observe how it changes.
+3. Debug the string pool code.
+
+#### JVM tests investigation
+
+1. How is C++ code tested in JVM? Try to launch tests.
+2. How is Java code tested in JVM? Try to launch tests.

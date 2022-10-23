@@ -3,8 +3,7 @@
 #### TODO
 
 1. Watch this: https://www.youtube.com/watch?v=5AFgNuGwLos
-2. Debug JVM from CLI: Build JVM with debug options -> debug with GDB on WSL Ubuntu
-3. Debug JVM from Visual Studio
+2. Debug JVM from Visual Studio
 
 ### Steps to build the actual JVM instance
 
@@ -18,6 +17,8 @@ Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --open
 
 ### Debugging the JVM instance
 
+#### Building the right target
+
 Links:
 * [SO topic: Debugging the JVM](https://stackoverflow.com/questions/44491385/how-to-use-gdb-to-trace-compiled-jdk9-hotspot)
 * [SO topic: Debugging the JVM interpreter](https://stackoverflow.com/questions/68391777/openjdk-8-interpreter-debug)
@@ -29,6 +30,10 @@ Additional configure arguments:
 2. Include native debug symbols (?): `--with-native-debug-symbols=internal`.
 
 Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --openjdk-target=x86_64-linux-gnu --disable-warnings-as-errors --with-debug-level=slowdebug --with-native-debug-symbols=internal`. For other options check `make\autoconf\jdk-options.m4`.
+
+#### Debugging with gdb
+
+`gdb --args /path/to/jvm/code/root/build/linux-x86_64-server-slowdebug/images/jdk/bin/java ExampleClass`
 
 ### Topics to investigate
 
@@ -48,3 +53,8 @@ Final configure command: `./configure --with-boot-jdk=/usr/lib/jvm/jdk-14 --open
 2. Native methods:
    1. Add a new JNI method to the JVM -> use it in the actual Java code.
 3. Implement an algorithm in Java and C++ and compare the performance.
+
+#### Class definition process
+
+1. Check how class is defined and put into the memory.
+2. Check what is the class header internally and why it weights 12 bytes.

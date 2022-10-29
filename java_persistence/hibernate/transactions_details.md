@@ -39,7 +39,7 @@
 [Check here for a detailed description from Martin Fowler.](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 * Martin Fowler describes it as " [maintaining] a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems".
-* This a transactions (in a abstract notion), but fulfilling it might often span multiple physical database transactions.
+* This a transactions (in an abstract notion), but fulfilling it might often span multiple physical database transactions.
 * Usually also called a "business transaction".
 
 ---
@@ -89,9 +89,9 @@
 * **Atomictiy = only one of the transactions actually stores the updated data; the rest are only reading the data.**
 
 Use of the Hibernate features to acheive this:
-	1. **Automatic versioning** - automatic optimistic concurrency control. The concurrent modifications are checked at the end of the conversation.
-	2. **Detached objects** - objects can be detached and then reattached to persist modifications. [**session-per-request-with-detached-objects pattern**] -
-	3. **Extended (or Long) Session** - the `Session` can be disconnected from the underlying JDBC connection after the database transaction has been comitted. Then, it can be reconnected when new client request comes.
+1. **Automatic versioning** - automatic optimistic concurrency control. The concurrent modifications are checked at the end of the conversation.
+2. **Detached objects** - objects can be detached and then reattached to persist modifications. [**session-per-request-with-detached-objects pattern**] -
+3. **Extended (or Long) Session** - the `Session` can be disconnected from the underlying JDBC connection after the database transaction has been comitted. Then, it can be reconnected when new client request comes.
 
 #### Session-per-request-with-detached-objects pattern
 

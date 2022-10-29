@@ -1,6 +1,6 @@
 ## Session and Transaction in Hibernate
 
-[Based on this documentation page](https://docs.jboss.org/hibernate/core/3.3/reference/en/html/transactions.html) [and this archived page](https://developer.jboss.org/docs/DOC-13951#).
+[Based on this documentation page](https://docs.jboss.org/hibernate/core/3.3/reference/en/html/transactions.html) and [this archived page](https://developer.jboss.org/docs/DOC-13951#).
 
 ### Questions for this article
 

@@ -21,17 +21,22 @@ JDBC notes:
 1. [Basics](./jdbc/basics.md)
 2. [Statement types](./jdbc/statements.md)
 
-JPA/Hibernate notes:
+General, quick JPA/Hibernate notes:
 1. [Basics](hibernate/basics.md)
 2. [EntityManager in the container environments](hibernate/container_environments.md)
 3. [JPA and Hibernate](./hibernate/jpa_and_hibernate.md)
-3. [Transactions](./hibernate/transactions.md)
-4. [Operations on data](./hibernate/operations.md)
-5. [The identity of detached state instances](./hibernate/detached_state.md)
-5. [Persistence lifecycle](./hibernate/persistence_lifecycle.md)
-6. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
-7. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
-8. [Unit tests of these mechanisms in a separate project]([unit tests of these mechanisms](https://github.com/kkoltun/dev_notes_code_java_persistence/tree/master/src/test/java/com/hr/jpa))
+
+Concurrency control in JPA/Hibernate:
+1. [Transactions in Hibernate - short overview](./hibernate/transactions_overview.md)
+2. [Transactions and sessions in Hibernate - more details](./hibernate/transactions_details.md).
+3. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
+4. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
+
+Entity states, operations:
+1. [Operations on data](./hibernate/operations.md)
+2. [The identity of detached state instances](./hibernate/detached_state.md)
+3. [Persistence lifecycle](./hibernate/persistence_lifecycle.md)
+4. [Unit tests of these mechanisms in a separate project](https://github.com/kkoltun/dev_notes_code_java_persistence)
 
 Spring:
 * [Guide to @Transactional by Marco Behler](https://www.marcobehler.com/guides/spring-transaction-management-unconventional-guide?utm_source=newsletter&utm_medium=sendy)

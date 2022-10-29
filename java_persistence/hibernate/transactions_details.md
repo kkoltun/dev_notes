@@ -36,6 +36,8 @@
 
 ### Unit of Work
 
+[Check here for a detailed description from Martin Fowler.](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+
 * Martin Fowler describes it as " [maintaining] a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems".
 * This a transactions (in a abstract notion), but fulfilling it might often span multiple physical database transactions.
 * Usually also called a "business transaction".

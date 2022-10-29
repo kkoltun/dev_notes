@@ -2,7 +2,7 @@
 
 > The data lives longer than any application.
 
-See the code repository [here](https://github.com/kkoltun/dev_notes_code_java_persistence).
+See the code repository [here](https://github.com/kkoltun/dev_notes_code_java_persistence)
 
 ## Notes
 
@@ -37,6 +37,10 @@ Entity states, operations:
 2. [The identity of detached state instances](./hibernate/detached_state.md)
 3. [Persistence lifecycle](./hibernate/persistence_lifecycle.md)
 4. [Unit tests of these mechanisms in a separate project](https://github.com/kkoltun/dev_notes_code_java_persistence)
+
+Code and different tests:
+1. [Entity states and persistence mechanisms](https://github.com/kkoltun/dev_notes_code_java_persistence/tree/master/src/test/java/com/hr/jpa)
+2. [Race condition example (money transfer case)](https://github.com/kkoltun/dev_notes_code_java_persistence/blob/master/src/test/java/com/bank/ACIDRaceConditionTest.java)
 
 Spring:
 * [Guide to @Transactional by Marco Behler](https://www.marcobehler.com/guides/spring-transaction-management-unconventional-guide?utm_source=newsletter&utm_medium=sendy)

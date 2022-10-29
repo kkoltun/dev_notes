@@ -54,6 +54,8 @@
 
 ### Session-per-request pattern
 
+![Session-per-request diagram](https://developer.jboss.org/servlet/JiveServlet/showImage/102-13951-3-22002/session_request.png)
+
 * Opening and closing a `Session` for every request that came from the client to the server.
 * All database operations are executed in this unit of work.
 * On completion and once the response for the client has been prepared, the session is flushed and closed.
@@ -91,6 +93,8 @@ Use of the Hibernate features to acheive this:
 
 #### Session-per-request-with-detached-objects pattern
 
+![Session-per-request-with-detached-objects diagram](https://developer.jboss.org/servlet/JiveServlet/showImage/102-13951-3-22003/session_detachedobjects.png)
+
 * Use **automatic versioning** and **detached objects**.
 * Steps:
   1. Load all instances in the beginning.
@@ -99,6 +103,8 @@ Use of the Hibernate features to acheive this:
   4. Persist the modifcations using reattached instances. Automatic versioning cares about the isolation of the concurrent modifications.
 
 #### Session-per-conversation-pattern
+
+![Session-per-request-with-detached-objects diagram](https://developer.jboss.org/servlet/JiveServlet/showImage/102-13951-3-22004/session_conversation.png)
 
 * Use **automatic versioning** and **detached objects**.
 * Steps:

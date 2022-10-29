@@ -15,6 +15,8 @@
 9. What are two patterns for implementing *long conversations*? What Hibernate features help here?
 10. What are common antipatterns and possible issues with `Session` objects (3 examples)? 
 
+---
+
 ### Objects
 
 `SessionFactory`:
@@ -30,11 +32,15 @@
 * Non-threadsafe.
 * Should be used once and then discarded for eg. a single request.
 
+---
+
 ### Unit of Work
 
 * Martin Fowler describes it as " [maintaining] a list of objects affected by a business transaction and coordinates the writing out of changes and the resolution of concurrency problems".
 * This a transactions (in a abstract notion), but fulfilling it might often span multiple physical database transactions.
 * Usually also called a "business transaction".
+
+---
 
 ### Session-per-operation antipattern
 
@@ -44,12 +50,16 @@
 * Doing these operations in auto-commit mode (every single SQL gets comitted) is useless.
 * **Hibernate disables or expects the application server to disable the auto-commit mode immediately.**
 
+---
+
 ### Session-per-request pattern
 
 * Opening and closing a `Session` for every request that came from the client to the server.
 * All database operations are executed in this unit of work.
 * On completion and once the response for the client has been prepared, the session is flushed and closed.
 * One single database transaction; starts when session is opened; committed when session is closed; one-to-one relationship.
+
+---
 
 ### Long conversations
 
@@ -107,6 +117,8 @@ These ones are usually antipatterns: session-per-user-session, session-per-appli
 
 See [here](https://docs.jboss.org/hibernate/core/3.3/reference/en/html/transactions.html#transactions-basics-issues) for details and possible solutions.
 
+---
+
 ### Database transaction demarcation
 
 **No communication with the database can occur outside of a database transaction (even if you are using auto-commit mode).**
@@ -126,6 +138,8 @@ Quick facts:
 	* CMT idiom
 
 See idioms for each type on this page.
+
+---
 
 ### Optimistic and pessimistic concurrency control
 

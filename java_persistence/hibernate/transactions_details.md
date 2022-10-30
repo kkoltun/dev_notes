@@ -8,11 +8,11 @@
 2. What is the Session?
 3. What is the Unit of Work? Is it different than a physical database transaction? What is the scope of it?
 4. What is the session-per-operation pattern?
-5. What is the session-per-request pattern?
+5. What is the session-per-request pattern? Draw a diagram for this pattern.
 6. What are *long coversations*, why do we need them?
 7. What is the naive impl. of *long conversations*?
-8. How *long conversations* can implemented safely in general?
-9. What are two patterns for implementing *long conversations*? What Hibernate features help here?
+8. How *long conversations* can implemented safely in general? What Hibernate features help here?
+9. What are two patterns for implementing *long conversations*? Draw a diagram for these two patterns.
 10. What are common antipatterns and possible issues with `Session` objects (3 examples)? 
 
 ---

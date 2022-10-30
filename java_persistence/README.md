@@ -28,7 +28,7 @@ General, quick JPA/Hibernate notes:
 
 Concurrency control in JPA/Hibernate:
 1. [Transactions in Hibernate - short overview](./hibernate/transactions_overview.md)
-2. [Transactions and sessions in Hibernate - more details](./hibernate/transactions_details.md).
+2. [Transactions and sessions in Hibernate - more details](./hibernate/transactions_details.md)
 3. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
 4. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
 

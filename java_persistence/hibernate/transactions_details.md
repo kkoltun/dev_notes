@@ -90,7 +90,7 @@
 
 Use of the Hibernate features to acheive this:
 1. **Automatic versioning** - automatic optimistic concurrency control. The concurrent modifications are checked at the end of the conversation.
-2. **Detached objects** - objects can be detached and then reattached to persist modifications. [**session-per-request-with-detached-objects pattern**] -
+2. **Detached objects** - objects can be detached and then reattached to persist modifications.
 3. **Extended (or Long) Session** - the `Session` can be disconnected from the underlying JDBC connection after the database transaction has been comitted. Then, it can be reconnected when new client request comes.
 
 #### Session-per-request-with-detached-objects pattern

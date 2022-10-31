@@ -1,12 +1,31 @@
-# Transactions in the databases
+## Transactions in the databases
+
+### Questions for this article
+
+1. What are two main motivations for transactions? 
+2. What are 4 types of concurrent access inconsistencies?
+3. What is a database transaction, what are the properties of it?
+4. What is the difference between a session and a transaction?
+5. What is Atomicity? Show it on a diagram? What are two possible cases where atomicity plays an important role?
+6. What is Consistency?
+7. What is Isolation? What is the ideal state? Why is it not achievable?
+8. Give an example of a problem with isolation.
+9. What is durability?
+10. What other requirements could be present in the real-world database usage?
+
+---
+
+### Introduction
 
 Transactions are motivated by two independent requirements:
-* Concurrent database access.
-* Resilience to system failures.
+* Prevent inconsistencies in the concurrent database access.
+* Provide resilience to system failures.
 
-## Concurrent access
+---
 
-### Concurrent access: Attribute-level Inconsistency
+### Concurrent access inconsistency types
+
+#### Concurrent access: Attribute-level Inconsistency
 
 Client S1:
 
@@ -24,7 +43,7 @@ WHERE cName = 'Stanford'
 
 Both clients modify the same attribute. Will all rows get modified correctly?
 
-### Concurrent access: Tuple-level Inconsistency
+#### Concurrent access: Tuple-level Inconsistency
 
 Client S1:
 
@@ -40,7 +59,7 @@ UPDATE Apply SET decision = 'Y' WHERE sID = 123
 
 Both clients modify the same tuple/row. Will all rows get the modification?
 
-### Concurrent access: Table-level Inconsistency
+#### Concurrent access: Table-level Inconsistency
 
 Client S1:
 
@@ -57,7 +76,7 @@ UPDATE Student SET GPA = 1.1*GPA WHERE sizeHS > 2500
 
 Will these two issued concurrently result in a consistent state of the database?
 
-### Concurrent access: Multi-statement inconsistency
+#### Concurrent access: Multi-statement inconsistency
 
 Client S1:
 
@@ -74,25 +93,27 @@ SELECT COUNT(*) FROM Apply;
 SELECT COUNT(*) FROM Archive;
 ```
 
-### The goal in concurrent access
+#### The goal in concurrent access
 
 Execute sequence of SQL statements so they appear to be running in isolation.
 
 ---
 
-## Resilience to System Failures
+### Resilience to System Failures
 
 We could have a bulk load with a lot of data. In the middle of the bulk load, there could be a system failure. We don't want to end up with part of the data loaded.
 
-### The goal in resilience
+#### The goal in resilience
 
 Guarantee all-or-nothing execution, regardless of the failures.
 
 ---
 
-## Transactions
+### Transactions
 
 **A transaction is a set of one or more SQL operations treated as a unit.**
+
+**In a relational database, everything that you execute is done in the context of the database transaction (even in the auto-commit) mode.**
 
 * Transactions appear to run in isolation.
 * If the system fails, each transaction's changes are reflected either entirely or not at all.
@@ -107,23 +128,33 @@ Session vs transaction:
 * Session may be spanning over multiple transactions.
 * Over the same connection multiple (begin transaction - commit) are possible.
 
-### ACID attributes
-
 Basic attributes of a transaction:
-* **Atomicity**
-* **Consistency**
-* **Isolation**
-* **Durability**
+* **A**tomicity
+* **C**onsistency
+* **I**solation
+* **D**urability
+
+---
 
 ### Atomicity
 
-This deals with the crash during the transaction. Each transaction is executed "all-or-nothing", it is never left half way done.
+**Grouping multiple operations in an all-or-nothing unit of work, which can succeed only if all individual operations succeed.**
 
-The logging mechanism ensures this. There are special mechanisms that, after the system recovers from the crash, undo the partial effects of the transactions.
+The operations might fail because of various reasons - breaking constraints, system crash.
+
+![Atomicity](images/atomicity.svg)
 
 **Transaction rollback** undoes partial effects of a transaction. This can be either initiated by the system or the client.
 
+Two mechanisms play important role here:
+* Undo log - in case a transaction needs to be rolled back.
+* Redo log - in case of a crash with some transactions not written to the disk yet.
+
+---
+
 ### Consistency
+
+**A modifying transaction can be seen as a state transformation, moving the database from one valid state to another.**
 
 Each client, each transaction:
 * can assume all constraints hold when the transaction begins;
@@ -131,7 +162,24 @@ Each client, each transaction:
 
 This, along with serializabiity, guarantees that the constraints always hold.
 
+**This is different than Consistency in the CAP theorem. That one is about linearizability (every read following a write should always read the latest state).**
+
+---
+
+### Durability
+
+**All committed transaction changes become permanent.**
+
+Each transaction is a sequence of statements.
+If the transaction is committed and the system crashes immediately afterwards, all the modifications will still be in the database.
+
+This is ensured using the logging system (usually a redo log or *Write-Ahead Log* in Postgres).
+
+---
+
 ### Isolation
+
+**This means interleaving concurrent transaction statements so that the outcome is equivalent to a serial execution.**
 
 1. Many users operate on the database; each of them issues a sequence of transactions; each transaction is a sequence of statements.
 2. **Serializability** is the implementation of the isolation. This means that the operations within transactions may be interleaved, but execution must be equivalent to some sequential (serial) order of all transactions.
@@ -153,19 +201,23 @@ Actually, serializability has some overhead (locks) and reduces the concurrency.
 
 See [the transaction isolation levels for details](transaction_isolation_levels.md).
 
-### Durability
+---
 
-Each transaction is a sequence of statements.
-If the transaction is committed and the system crashes immediately afterwards, all the modifications will still be in the database.
+### Implementation of isolation - serializability
 
-This is ensured using the logging system.
+See [here](https://vladmihalcea.com/serializability/) for details and diagrams.
 
-## Other requirements
+See [example race condition test code](https://github.com/kkoltun/dev_notes_code_java_persistence/blob/master/src/test/java/com/bank/ACIDRaceConditionTest.java).
 
-Business may dictate many rules, so we add one more attribute:
-* **Correctness** - the transactions must comply with various business rules. This usually is the responsibility of the application, because many rules cannot be expressed with database constraints.
+---
 
-## Read only transactions
+### Other requirement - correctness
+
+Business may dictate many rules, so we add one more attribute - **correctness**. The transactions must comply with various business rules. This usually is the responsibility of the application, because many rules cannot be expressed with database constraints.
+
+---
+
+### Read only transactions
 
 * This helps the system optimize the performance.
 * This is independent of the isolation level.

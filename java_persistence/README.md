@@ -11,11 +11,12 @@ Database basics:
 1. [Basics](database_basics/basics.md)
 2. [Joins + (exercises)](database_basics/joins.md)
 3. [Transactions](database_basics/transactions.md)
-4. [Transaction isolation issues](database_basics/transaction_isolation_issues.md)
-5. [Transaction isolation levels](database_basics/transaction_isolation_levels.md)
-6. [Constraints](database_basics/constraints.md)
-7. [Referential integrity constraints](database_basics/referential_integrity_constraints.md)
-8. [Triggers](database_basics/triggers.md)
+4. [Dealing with concurrency in databases](database_basics/concurrency.md)
+5. [Transaction isolation issues](database_basics/transaction_isolation_issues.md)
+6. [Transaction isolation levels](database_basics/transaction_isolation_levels.md)
+7. [Constraints](database_basics/constraints.md)
+8. [Referential integrity constraints](database_basics/referential_integrity_constraints.md)
+9. [Triggers](database_basics/triggers.md)
 
 JDBC notes:
 1. [Basics](./jdbc/basics.md)

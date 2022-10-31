@@ -76,6 +76,8 @@
 	5. **User expects that they were the only people editing this information.**
 	6. **User expects that no conflicting modification has occurred.**
 
+[TODO See this article from Vlad Mihalcea.](https://vladmihalcea.com/preventing-lost-updates-in-long-conversations/)
+
 #### Naive implementation of long conversations (antipattern)
 
 * Keep the `Session` and the transaction open during user think time.

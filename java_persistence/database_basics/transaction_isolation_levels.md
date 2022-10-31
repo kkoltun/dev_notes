@@ -1,9 +1,27 @@
-# Transaction Isolation Levels
+## Transaction Isolation Levels
 
 * Isolation levels are set for the transaction. There could be two, concurrent transactions with different isolation levels.
 * The isolation levels are mostly about the **reads**. They specify what actually can be read.
 
-## ANSI Isolation Levels
+---
+
+### ANSI Isolation Levels
+
+* Read uncommitted
+* Read committed
+* Repeatable read
+* Serial execution
+
+Table from [Patterns of Enterprise Application Architecture by Martin Fowler](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420):
+
+| Isolation Level  | Dirty Read | Unrepeatable Read | Phantom Read |
+|---|---|---|---|
+| Read Uncommitted | Yes | Yes | Yes |
+| Read Committed | No | Yes | Yes |
+| Repeatable Read | No | No | Yes |
+| Serializable | No | No | No |
+
+---
 
 ### Read uncommitted isolation
 
@@ -42,6 +60,8 @@ This means that part of the College rows already have the doubled enrollment and
 
 **This is not equivalent to any serial order**, T2 could be executed in any moment of T1. It is neither `T1, T2`, nor `T2, T1`.
 
+---
+
 ### Read committed isolation
 
 Features:
@@ -71,6 +91,8 @@ SELECT MAX(GPA) FROM Student;
 The `AVG` function might get the old GPA values, while the `MAX` operation could get the new GPA values. The read is unrepeatable.
 
 **This is not equivalent to any serial order**. It is neither `T1, T2` order, nor `T2, T1` order. T1 could be executed between the T2 statements.
+
+----
 
 ### Repeatable read isolation
 
@@ -130,18 +152,9 @@ The rationale behind this is that the tuples that we read in `AVG` statement, st
 
 This behavior does not happen when deleting rows, however.
 
+---
+
 ### Serializable isolation
 
 **Features:**
 * Emulates serial execution - as if transactions were executed one after another, rather than concurrently.
-
-### Summary
-
-Table from [Patterns of Enterprise Application Architecture by Martin Fowler](https://www.amazon.com/Patterns-Enterprise-Application-Architecture-Martin/dp/0321127420):
-
-| Isolation Level  | Dirty Read | Unrepeatable Read | Phantom Read |
-|---|---|---|---|
-| Read Uncommitted | Yes | Yes | Yes |
-| Read Committed | No | Yes | Yes |
-| Repeatable Read | No | No | Yes |
-| Serializable | No | No | No |

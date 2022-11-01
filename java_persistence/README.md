@@ -7,16 +7,11 @@ See the code repository [here](https://github.com/kkoltun/dev_notes_code_java_pe
 ## Notes
 
 Database basics:
-
 1. [Basics](database_basics/basics.md)
 2. [Joins + (exercises)](database_basics/joins.md)
-3. [Transactions](database_basics/transactions.md)
-4. [Dealing with concurrency in databases](database_basics/concurrency.md)
-5. [Transaction isolation issues](database_basics/transaction_isolation_issues.md)
-6. [Transaction isolation levels](database_basics/transaction_isolation_levels.md)
-7. [Constraints](database_basics/constraints.md)
-8. [Referential integrity constraints](database_basics/referential_integrity_constraints.md)
-9. [Triggers](database_basics/triggers.md)
+3. [Constraints](database_basics/constraints.md)
+4. [Referential integrity constraints](database_basics/referential_integrity_constraints.md)
+5. [Triggers](database_basics/triggers.md)
 
 JDBC notes:
 1. [Basics](./jdbc/basics.md)
@@ -27,13 +22,17 @@ General, quick JPA/Hibernate notes:
 2. [EntityManager in the container environments](hibernate/container_environments.md)
 3. [JPA and Hibernate](./hibernate/jpa_and_hibernate.md)
 
-Concurrency control in JPA/Hibernate:
-1. [Transactions in Hibernate - short overview](./hibernate/transactions_overview.md)
-2. [Transactions and sessions in Hibernate - more details](./hibernate/transactions_details.md)
-3. [Optimistic concurrency control](./hibernate/optimistic_concurrency_control.md)
-4. [Pessimistic concurrency control](./hibernate/pessimistic_concurrency_control.md)
+Concurrency control in Databases:
+1. [Transactions](database_basics/transactions.md)
+2. [Dealing with concurrency in databases](database_basics/concurrency.md)
+3. [Transaction isolation issues](database_basics/transaction_isolation_issues.md)
+4. [Transaction isolation levels](database_basics/transaction_isolation_levels.md)
+5. [Pessimistic locking (with references to JPA/Hibernate)](database_basics/pessimistic_locking.md)
+6. [Optimistic locking (with references to JPA/Hibernate)](database_basics/optimistic_locking.md)
+7. [Transactions in Hibernate - short overview](./hibernate/transactions_overview.md)
+8. [Transactions and sessions in Hibernate - more details](./hibernate/transactions_details.md)
 
-Entity states, operations:
+Entity states, operations in JPA/Hibernate:
 1. [Operations on data](./hibernate/operations.md)
 2. [The identity of detached state instances](./hibernate/detached_state.md)
 3. [Persistence lifecycle](./hibernate/persistence_lifecycle.md)

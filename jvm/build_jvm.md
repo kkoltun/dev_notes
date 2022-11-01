@@ -2,11 +2,12 @@
 
 ### TODO
 
-1. Watch this: https://www.youtube.com/watch?v=5AFgNuGwLos.
-2. Debug JVM from Visual Studio.
-3. Investigate topics below.
-
----
+1. Check how the tests work:
+   1. Tests for C++ code.
+   2. Tests for Java code.
+2. Watch this: https://www.youtube.com/watch?v=5AFgNuGwLos
+3. Debug JVM from CLI: Build JVM with debug options -> debug with GDB on WSL Ubuntu
+4. Debug JVM from Visual Studio
 
 ### Steps to build the actual JVM instance
 

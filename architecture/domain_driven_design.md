@@ -62,7 +62,8 @@ Building Blocks define a set of Roles that can be played by objects within the M
 
 #### 1 | Entity
 
-* Entities should have characteristic responsibilities in them.
+* These are ordinary Entities known from ORMs with added business logic.
+* There should be only **business logic essential for this entity** inside, not more.
 
 #### 2 | Aggregate
 

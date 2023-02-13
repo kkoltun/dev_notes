@@ -110,6 +110,8 @@ Use of the Hibernate features to acheive this:
 
 ![Session-per-request-with-detached-objects diagram](https://developer.jboss.org/servlet/JiveServlet/showImage/102-13951-3-22004/session_conversation.png)
 
+Check the code testing and explaining Long Conversations [here](https://github.com/kkoltun/dev_notes_code_java_persistence/blob/9917586a7c2809dca6acd0127701dfbc3dccce0d/src/main/java/dev/karolkoltun/persistence/concurrency/optimistic/locking/HibernateOptimisticLockingLongConversationTests.java).
+
 * Use **automatic versioning** and **detached objects**.
 * Steps:
   1. Disconnect the Hibernate `Session` from the JDBC connection after the database transaction has been comitted.

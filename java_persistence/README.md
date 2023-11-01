@@ -31,6 +31,7 @@ Concurrency control in Databases:
 6. [Optimistic locking (with references to JPA/Hibernate)](database_basics/optimistic_locking.md)
 7. [Transactions in Hibernate - short overview](./hibernate/transactions_overview.md)
 8. [Transactions and sessions in Hibernate - more details](./hibernate/transactions_details.md)
+9. [Preventing lost updates](./database_basics/preventing_lost_updates.md)
 
 Entity states, operations in JPA/Hibernate:
 1. [Operations on data](./hibernate/operations.md)

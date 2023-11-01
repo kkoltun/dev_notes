@@ -9,6 +9,7 @@
    1. Features.
    2. Example SQL that could be an issue.
    3. Is that serial execution? Why not?
+5. Describe multiple ways a lost update can be prevented.
 
 ---
 
@@ -72,7 +73,7 @@ Table from [Patterns of Enterprise Application Architecture by Martin Fowler](ht
 | Isolation level  | Dirty Read | Non-Repeatable Read | Phantom Read | Read Skew | Write Skew | Lost Update |
 |------------------|------------|---------------------|--------------|-----------|------------|-------------|
 | Read Uncommitted | No         | Yes                 | Yes          | Yes       | Yes        | Yes         |
-| Read Comitted    | No         | Yes                 | Yes          | Yes       | Yes        | Yes         |
+| Read Committed   | No         | Yes                 | Yes          | Yes       | Yes        | Yes         |
 | Repeatable Read  | No         | No                  | **No**       | No        | Yes        | No          |
 | Serializable     | No         | No                  | No           | No        | No         | No          |
 
@@ -128,10 +129,14 @@ This is not equivalent to any serial order, T2 could be executed in any moment o
 Features:
 * Unrepeatable reads are permitted.
 * No dirty reads.
+* No dirty writes.
 
 Possible implementation:
-* Shared read locks: reading transactions don't block other transactions from accessing a row.
-* Exclusive write locks: any uncommitted writing transaction blocks all other transactions from accessing the row.
+* Preventing dirty writes:
+  * Shared read locks: reading transactions don't block other transactions from accessing a row.
+  * Exclusive write locks: any uncommitted writing transaction blocks all other transactions from accessing the row.
+* Preventing dirty reads:
+  * Remebering original commited value along with the new, uncommitted value.
 
 #### Example
 
@@ -163,6 +168,7 @@ Features:
 * Phantom reads are permitted.
 * No dirty reads.
 * No unrepeatable reads.
+* No lost updates.
 
 Possible implementation:
 * Reading transactions block writing transactions but not other reading transactions.
@@ -216,6 +222,17 @@ So the `AVG` operation might be calculated on a different set of data than `MAX`
 The rationale behind this is that the tuples that we read in `AVG` statement, still have the same value when we are reading in the `MAX` statement.
 
 This behavior does not happen when deleting rows, however.
+
+---
+
+### Snapshot isolation
+
+This is an implementation of repeatable read in PostgresSQL.
+They call it repeatable read there, because it meets the requirements of the standard.
+
+Implementation involves MVCC (*multi-version concurrency control*), which means keeping multiple versions of rows.
+
+See [notes here](./concurrency.md) and [Designing Data Intensive Applications Chapter 7: Transactions part Implementing snapshot isolation](https://www.amazon.pl/Designing-Data-Intensive-Applications-Reliable-Maintainable/dp/1449373321) for details.
 
 ---
 

@@ -6,12 +6,13 @@
 2. What are 4 types of concurrent access inconsistencies?
 3. What is a database transaction, what are the properties of it?
 4. What is the difference between a session and a transaction?
-5. What is Atomicity? Show it on a diagram? What are two possible cases where atomicity plays an important role?
-6. What is Consistency?
-7. What is Isolation? What is the ideal state? Why is it not achievable?
-8. Give an example of a problem with isolation.
-9. What is durability?
-10. What other requirements could be present in the real-world database usage?
+5. Why are transactions so important in the multi-object context (3 reasons)?
+6. What is Atomicity? Show it on a diagram? What are two possible cases where atomicity plays an important role?
+7. What is Consistency?
+8. What is Isolation? What is the ideal state? Why is it not achievable?
+9. Give an example of a problem with isolation.
+10. What is durability?
+11. What other requirements could be present in the real-world database usage?
 
 ---
 
@@ -134,6 +135,13 @@ Basic attributes of a transaction:
 * **I**solation
 * **D**urability
 
+Transactions are particularly important in the multi-object context:
+* Single row in one table often has a foreign key reference to a row in another table.
+Multi-object transactions allow you to ensue that these references remain valid.
+* When denormalized information needs to be updated, you need to update several places/documents/tables in one go.
+Transactions prevent denormalized data from going out of sync.
+* In databases with secondary indexes, the indexes also need to be updated every time you change a value.
+
 ---
 
 ### Atomicity
@@ -149,6 +157,10 @@ The operations might fail because of various reasons - breaking constraints, sys
 Two mechanisms play important role here:
 * Undo log - in case a transaction needs to be rolled back.
 * Redo log - in case of a crash with some transactions not written to the disk yet.
+
+> Note that atomicity in the context of ACID is different than atomicity in multi-threaded programming.
+> If one thread executes an atomic operation, that means there is no way that another thread could see half-finished result of operation.
+> In the context of ACID, atomicity is *not* about concurrency. This is covered under the letter **I** for **isolation**.
 
 ---
 
@@ -229,3 +241,9 @@ SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
 SELECT AVG(GPA) FROM Student;
 SELECT MAX(GPA) FROM Student;
 ```
+
+---
+
+### Additional materials
+
+See [Designing Data Intensive Applications -> Chapter 7: Transactions -> The Meaning of ACID](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/).

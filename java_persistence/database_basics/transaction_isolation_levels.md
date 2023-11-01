@@ -165,7 +165,7 @@ This is not equivalent to any serial order. It is neither `T1, T2` order, nor `T
 ### Repeatable read isolation
 
 Features:
-* Phantom reads are permitted.
+* Write skew and phantom reads are permitted.
 * No dirty reads.
 * No unrepeatable reads.
 * No lost updates.
@@ -227,8 +227,9 @@ This behavior does not happen when deleting rows, however.
 
 ### Snapshot isolation
 
-This is an implementation of repeatable read in PostgresSQL.
+* This is an implementation of repeatable read in PostgresSQL.
 They call it repeatable read there, because it meets the requirements of the standard.
+* General rule: readers never block writers, and writers never block readers.
 
 Implementation involves MVCC (*multi-version concurrency control*), which means keeping multiple versions of rows.
 
@@ -240,3 +241,10 @@ See [notes here](./concurrency.md) and [Designing Data Intensive Applications Ch
 
 **Features:**
 * Emulates serial execution - as if transactions were executed one after another, rather than concurrently.
+* Some race conditions are prevented by the read committed and snapshot isolation levels, but **read skew and phantoms are still possible**.
+* Possible implementations:
+  * Actual serial execution.
+  * Two-phase locking.
+  * Serializable snapshot isolation.
+
+Check [Serializability Implementations](./serializability_implementations.md) for details.

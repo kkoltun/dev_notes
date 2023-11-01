@@ -75,34 +75,28 @@ This can also be a feature, not a bug in some cases, for example:
 
 ---
 
-### 4. Dirty write
+### 4. Read skew
+
+![Read skew](images/isolation_issues_read_skew.svg)
+
+**One transaction is able to see the database in an inconsistent state.**
+
+* In reality, the unrepeatable read and read skew are closely related.
+
+---
+
+### 5. Dirty write
 
 ![Dirty write](images/isolation_issues_dirty_write.svg)
+
+*At the end, both Bob and Alice commit and owner is 'Alice', whereas recipient of the Invoice is 'Bob'.*
 
 **One transaction overwrites uncommitted changes from another transaction.**
 * This happens when no exclusive locks are taken.
 * So when one transaction does a rollback, nobody really knows what the previous state is.
 * This breaks atomicity, it will not happen on any database.
 
----
-
-### 5. Read skew
-
-![Read skew](images/isolation_issues_read_skew.svg)
-
-**One transaction is able to see the database in an inconsistent state.**
-
-* In reality, this is an example of unrepeatable read.
-
----
-
-### 6. Write skew
-
-TODO
-
----
-
-### 7. Lost update
+### 6. Lost update
 
 ![Lost update](images/isolation_issues_lost_update_2.svg)
 
@@ -125,7 +119,34 @@ Lost updated happen in different scenarios:
 
 ---
 
-### X. Last commit wins
+### 7. Write skew
+
+![Write skew](images/isolation_issues_write_skew.svg)
+
+**Different transactions read the same objects and update some of them leading to a race condition and casuing an anomaly.**
+
+* Write skew can be treated as a generalization of the lost update problem.
+* When different transactions update the same object, you get a dirty write or lost update anomaly depending on the timing.
+* When different transactions read the same objects and then update some of them (different transactions update different objects), you can get write skew.
+* **Snapshot isolation does not prevent this.** Only proper locking, database constraints or serializable isolation would prevent this.
+
+Other examples:
+* Booking system, where you first select bookings for a date range and then, when none found, insert a new booking for the date range.
+Race condition leads to an over-booking.
+* Accounting system, where you first check the balance and only then subtract an amount.
+Race condition leads to a negative balance.
+
+In general:
+1. A `SELECT` query checks whether a requirement is satisfied (no bookings, at least two doctors on call etc).
+2. Depending on the result, the application code decides to continue or abort.
+3. If application goes ahead, it does a modification (`UPDATE`, `DELETE` or `INSERT`).
+4. The modification from point 3 changes the precondition of the decision in step 2.
+
+A write in one transaction changes the result of a search query in another transaction - it is called a **phantom**.
+
+---
+
+### 8. Last commit wins
 
 ![Last commit wins](images/isolation_issues_last_commit_wins.svg)
 

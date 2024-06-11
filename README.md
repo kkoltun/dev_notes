@@ -68,3 +68,7 @@ Currently reading:
 * [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/gp/product/0201485672/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0201485672&linkId=da77d80ca71a20f6862156fed62e779b)
 * [Refactoring: Improving the Design of Existing Code (2nd Edition)](https://www.amazon.com/gp/product/0134757599/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0134757599&linkId=2fe8e02bf9998a2b3c5419dd1a374c5b)
 * [Test Driven Development: By Example](https://www.amazon.com/gp/product/0321146530/ref=as_li_tl?ie=UTF8&tag=jlacar-in-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0321146530&linkId=ec4179a2a0749f0433740765e89abbd7)
+
+## Contact
+
+If you would like me to work for you, please contact contact@karolkoltun.dev email address.

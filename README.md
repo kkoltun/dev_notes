@@ -55,8 +55,8 @@
 ## Miscellanea
 
 Currently reading:
-* EJB 3 in Action
-* Java Persistence with Hibernate
+* Soul of the New Machine
+* Designing Data-Intensive Applications
 
 ## Books
 

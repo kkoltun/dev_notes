@@ -96,6 +96,8 @@ This can also be a feature, not a bug in some cases, for example:
 * So when one transaction does a rollback, nobody really knows what the previous state is.
 * This breaks atomicity, it will not happen on any database.
 
+---
+
 ### 6. Lost update
 
 ![Lost update](images/isolation_issues_lost_update_2.svg)

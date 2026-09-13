@@ -16,6 +16,18 @@ It blocks others from taking an explicit lock.
 
 ---
 
+### Where do locks live in PostgreSQL
+
+* A heap tuple header has one field for the transaction that last modified it: `t_max` which is 32 bits.
+* This value is filled when a query issues UPDATE/DELETE (update deletes the tuple) **and** for locking.
+* When locking is involved, the field is filled with `MultiXactId` instead of a plan xid and also the
+  `HEAP_XMAX_IS_MULTI` bit is set in `t_infomask`. The multixact ID is drawn from its own 32-bit counter, independent of
+  the xid counter.
+* Reading the tuple then requires a second lookup: see the flag, take the value as a multixact ID, go fetch the member
+  list to find out who actually holds what.
+
+---
+
 ### Shared lock in PostgreSQL
 
 The `LockMode.PESSIMISTIC_READ`:
@@ -36,6 +48,19 @@ FROM employees
 WHERE id = 100
 FOR SHARE;
 ```
+
+When there are JOINs:
+
+```sql
+SELECT *
+FROM employees e
+    JOIN districts d ON e.district_id = d.id
+FOR SHARE;
+```
+
+then both tables' rows get locked.
+
+You cannot use these locks with `LEFT JOIN` - it throws `FOR SHARE cannot be applied to the nullable side of an outer join`.
 
 ---
 

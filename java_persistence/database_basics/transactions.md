@@ -2,7 +2,7 @@
 
 ### Questions for this article
 
-1. What are two main motivations for transactions? 
+1. What are two main motivations for transactions?
 2. What are 4 types of concurrent access inconsistencies?
 3. What is a database transaction, what are the properties of it?
 4. What is the difference between a session and a transaction?
@@ -19,6 +19,7 @@
 ### Introduction
 
 Transactions are motivated by two independent requirements:
+
 * Prevent inconsistencies in the concurrent database access.
 * Provide resilience to system failures.
 
@@ -31,14 +32,16 @@ Transactions are motivated by two independent requirements:
 Client S1:
 
 ```sql
-UPDATE College SET enrollment = enrollment + 1000
+UPDATE College
+SET enrollment = enrollment + 1000
 WHERE cName = 'Stanford'
 ```
 
 concurrent with client S2:
 
 ```sql
-UPDATE College SET enrollment = enrollment + 1000
+UPDATE College
+SET enrollment = enrollment + 1000
 WHERE cName = 'Stanford'
 ```
 
@@ -49,13 +52,17 @@ Both clients modify the same attribute. Will all rows get modified correctly?
 Client S1:
 
 ```sql
-UPDATE Apply SET major = 'CS' WHERE sID = 123
+UPDATE Apply
+SET major = 'CS'
+WHERE sID = 123
 ```
 
 concurrent with client S2:
 
 ```sql
-UPDATE Apply SET decision = 'Y' WHERE sID = 123
+UPDATE Apply
+SET decision = 'Y'
+WHERE sID = 123
 ```
 
 Both clients modify the same tuple/row. Will all rows get the modification?
@@ -65,14 +72,17 @@ Both clients modify the same tuple/row. Will all rows get the modification?
 Client S1:
 
 ```sql
-UPDATE Apply SET decision = 'Y'
+UPDATE Apply
+SET decision = 'Y'
 WHERE sID IN (SELECT sID FROM Student WHERE GPA > 3.9)
 ```
 
 concurrent with client S2:
 
 ```sql
-UPDATE Student SET GPA = 1.1*GPA WHERE sizeHS > 2500
+UPDATE Student
+SET GPA = 1.1 * GPA
+WHERE sizeHS > 2500
 ```
 
 Will these two issued concurrently result in a consistent state of the database?
@@ -82,16 +92,22 @@ Will these two issued concurrently result in a consistent state of the database?
 Client S1:
 
 ```sql
-INSERT INTO Archive 
-SELECT * FROM Apply WHERE decision = 'N';
-DELETE FROM Apply WHERE decision = 'N';
+INSERT INTO Archive
+SELECT *
+FROM Apply
+WHERE decision = 'N';
+DELETE
+FROM Apply
+WHERE decision = 'N';
 ```
 
 concurrent with client S2:
 
 ```sql
-SELECT COUNT(*) FROM Apply;
-SELECT COUNT(*) FROM Archive;
+SELECT COUNT(*)
+FROM Apply;
+SELECT COUNT(*)
+FROM Archive;
 ```
 
 #### The goal in concurrent access
@@ -102,7 +118,8 @@ Execute sequence of SQL statements so they appear to be running in isolation.
 
 ### Resilience to System Failures
 
-We could have a bulk load with a lot of data. In the middle of the bulk load, there could be a system failure. We don't want to end up with part of the data loaded.
+We could have a bulk load with a lot of data. In the middle of the bulk load, there could be a system failure. We don't
+want to end up with part of the data loaded.
 
 #### The goal in resilience
 
@@ -114,53 +131,96 @@ Guarantee all-or-nothing execution, regardless of the failures.
 
 **A transaction is a set of one or more SQL operations treated as a unit.**
 
-**In a relational database, everything that you execute is done in the context of the database transaction (even in the auto-commit) mode.**
+**In a relational database, everything that you execute is done in the context of the database transaction (even in the
+auto-commit) mode.**
 
 * Transactions appear to run in isolation.
 * If the system fails, each transaction's changes are reflected either entirely or not at all.
 
 SQL standard:
+
 * Transaction begins automatically on first SQL statement.
 * On `commit` transaction ends and new one begins.
 * Current transaction ends on session termination.
 * `Autocommit` turns each statement into transaction.
 
 Session vs transaction:
+
 * Session may be spanning over multiple transactions.
 * Over the same connection multiple (begin transaction - commit) are possible.
 
 Basic attributes of a transaction:
+
 * **A**tomicity
 * **C**onsistency
 * **I**solation
 * **D**urability
 
 Transactions are particularly important in the multi-object context:
+
 * Single row in one table often has a foreign key reference to a row in another table.
-Multi-object transactions allow you to ensue that these references remain valid.
+  Multi-object transactions allow you to ensue that these references remain valid.
 * When denormalized information needs to be updated, you need to update several places/documents/tables in one go.
-Transactions prevent denormalized data from going out of sync.
+  Transactions prevent denormalized data from going out of sync.
 * In databases with secondary indexes, the indexes also need to be updated every time you change a value.
 
 ---
 
 ### Atomicity
 
-**Grouping multiple operations in an all-or-nothing unit of work, which can succeed only if all individual operations succeed.**
+**Grouping multiple operations in an all-or-nothing unit of work, which can succeed only if all individual operations
+succeed.**
 
 The operations might fail because of various reasons - breaking constraints, system crash.
 
 ![Atomicity](images/atomicity.svg)
 
-**Transaction rollback** undoes partial effects of a transaction. This can be either initiated by the system or the client.
+**Transaction rollback** undoes partial effects of a transaction. This can be either initiated by the system or the
+client.
+
+#### Atomicity implementation with logs
 
 Two mechanisms play important role here:
+
 * Undo log - in case a transaction needs to be rolled back.
 * Redo log - in case of a crash with some transactions not written to the disk yet.
 
+#### Atomicity implementation in Postgres
+
+Facts:
+
+* `pg_xact` with two bits per transaction: `IN_PROGRESS`, `COMMITTED`, `ABORTED`, `SUB_COMMITTED`. That's the entire
+  durable record of "did this transaction happen". Even if the transaction is big, the outcome is one bit-flip in one
+  place. All or nothing.
+* **No undo log**, writes are never reversed, every tuple carries `xmin` (creating xid) and `xmax` (deleting xid) in its
+  header. Visibility is decided on read - for a given tuple, look up `xmin`'s status in `pg_xact`.
+
+`RecordTransactionCommit`:
+
+* Write a commit record to WAL and `XLogFlush` it to durable storage. **This is real atomicity point** - the
+  transaction is committed the instant this fsync returns, regardless of what `pg_xact` currently says.
+* Set the xid to `COMMITTED` in `pg_xact`.
+* Remove the xid from the `ProcArray`, which is what makes it visible to newly-taken snapshots.
+
+If there is a crash between 1 and 2:
+
+* Recovery replays the commit record and sets the `pg_xact` itself.
+* So `pg_xact` is better thought of as derived state that WAL is authoritative over.
+
+**Please note, that the WAL write is the final step in terms of atomicity and durability of the change, but is not the
+final step of writing data in general. The WAL record is a description of the change. The modified page sits dirty in
+`shared_buffers` and is written to disk later, usually by the checkpointer.**
+
+**This does not weaken the guarantee: once the commit record is flushed to WAL, the transaction is durable, and a crash
+before the page reaches disk is recovered by replaying wAL over the stale page.**
+
+#### Atomicity here vs atomicity in multithreading
+
 > Note that atomicity in the context of ACID is different than atomicity in multi-threaded programming.
-> If one thread executes an atomic operation, that means there is no way that another thread could see half-finished result of operation.
-> In the context of ACID, atomicity is *not* about concurrency. This is covered under the letter **I** for **isolation**.
+> If one thread executes an atomic operation, that means there is no way that another thread could see half-finished
+> result of operation.
+> In the context of ACID, atomicity is *not* about concurrency. This is covered under the letter **I** for
+> **isolation**.
 
 ---
 
@@ -169,12 +229,22 @@ Two mechanisms play important role here:
 **A modifying transaction can be seen as a state transformation, moving the database from one valid state to another.**
 
 Each client, each transaction:
+
 * can assume all constraints hold when the transaction begins;
 * must guarantee all constraints hold when the transaction ends (this is usually done by the constraints subsystem).
 
 This, along with serializabiity, guarantees that the constraints always hold.
 
-**This is different than Consistency in the CAP theorem. That one is about linearizability (every read following a write should always read the latest state).**
+**This is different than Consistency in the CAP theorem. That one is about linearizability (every read following a write
+should always read the latest state).**
+
+Consistency is both about the database and the application using it. The database does not know about ledger debits and
+other business rules you have. It can enforce the invariants you
+declared: `NOT NULL`, `UNIQUE`, foreign keys, `CHECK` constraints, triggers.
+
+* CHECK constraints is a declarative predicate on a single row.
+* A trigger is a procedure you attach to an event and ti can do anything. It is broader than CHECK because: it can look
+  at other rows or tables, CHECK has to be immutable.
 
 ---
 
@@ -183,7 +253,8 @@ This, along with serializabiity, guarantees that the constraints always hold.
 **All committed transaction changes become permanent.**
 
 Each transaction is a sequence of statements.
-If the transaction is committed and the system crashes immediately afterwards, all the modifications will still be in the database.
+If the transaction is committed and the system crashes immediately afterwards, all the modifications will still be in
+the database.
 
 This is ensured using the logging system (usually a redo log or *Write-Ahead Log* in Postgres).
 
@@ -193,20 +264,28 @@ This is ensured using the logging system (usually a redo log or *Write-Ahead Log
 
 **This means interleaving concurrent transaction statements so that the outcome is equivalent to a serial execution.**
 
-1. Many users operate on the database; each of them issues a sequence of transactions; each transaction is a sequence of statements.
-2. **Serializability** is the implementation of the isolation. This means that the operations within transactions may be interleaved, but execution must be equivalent to some sequential (serial) order of all transactions.
-3. So the system might execute all of these operations done by users concurrently, but it has to guarantee that the behavior against the database is equivalent to some sequential order.
+1. Many users operate on the database; each of them issues a sequence of transactions; each transaction is a sequence of
+   statements.
+2. **Serializability** is the implementation of the isolation. This means that the operations within transactions may be
+   interleaved, but execution must be equivalent to some sequential (serial) order of all transactions.
+3. So the system might execute all of these operations done by users concurrently, but it has to guarantee that the
+   behavior against the database is equivalent to some sequential order.
 4. How is it done? Using protocols involving locking.
 
 This solves the potential issues in *Attribute-level Inconsistency* and *Tuple-level Inconsistency*.
-In both examples above, the database can execute two transactions in arbitrary order and this will be OK, as long as they both are fully executed.
+In both examples above, the database can execute two transactions in arbitrary order and this will be OK, as long as
+they both are fully executed.
 
-In the case of *Table-level Inconsistency* and *Multi-statement inconsistency* the database still can execute the two transactions in arbitrary order and this **will** leave the database in the consistent state.
+In the case of *Table-level Inconsistency* and *Multi-statement inconsistency* the database still can execute the two
+transactions in arbitrary order and this **will** leave the database in the consistent state.
 However, the order of the execution of these two transactions matters from the user standpoint.
-So, the database guarantees the serializability when the transactions are issued concurrently, but **does not** ensure the exact order of the execution.
+So, the database guarantees the serializability when the transactions are issued concurrently, but **does not** ensure
+the exact order of the execution.
 If this is an issue, it has to be coded as part of an application.
 
-Actually, serializability has some overhead (locks) and reduces the concurrency. This is why, databases offer weaker "isolation levels":
+Actually, serializability has some overhead (locks) and reduces the concurrency. This is why, databases offer weaker
+"isolation levels":
+
 * Read Uncommitted
 * Read Committed
 * Repeatable Read
@@ -225,7 +304,9 @@ See [example race condition test code](https://github.com/kkoltun/dev_notes_code
 
 ### Other requirement - correctness
 
-Business may dictate many rules, so we add one more attribute - **correctness**. The transactions must comply with various business rules. This usually is the responsibility of the application, because many rules cannot be expressed with database constraints.
+Business may dictate many rules, so we add one more attribute - **correctness**. The transactions must comply with
+various business rules. This usually is the responsibility of the application, because many rules cannot be expressed
+with database constraints.
 
 ---
 
@@ -238,8 +319,10 @@ Business may dictate many rules, so we add one more attribute - **correctness**.
 SET TRANSACTION READ ONLY;
 SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
 
-SELECT AVG(GPA) FROM Student;
-SELECT MAX(GPA) FROM Student;
+SELECT AVG(GPA)
+FROM Student;
+SELECT MAX(GPA)
+FROM Student;
 ```
 
 ---

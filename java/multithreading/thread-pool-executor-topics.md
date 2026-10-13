@@ -11,3 +11,10 @@ Topics:
    3. `numThreads > maximumPoolSize`?
 3. What is the timeout used for?
 4. What are the there general strategies for queuing? What are the queue implementations used there?
+
+### Additional info
+
+Why thread pools are better than creating threads via `new Thread()`:
+
+* Limiting the number of spawned threads.
+* A thread is an expensive resource - it is expensive to create and kill.

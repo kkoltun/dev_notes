@@ -1,6 +1,6 @@
 # Kafka
 
-![Kafka message](./images/kafka_overview.svg)
+![Kafka message](basics/images/kafka_overview.svg)
 
 ### Problem to solve
 
@@ -59,7 +59,7 @@ Producers can send a key with the message (string, number, binary, etc.)
 
 Kafka accepts only bytes as input and will output bytes.
 
-![Kafka message](./images/kafka_message.svg)
+![Kafka message](basics/images/kafka_message.svg)
 
 * You need a serializer for both the key and the value.
 * Kafka comes with a set of Common Serializers.

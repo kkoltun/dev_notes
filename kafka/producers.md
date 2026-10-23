@@ -197,3 +197,15 @@ one-message batches. However, it will use more memory.
 
 **Apache Kafka preserves the order of messages within one partition.**
 
+* Setting `retries > 0` and `max.in.flight.requests.per.connection > 1`.
+* So: there can be multiple requests waiting for the response from the broker.
+    * The broker fails batch #1.
+    * Batch #2, which was already in flight, succeeds.
+    * The producer retries #1; if it succeeds, the order is reversed.
+
+So you set:
+
+* `max.in.flight.requests.per.connection > 1` for performance (one request does not block the next).
+* Retries for reliability.
+* So: you get at-least-once, but you can get duplicates.
+* So: it's good to also set `enable.idempotence=true`.

@@ -26,7 +26,7 @@ All the consumers in an application read data as consumer groups.
 **The main way we scale data consumption from a Kafka topic is by adding more consumers to a consumer group.** This is
 why it is a good idea to create topics with a large number of partitions.
 
-### 3. Consumer Offsets
+## 3. Consumer Offsets
 
 The consumer offsets are recorded by Kafka to know, how far is each consumer group in each topic.
 
@@ -128,7 +128,7 @@ Flow:
         2. The others get only the information about the leader and the number of this round (the generation).
     3. `SyncGroup`: All consumers send the `SyncGroup` requests to the `GroupCoordinator` (right part, arrows down).
         1. The leader sends its plan (`A: [1], B: [2], C: []`).
-        2. The others send enmpty requests.
+        2. The others send empty requests.
     4. `SyncGroup` response: The consumers get their assignments.
 3. Second rebalance (right part):
     1. `JoinGroup`: A says it owns 1, B says it owns 2, C owns none.
@@ -233,8 +233,8 @@ metadata from Kafka. So if it times out before getting the data, it just return.
 ### 9.1 When a consumer is considered alive
 
 * `max.poll.interval.ms` - time during which the consumer can go without polling before it is considered dead.
-* `session.timeout.ms` and `heartbeat.interval.ms` - described above, heartbeat interval must be lower than usually
-  session timeout and is usually one-third of the timeout value.
+* `session.timeout.ms` and `heartbeat.interval.ms` - described above, heartbeat interval must be lower than session
+  timeout and is usually one-third of the timeout value.
 
 ### 9.2 Timeouts
 
@@ -324,7 +324,7 @@ After we got to know the basic settings, we can get deeper into the process of l
    Only when the buffer is empty, the `poll()` will fetch and wait for results or timeout. The client will also fetch in
    the background while the code processes polled batch.
 
-## 10. Commits and offsets
+## 11. Commits and offsets
 
 **Kafka does not track acknowledgements from the consumers the way many JMS queues do. Instead it lets consumers to use
 Kafka to track their position (offset) in each partition.**
@@ -393,7 +393,7 @@ Lost messages:
 ### 10.1 Automatic Commit
 
 * Consumer commits the lates offset every `auto.commit.interval.ms`, 5 seconds by default.
-* Whenever you poll, the consumer checks if it is time to commit, adn if it is, it will commit the offsets it returned
+* Whenever you poll, the consumer checks if it is time to commit, and if it is, it will commit the offsets it returned
   in the last poll.
 * So if the interval is five seconds and after three seconds from the last commit the consumer crashed, a rebalance will
   happen and the new consumers will start consuming the partitions from the last committed offset - the one that is

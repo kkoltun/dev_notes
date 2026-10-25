@@ -5,7 +5,8 @@
 ## Web Security
 
 * [Basics](./web_security/basics.md)
-* [CSRF and XSS](./web_security/csrf_xss.md)
+* [CSRF - Cross Site Request Forgery](./web_security/csrf.md)
+* [XSS - Cross Site Scripting](./web_security/xss.md)
 * [JSON Web Token](./web_security/jwt.md)
 * [Authentication methods in REST](./web_security/rest_auth_methods.md)
 

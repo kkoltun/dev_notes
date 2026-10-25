@@ -1,57 +1,6 @@
-# Locks and semaphores
+# Semaphores
 
-* Intrinsic locking - using `synchronized`. Problems with it:
-    * A thread waiting for a lock cannot time out, be interrupted or give up. If the holder gets stuck indefinitely,
-      waiters are stuck forever and usually the only way out is rebooting JVM.
-    * It is exclusive only with no shared (read) mode.
-    * No fairness options - no FIFO option guaranteeing that the longest-waiting thread gets the lock.
-* Explicit locking - using `Lock`.
-    * Many more options and methods, check below.
-
-## Lock patterns introduced by the `Lock`
-
-### Interruptible Lock Acquisition
-
-```
-Lock lock = new ReentrantLock();
-lock.lockInterruptibly();
-try {
-    // work
-} finally {
-    lock.unlock();
-}
-```
-
-### Timed Lock Acquisition
-
-```
-Lock lock = new ReentrantLock();
-if (lock.tryLock(1, SECONDS)) {
-    try {
-        // work
-    } finally {
-        lock.unlock();
-    }
-} else {
-    log.error("Could not do the work - timed out while waiting for lock");
-}
-```
-
-### Fair Lock Acquisition
-
-```
-Lock lock = new ReentrantLock(true); // enables fairness; beware: it is costly
-lock.lock();
-try {
-    // work
-} finally {
-    lock.unlock();
-}
-```
-
-## Semaphores
-
-Semaphore maintains a set of permits.
+Semaphore maintains a set of permits. It allows several threads in the same block of code.
 
 * Each `acquire()` blocks if necessary until a permit is available and then takes it.
 * Each `release()` adds a permit, potentially releasing a blocking acquirer.
@@ -59,6 +8,12 @@ Semaphore maintains a set of permits.
   `acquire()` and another `release()`.
 * Memory consistency: actions in a thread prior to calling "release" methods (e.g. `release()`) **happen-before**
   actions following a successful "acquire" methods (e.g. `acquire()`) in another thread.
+* A `Semaphore` can be fair.
+* You can request more than one permit `semaphore.acquire(2)` and then `semaphore.release(2)`.
+* Same ideas on interruptibility as with `Lock` object.
+* Additional options only for semaphores (not possible in `Lock` objects):
+    * Reducing the number of permits (cannot increase).
+    * Getting a count/a list of the waiting threads.
 
 ```
 // 20 threads call an external API that allows at most 5 calls at a time
@@ -75,7 +30,7 @@ String callApi(Request request) throws InterruptedException {
 }
 ```
 
-About the example:
+In the example:
 
 1. The first 5 threads each take a permit and they call the API. The count drops to 0.
 2. The other 15 block in `acquire()`, because there are no permits left.

@@ -81,6 +81,9 @@ Flow:
 1. All consumers stop consuming and give up the ownership of all partition (solid horizontal line becomes dashed).
 2. `JoinGroup`: All consumers send the `JoinGroup` requests to the `GroupCoordinator` (left part, arrows down).
 3. `JoinGroup` response: The coordinator answers **AFTER** every member has asked (left part, arrows up).
+    * It waits at most `max.poll.interval.ms` (the rebalance timeout), NOT `session.timeout.ms`. A consumer busy with
+      a long batch still sends heartbeats from the background thread - it is late, not dead. It joins only when its
+      batch is done and it calls `poll()` again; if it misses the limit, it is removed from the group.
     1. The leader gets the full list of members and the topics each reads.
     2. The others get only the information about the leader and the number of this round (the generation).
 4. The synchronization barrier - everyone is in, nobody owns anything.
@@ -92,6 +95,9 @@ Flow:
 
 Consequences: there is a short window of unavailability of the entire consumer group, the length depends on the size of
 the consumer group and other configration values.
+
+While the group waits for the slowest member, the other consumers' `poll()` calls return empty (they own no
+partitions). So one consumer in the middle of a long batch stops the whole group until it finishes the batch.
 
 The result of the rebalance above is the same partition assignment. It still needed to pause. The cooperative rebalance
 (mentioned below) would have paused nothing here.
@@ -156,6 +162,9 @@ The difference here is:
   consider it dead and trigger a rebalance.
 * If the consumer crashes, it will take the group coordinator a few seconds without heartbeats to decide it is dead and
   trigger the rebalance.
+* The heartbeat is also how a consumer learns that a rebalance has started: the coordinator answers a heartbeat with
+  "rebalance in progress". The heartbeat thread only marks that the consumer must rejoin; the revoking and the
+  `JoinGroup` happen later, in the next `poll()` on the main thread (see 8).
 
 ## 6. Static group membership
 
@@ -224,6 +233,10 @@ The first `poll()` call with a new consumer:
 * Joins the consumer group.
 * Receives the partition assignment.
 * If a rebalance is triggered, it will be hanlded inside the poll as well.
+  * The next `poll()` after the heartbeat thread got "rebalance in progress": revokes the partitions
+    (`onPartitionsRevoked`; all of them in eager), sends `JoinGroup`, then `SyncGroup`, and gets the new assignment
+    (`onPartitionsAssigned`).
+  * The `KafkaConsumer` is not thread-safe, so all of this must happen on the thread that calls `poll()`.
 
 The `poll(Duration)` adheres to the timeout restriction and, at the same time, it has different jobs, e.g. getting
 metadata from Kafka. So if it times out before getting the data, it just return.

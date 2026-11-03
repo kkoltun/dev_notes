@@ -1,6 +1,11 @@
 ## System Design
 
-Notes from Hello Interview, *System Design in a Hurry*: [System design in a hurry](./system_design_in_a_hurry.md).
+Notes from Hello Interview, *System Design in a Hurry*:
+
+1. [Introduction](./system_design_in_a_hurry/introduction.md)
+2. [Delivery Framework](./system_design_in_a_hurry/delivery_framework.md)
+3. [Core Concepts](./system_design_in_a_hurry/core_concepts.md)
+4. [Key Technologies](./system_design_in_a_hurry/key_technologies.md)
 
 ### Steps
 

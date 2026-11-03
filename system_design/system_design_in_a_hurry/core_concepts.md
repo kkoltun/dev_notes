@@ -1,177 +1,22 @@
-# System Design in a Hurry (Hello Interview)
+# Core Concepts
 
-Handwritten notes from [Hello Interview, *System Design in a
-Hurry*](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction): the introduction, the delivery
-framework and the core concepts.\
+Handwritten notes from [Hello Interview, *System Design in a Hurry*](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction). Back to [System design](../system_design.md).
 
-## Introduction
 
-### What the interview is
+## CC1 Networking
 
-- An ambiguously defined high-level problem.
-- So: break it down into the pieces of infrastructure that you'll need to solve it.
-- No single right answer.
-- Navigate a complex problem.
-- Reason about trade-offs, communicate thinking clearly.
-- Quickly work through the basics, leaving time to show off the depth of knowledge in the deep dives.
-
-### What is assessed
-
-Four areas: Problem Navigation, Solution Design, Technical Excellence, Communication and Collaboration.
-
-### Problem Navigation
-
-- Break down the problem into smaller manageable pieces.
-- Identify the most important ones.
-
-What can go wrong:
-
-- Not enough exploration of the problem.
-- Not enough exploration of the requirements.
-- Focus on uninteresting / non-relevant / trivial aspects.
-- Getting stuck on one problem and not being able to move forward.
-- Failing to deliver a working system.
-
-### Solution Design
-
-- How do you solve each piece of the problem.
-
-What can go wrong:
-
-- Plain lack of knowledge, insight.
-- Ignoring scaling or performance considerations.
-- Spaghetti design.
-
-### Technical Excellence
-
-- You need to know the best practices, current tech, how to apply them.
-
-What can go wrong:
-
-- Not knowing current tech, using deprecated tech.
-- Not knowing how to apply new tech.
-
-### Communication and Collaboration
-
-- Communicate complex concepts, respond to feedback and questions, work together on a problem.
-
-## Delivery Framework
-
-**CRITICAL: First deliver a working system. Then work on non-functional requirements.**
-
-```
-                                                                                                       Primary Goal: Satisfy
-                                                                                                    Non-functional Requirements
-                                                                                  Primary Goal: Satisfy          │
-                                                                                 Functional Requirements         │
-                                                                                            │                    │
-                                                                                            ▼                    ▼
-┌(1)────────────┐    ┌(2)────────────┐    ┌(3)────────────┐    ┌(4)┄┄┄┄┄┄┄┄┄┄┄┄┐    ┌(5)────────────┐    ┌(6)────────────┐
-│               │    │               │    │               │    ┆               ┆    │               │    │               │
-│  Requirements │ ─▶ │ Core Entities │ ─▶ │     API or    │ ╌▶ ┆   Data Flow   ┆ ╌▶ │   High-level  │ ─▶ │   Deep Dives  │
-│               │    │               │    │   Interface   │    ┆               ┆    │     Design    │    │               │
-│               │    │               │    │               │    ┆               ┆    │               │    │               │
-└───────────────┘    └───────────────┘    └───────────────┘    └┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┘    └───────────────┘    └───────────────┘
-                                                                                            ▲
-                                                                                            │
-                                                                                ★ YOU MUST ARRIVE HERE ★
-```
-
-Redraw from https://www.hellointerview.com/learn/system-design/in-a-hurry/delivery.
-
-The steps, in order:
-
-1. Requirements (5 min).
-2. Core Entities (2 min).
-3. API or Interface (5 min).
-4. (Optional) Data Flow (5 min).
-5. High level design (10-15 min).
-6. Deep dives (10 min).
-
-Capacity estimation hangs off the requirements.
-
-### Requirements
-
-Functional requirements:
-
-- A prioritized list of core features.
-- Top 3.
-
-Non-functional requirements:
-
-- System qualities that are important to the users.
-- Put in context and quantified.
-- CAP: consistency vs availability.
-- Environment constraints.
-- Scalability: peak hours, Black Friday etc.
-- Read vs write ratio.
-- Latency, especially for reads requiring computation.
-- Durability.
-- Security.
-- Fault tolerance.
-- Compliance.
-
-### Core Entities
-
-- The data central to the design.
-- The data you send via the API, save in the data model.
-- Create a small list, do not aim to cover 100%.
-
-### API or System Interface
-
-Contract between your system and its users.
-
-- REST: HTTP verbs.
-    - Default choice.
-- GraphQL: lets clients specify exactly what data they want, avoiding over- and underfetching.
-    - Many clients with different needs.
-- RPC: action-oriented protocol, faster than REST for service-to-service communication.
-    - Internal API, performance critical.
-
-### Optional: Data Flow
-
-- High level sequence of actions or processes that the system performs on the inputs to produce outputs.
-
-### High level design
-
-Boxes and arrows to represent the different components of the system and how they interact.
-
-- Do not overthink! Design an architecture that satisfies the API and requirements.
-- Stay focused! Do a relatively simple design that meets the core requirements, then layer on complexity to satisfy the
-  non-functional requirements.
-- When designing this, you will identify needs for adding complexity: note them for later.
-- Document only a high level of the data layout.
-
-### Deep dives
-
-Now you have a high level design. Now you focus on:
-
-- Meeting non-functional requirements.
-- Addressing edge cases.
-- Identifying and addressing issues and bottlenecks.
-- Improving the design based on probes from the interviewer.
-
-Then:
-
-- Act proactively.
-- Give room to the interviewer to ask questions and probe the design.
-
-## Core Concepts
-
-### CC1 Networking
-
-#### CC1.1 Live updates
+### CC1.1 Live updates
 
 - Polling: one way.
 - SSE: one way, the client makes the initial HTTP request (stateful).
 - WebSockets: bidirectional, but more complex to implement (stateful).
 - SSE and WebSockets could be a problem behind the load balancer (stateful).
 
-#### CC1.2 Service to service
+### CC1.2 Service to service
 
 - gRPC where performance is critical: binary over HTTP/2, faster than JSON over HTTP.
 
-#### CC1.3 Load balancing
+### CC1.3 Load balancing
 
 - Level 7 (application level): can route basing on the request content (URL path, headers, cookies, e.g. sticky
   sessions).
@@ -187,19 +32,19 @@ Then:
 - Example: a chat with 200,000 users connected all day goes behind L4; the REST API of the same product (`/api/rooms`,
   `/api/users`) goes behind L7, because there routing by path is the point.
 
-#### CC1.4 Geography
+### CC1.4 Geography
 
 - New York to London is 80 ms base, before you process anything.
 - So: use a CDN, regional deployments, data replicated or partitioned by geography.
 
-### CC2 API design
+## CC2 API design
 
 - 4–5 key endpoints.
 - Usually REST.
 - Think of pagination, or cursor based.
 - Think of rate limiting.
 
-### CC3 Data modeling
+## CC3 Data modeling
 
 - Relational DB:
     - Structured data.
@@ -239,7 +84,7 @@ Then:
       A user's chats by last activity: `chats_by_user`, partition `user_id`, sort `last_message_at` desc. A new message
       is written to both. In PostgreSQL: `messages`, `chats`, `chat_members` and a join.
 
-### CC4 Database indexing
+## CC4 Database indexing
 
 - B-tree indexes: default, support both exact lookups and ranges.
 - Hash indexes: better for exact, but do not support ranges.
@@ -251,7 +96,7 @@ Then:
 - Partial indexes: when you have e.g. 3 years of history but usually browse only the latest rows.
     - So: index only the rows matching a condition, the index stays small.
 
-### CC5 Caching
+## CC5 Caching
 
 - Add when the DB is hammered with reads.
 - Redis cache hit: 1 ms, compared to DB 20–50 ms.
@@ -291,7 +136,7 @@ Then:
     - So: a small in-process fallback cache, a circuit breaker to shed load, graceful degradation until Redis is back.
 - Do not cache everything: only data read often and changed rarely; profile first, then cache the hot paths.
 
-### CC6 Sharding
+## CC6 Sharding
 
 - Usually to do when hitting storage limits (TBs) or write throughput limits (tens of thousands per sec).
 - Most important: the sharding key.
@@ -309,7 +154,7 @@ Then:
     - So: a shard is hot when the load is uneven across ranges; check where the load really sits (e.g. in Woodpecker
       the most active were the customers with a big setup and many campaigns, not the new ones).
 
-### CC7 Consistent hashing
+## CC7 Consistent hashing
 
 Supports elastic scaling.
 
@@ -341,7 +186,7 @@ Supports elastic scaling.
    only the keys hashing to 26–35 move (from DB3 to DB5); every other key stays where it was.
 ```
 
-### CC8 CAP
+## CC8 CAP
 
 You can have only two of the three:
 
@@ -367,7 +212,7 @@ Important:
 - This is mostly about replicating distributed data.
 - Usually choose eventual consistency, unless the problem involves money, inventory, booking limited resources.
 
-### CC9 Numbers to know
+## CC9 Numbers to know
 
 From the article's table:
 

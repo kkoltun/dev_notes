@@ -25,6 +25,7 @@
 
 * [Various notes on Java basics](./java/README.md)
 * [Design patterns and architecture](./architecture/README.md)
+* [System design](./system_design/system_design.md)
 * [Notes on algorithms](./algorithms/README.md)
 * [Web Security](./security/README.md)
 * [Spring](./spring/README.md)

@@ -71,7 +71,7 @@ Two retention policies:
 You can choose the policy using `cleanup.policy` and values `delete` and `compact`:
 
 * `compact` - keeps the latest message for every key forever.
-* `delete` - removes only basing on the age.
+* `delete` - removes only basing on the age (`retention.ms`).
 * `compact,delete` - keeps the latest message for every key **within the retention period**. A message older than the
   retention period will be removed even if it is the latest value for a specific key.
 
@@ -89,7 +89,8 @@ data:
 * Send a message with the specified key and `value = null`.
 * Cleaner thread will first do a normal compaction and retain only the message with a null value.
 * The message is called **tombstone** and is kept for a configured amount of time. Consumers can see it.
-* After a certain amount of time, the cleaner thread will remove the tombstone, so give the consumers enough time to
+* After a configured amount of time (`delete.retention.ms`, not to be mistaken with `retention.ms` which controls the
+  retention in `delete` policy), the cleaner thread will remove the tombstone, so give the consumers enough time to
   react to it (e.g. clear the user's database data).
 
 There is also another way of removing messages - using Kafka Admin Client `deleteRecords` method:

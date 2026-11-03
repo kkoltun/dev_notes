@@ -37,6 +37,7 @@
 
 * [S.O.L.I.D](./solid.md)
 * [Writing clean code](./clean_code.md)
+* [Events and publishing: when an event bus pays off (Jakub Nabrdalik, Confitura 2025)](./events_and_publishing.md)
 * [**Very** good material on abstraction, encapsulation and information hiding (external link)](https://web.archive.org/web/20071214085409/http://www.itmweb.com/essay550.htm)
 * [Overall notes on architecture](./architecture.md)
 * [Notes from Coursera OOP Course Module 2](./oop_module_2.md)

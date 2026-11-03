@@ -1,5 +1,7 @@
 ## System Design
 
+Notes from Hello Interview, *System Design in a Hurry*: [System design in a hurry](./system_design_in_a_hurry.md).
+
 ### Steps
 
 #### 1. Clarification of requirements

@@ -45,21 +45,24 @@
         |                grant access to client                 |                           |
         |------------------------------------------------------>|                           |
         |                           |                           |                           |
-        |       redirect to client w/ authorization code        |                           |
-        |<- - - - - - - - - - - - - - - - - - - - - - - - - - - |                           | This redirects back to a callback endpoint in Woodpecker.
+        |   redirect to client w/ authorization code + state    |                           |
+        |<- - - - - - - - - - - - - - - - - - - - - - - - - - - |                           | This redirects back to a callback endpoint in Woodpecker, with `state` unchanged.
         |                           |                           |                           |
 ==== 2. Getting an access token ====================================================================
         |                           |                           |                           |
-        |  back to client w/ code   |                           |                           |
-        |-------------------------->|                           |                           |
+        | back to client w/ code +  |                           |                           |
+        |     + state               |                           |                           |
+        |-------------------------->|                           |                           | The client checks that `state` equals the value it stored before the redirect.
         |                           |                           |                           |
         |                           | auth code + client_id +   |                           |
-        |                           |     + client_secret       |                           | Client credentials are the ones obtained when Woodpecker registered in Google as an app that will want to access user mailboxes. 
+        |                           |     + client_secret +     |                           | Client credentials are the ones obtained when Woodpecker registered in Google as an app that will want to access user mailboxes. 
+        |                           |     + code_verifier       |                           | The code_verifier is the PKCE secret whose hash was sent as code_challenge in step 1.
         |                           |-------------------------->|                           | While registering you also set a callback URL there.
         |                           |                           |                           |
         |                           |                           | only if code + creds +    | The code-for-token exchange is server-to-server, the token never passes through the browser.
         |                           |                           |     + redirect_uri valid  | 
-        |                           |                           |                           | 
+        |                           |                           |     + hash(code_verifier) | PKCE: the server hashes the code_verifier and compares it with the code_challenge from step 1.
+        |                           |                           |       == code_challenge   | 
         |                           |    valid access token     |                           |
         |                           |<- - - - - - - - - - - - - |                           |
         |                           |                           |                           |

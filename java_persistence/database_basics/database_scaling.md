@@ -13,6 +13,8 @@ Scenario:
    2. Some transactions deadlock or starve.
    3. The application is taking more time to respond.*
 
+How to tell that one instance is reaching its limit (signals, ballparks, partitioning by time): [When one PostgreSQL is no longer enough](../../system_design/postgres_limits.md).
+
 ### First step - query optimization and Connection Pool implementation
 
 #### Denormalization in highly used tables.

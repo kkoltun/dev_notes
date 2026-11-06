@@ -15,6 +15,17 @@ to [System design](../system_design.md).
 - You usually choose it.
 - You get joins, transactions and indexes.
 
+### KT1.3 Keeping one database available
+
+- One primary is a single point of failure: when it is down, nothing that reads it works.
+- Standby replica, kept current by streaming replication, with automatic failover.
+    - So: when the primary dies, the standby takes over in about a minute.
+- Managed databases do it for you: AWS RDS Multi-AZ, Cloud SQL high availability.
+- Read replicas can also carry the read load (slightly stale reads).
+- In the interview it is one sentence, not a deep dive: "managed Postgres with a standby and automatic failover".
+    - So: a requirement like "viewing always available" is met even with one database.
+- A CDN or a cache covers only the minute of failover, not a long outage.
+
 ### KT1.2 Non-relational databases
 
 Types:

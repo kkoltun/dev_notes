@@ -88,6 +88,19 @@ Boxes and arrows to represent the different components of the system and how the
 - When designing this, you will identify needs for adding complexity: note them for later.
 - Document only a high level of the data layout.
 
+### Questions to ask yourself
+
+Run them over your own design before the interviewer does.
+
+- What happens if this message arrives twice?
+    - So: a retried callback or event must not repeat its effect (a second refund, a second email).
+- What if it arrives late, or a scheduled run is late?
+- Who is allowed to call this?
+    - So: a public callback must prove it comes from the provider (signature, shared secret, or ask its API).
+- What does the user see while this part is down?
+- For every time on the board: whose zone is it in, and does it repeat?
+    - So: a repeating rule is stored as local time plus the zone; a single event as a UTC instant.
+
 ## Deep dives
 
 Now you have a high level design. Now you focus on:
